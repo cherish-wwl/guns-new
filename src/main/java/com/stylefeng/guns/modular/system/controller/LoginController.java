@@ -79,6 +79,17 @@ public class LoginController extends BaseController {
     }
 
     /**
+     * 跳转到浏览页面
+     */
+    @RequestMapping(value = "/salaryIndex", method = RequestMethod.GET)
+    public String salaryIndex() {
+      /*  if (ShiroKit.isAuthenticated() || ShiroKit.getUser() != null) {
+            return REDIRECT + "/";
+        } else {*/
+            return "/Salaryweb/index.html";
+     /*   }*/
+    }
+    /**
      * 点击登录执行的动作
      */
     @RequestMapping(value = "/login", method = RequestMethod.POST)
