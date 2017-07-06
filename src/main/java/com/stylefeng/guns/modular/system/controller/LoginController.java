@@ -79,16 +79,54 @@ public class LoginController extends BaseController {
     }
 
     /**
-     * 跳转到浏览页面
+     * 跳转到首页页面
      */
     @RequestMapping(value = "/salaryIndex", method = RequestMethod.GET)
     public String salaryIndex() {
-      /*  if (ShiroKit.isAuthenticated() || ShiroKit.getUser() != null) {
-            return REDIRECT + "/";
-        } else {*/
             return "/Salaryweb/index.html";
-     /*   }*/
     }
+
+    /**
+     * 跳转到平台介绍页面
+     */
+    @RequestMapping(value = "/salaryWeb/salaryIndexAbout", method = RequestMethod.GET)
+    public String salaryIndexAbout() {
+        return "/Salaryweb/about.html";
+    }
+
+    /**
+     * 跳转到岗位薪酬页面
+     */
+    @RequestMapping(value = "/salaryWeb/salaryIndexServices", method = RequestMethod.GET)
+    public String salaryIndexServices() {
+        return "/Salaryweb/services.html";
+    }
+
+    /**
+     * 跳转到行业薪酬页面
+     */
+    @RequestMapping(value = "/salaryWeb/salaryIndexPortfolio3col", method = RequestMethod.GET)
+    public String salaryIndexPortfolio3col() {
+        return "/Salaryweb/portfolio3col.html";
+    }
+
+    /**
+     * 跳转到薪酬查询页面
+     */
+    @RequestMapping(value = "/salaryWeb/salaryIndexBlog", method = RequestMethod.GET)
+    public String salaryIndexBlog() {
+        return "/Salaryweb/blog.html";
+    }
+
+    /**
+     * 跳转到专项报告页面
+     */
+    @RequestMapping(value = "/salaryWeb/salaryIndexBlogSingle", method = RequestMethod.GET)
+    public String salaryIndexBlogSingle() {
+        return "/Salaryweb/blog-single.html";
+    }
+
+
     /**
      * 点击登录执行的动作
      */
@@ -131,6 +169,6 @@ public class LoginController extends BaseController {
     public String logOut() {
         LogManager.me().executeLog(LogTaskFactory.exitLog(ShiroKit.getUser().getId(), getIp()));
         ShiroKit.getSubject().logout();
-        return REDIRECT + "/login";
+        return REDIRECT + "/salaryIndex";
     }
 }

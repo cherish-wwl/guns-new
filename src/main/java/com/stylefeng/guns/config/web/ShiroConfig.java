@@ -135,9 +135,12 @@ public class ShiroConfig {
          */
         Map<String, String> hashMap = new HashMap<>();
         hashMap.put("/static/**", "anon");
+
         hashMap.put("/login", "anon");
 
         hashMap.put("/salaryIndex", "anon");
+        hashMap.put("/salaryIndexAbout", "anon");
+        hashMap.put("/salaryWeb/**", "anon");
 
         hashMap.put("/global/sessionError", "anon");
         hashMap.put("/kaptcha", "anon");

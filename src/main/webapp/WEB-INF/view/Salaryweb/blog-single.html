@@ -15,20 +15,20 @@
 
 	<!-- CSS
   ================================================== -->
-	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<link rel="stylesheet" href="${ctxPath}/static/Salaryweb/css/style.css" type="text/css" />
    
 
 	<!-- JS
   ================================================== -->
-   <script type="text/javascript" src="js/jquery.min.js"></script>
+   <script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/jquery.min.js"></script>
 	<!-- HTML5 Shiv events -->
-   <script type="text/javascript" src="js/modernizr.custom.11889.js"></script>
+   <script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/modernizr.custom.11889.js"></script>
     <!-- HTML5 Shiv events (end)-->
-   <script type="text/javascript" src="js/nav-resp.js"></script>
+   <script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/nav-resp.js"></script>
 
 	<!-- Favicons
   ================================================== -->
-	<link rel="shortcut icon" href="images/favicon.ico" />
+	<link rel="shortcut icon" href="${ctxPath}/static/Salaryweb/images/favicon.ico" />
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body>
@@ -38,16 +38,21 @@
 
 <div id="wrap">
 <header id="header" class="container">
-<div class="top-link"><a href="contact.html">登录/注册</a></div>
-<div class="four columns"><a href="#"><img src="images/logo.png" /></a></div>
+<div class="top-link"><a href="${ctxPath}/login">登录/注册</a></div>
+<div class="four columns"><a href="#"><img src="${ctxPath}/static/Salaryweb/images/logo.png" /></a></div>
 <nav id="nav-wrap" class="twelve columns">
 					<ul id="nav">
-					 
-				<li><a href="index.html">首页</a></li>
+						<li><a href="${ctxPath}/salaryIndex">首页</a></li>
+						<li><a href="${ctxPath}/salaryWeb/salaryIndexAbout">平台介绍</a></li>
+						<li><a href="${ctxPath}/salaryWeb/salaryIndexServices">岗位薪酬</a></li>
+						<li><a href="${ctxPath}/salaryWeb/salaryIndexPortfolio3col">行业薪酬</a></li>
+						<li><a href="${ctxPath}/salaryWeb/salaryIndexBlog">薪酬查询</a></li>
+						<li><a href="${ctxPath}/salaryWeb/salaryIndexBlogSingle">专项报告</a></li>
+			<!--	<li><a href="index.html">首页</a></li>
 				<li><a href="about.html">平台介绍</a></li>
 				<li><a href="services.html">岗位薪酬
 					</a>
-					<!--
+					&lt;!&ndash;
 					<ul>
 						<li><a href="services.html">善德讲堂</a></li>
 						<li><a href="pricing.html">爱心公益</a></li>
@@ -56,9 +61,9 @@
 						<li><a href="contact.html">标德优品</a></li>
 					</ul>
 				</li>
-				-->
+				&ndash;&gt;
 				<li><a href="portfolio3col.html">行业薪酬</a>
-					<!--
+					&lt;!&ndash;
 				    <ul>
 						<li><a href="portfolio2col.html">善德讲堂</a></li>
 						<li><a href="portfolio3col.html">爱心公益</a></li>
@@ -66,16 +71,16 @@
 						<li><a href="portfolio-item.html">商业讲堂</a></li>
 						<li><a href="portfolio-item.html">标德优品</a></li>
 					</ul>
-					-->
+					&ndash;&gt;
 				</li>
 				<li><a href="blog.html">薪酬查询</a></li>
-				<li><a href="blog-single.html">专项报告</a></li>
+				<li><a href="blog-single.html">专项报告</a></li>-->
 			</ul>
 	</nav>
 		<!-- /nav-wrap -->
 </header><!-- end-header -->
 <section id="full-width">
-<img src="images/hero-pages2.jpg" class="full-width" />
+<img src="${ctxPath}/static/Salaryweb/images/hero-pages2.jpg" class="full-width" />
 <div class="page-subtitle"> 
 <h3>专项报告</h3>
 <p>根据需要，进行不同专题的薪酬报告</p>
@@ -110,13 +115,13 @@ Lorem ipsum dolor sit amet nec, consectetuer adipiscing elit</em>
 </p>
 </div>
 <br class="clear" />
-<p class="blog-inpic"><img src="images/portfo/port1.jpg" />
+<p class="blog-inpic"><img src="${ctxPath}/static/Salaryweb/images/portfo/port1.jpg" />
  Lorem ipsum dolor sit amet nec, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.<br />
 Lorem ipsum dolor sit amet nec, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes. Lorem ipsum dolor sit amet nec, consectetuer adipiscing elit. Aenean commodo ligula commodo.</p>
 </article>
 <div class="clear"></div>
 <div class="likebox">
-<div class="likepic"><img src="images/likebox1.png" border="0" id="like-1" class="likebtn" /></div>
+<div class="likepic"><img src="${ctxPath}/static/Salaryweb/images/likebox1.png" border="0" id="like-1" class="likebtn" /></div>
 <div class="likemetlftpic"></div>
 <div class="likemetric boxlike" id="boxlike-1">0</div>
 </div><!-- end-likebox  -->
@@ -124,15 +129,15 @@ Lorem ipsum dolor sit amet nec, consectetuer adipiscing elit. Aenean commodo lig
 <hr />
 
 <div class="commentbox">
-<div><img src="images/comments-ico.png" /></div>
+<div><img src="${ctxPath}/static/Salaryweb/images/comments-ico.png" /></div>
 
 <div class="commentin">
-<img src="images/avatar01.png" />
+<img src="${ctxPath}/static/Salaryweb/images/avatar01.png" />
 <div>John Doil / <span class="blgdatebox ">May 22, 2016</span> - <a href="#">Reply</a></div>
 <p>Praesent tempor sollicitudin cursus. Nullam quis mi risus, adipiscing rutrum ipsum</p>
 </div><!-- end-commentin  -->
 <div class="commentin">
-<img src="images/avatar02.png" />
+<img src="${ctxPath}/static/Salaryweb/images/avatar02.png" />
 <div>Rose Smith / <span class="blgdatebox ">May 19, 2016</span> - <a href="#">Reply</a></div>
 <p>adipiscing rutrum ipsum. Aliquam volutpat mollis</p>
 </div><!-- end-commentin  -->
@@ -195,7 +200,7 @@ Lorem ipsum dolor sit amet nec, consectetuer adipiscing elit. Aenean commodo lig
 </div><!-- end-listbox1 -->
 <br class="clear" />
 <!--
-	作者：tanks@tom.com
+	作者：tanks tom.com
 	时间：2017-07-01
 	描述：
 <h4 class="subtitle">Video Widget</h4>
@@ -224,7 +229,7 @@ Lorem ipsum dolor sit amet nec, consectetuer adipiscing elit. Aenean commodo lig
 	<footer id="footer" align="center">
 <div class="container footer-in">
 <div class="disclaimer four columns" align="left">
-<h4>Disclaimer <img src="images/footer-p1.png" /></h4>
+<h4>Disclaimer <img src="${ctxPath}/static/Salaryweb/images/footer-p1.png" /></h4>
 <br />
 <p>
 Important: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at felis mi, at auctor mi. Donec vel nibh sem. Etiam ut lacus a dui accumsan accumsan. 
@@ -234,21 +239,21 @@ Important: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at fel
   <a href="#" class="terms">Terms of Service</a> | <a href="#" class="terms">Privacy Policy</a></div>
   </div><!-- content220 -->
 <div class="three columns navi2" align="left">
-<h4>Navigation <img src="images/footer-p3.png" /></h4>
+<h4>Navigation <img src="${ctxPath}/static/Salaryweb/images/footer-p3.png" /></h4>
 <br />
-<p><a href="#"><img src="images/rowp6.png" />Services</a></p>
+<p><a href="#"><img src="${ctxPath}/static/Salaryweb/images/rowp6.png" />Services</a></p>
 
-<p><a href="#"><img src="images/rowp6.png" />Our Portfolio</a></p>
+<p><a href="#"><img src="${ctxPath}/static/Salaryweb/images/rowp6.png" />Our Portfolio</a></p>
 
-<p><a href="#"><img src="images/rowp6.png" />Blog</a></p>
+<p><a href="#"><img src="${ctxPath}/static/Salaryweb/images/rowp6.png" />Blog</a></p>
 
-<p><a href="#"><img src="images/rowp6.png" />Prices</a></p>
+<p><a href="#"><img src="${ctxPath}/static/Salaryweb/images/rowp6.png" />Prices</a></p>
 
-<p><a href="#"><img src="images/rowp6.png" />Contact Form</a></p>
+<p><a href="#"><img src="${ctxPath}/static/Salaryweb/images/rowp6.png" />Contact Form</a></p>
 </div><!-- end-navi2 -->
 
 <div class="five columns" align="left">
-<h4>Newsletter <img src="images/footer-p2.png" /></h4>
+<h4>Newsletter <img src="${ctxPath}/static/Salaryweb/images/footer-p2.png" /></h4>
 <br />
 <p>Subscribe to our newsletter to always be up to date! See more, learn more.</p>
 <form action="" method="post" id="frmSubscribe" />
@@ -257,27 +262,27 @@ Important: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at fel
 </form>
 <div class="clear"></div>
 <div class="social-icons">
-<a href="#"><img src="images/social_twitter.png" align="right" /></a>
-<a href="#"><img src="images/social_facebook.png" align="right" /></a>
-<a href="#"><img src="images/social_vimeo.png" align="right" /></a>
+<a href="#"><img src="${ctxPath}/static/Salaryweb/images/social_twitter.png" align="right" /></a>
+<a href="#"><img src="${ctxPath}/static/Salaryweb/images/social_facebook.png" align="right" /></a>
+<a href="#"><img src="${ctxPath}/static/Salaryweb/images/social_vimeo.png" align="right" /></a>
 </div><!-- end-social-icons -->
 </div><!-- end-follow2 -->
 
 <div class="four columns" align="left">
-<h4>Contact <img src="images/footer-p4.png" /></h4>
+<h4>Contact <img src="${ctxPath}/static/Salaryweb/images/footer-p4.png" /></h4>
 <br />
-<p><img src="images/social_address.png" align="left" />&nbsp;<strong>Address:</strong>
+<p><img src="${ctxPath}/static/Salaryweb/images/social_address.png" align="left" />&nbsp;<strong>Address:</strong>
 <br />
 No.28 - 63739 street lorem ipsum City, Country</p>
 
-<p><img src="images/social_phone.png" align="left" />&nbsp;<strong>Phone:</strong>
+<p><img src="${ctxPath}/static/Salaryweb/images/social_phone.png" align="left" />&nbsp;<strong>Phone:</strong>
 <br />
 + 1 (234) 567 8901<br />
 </p>
 
-<p><img src="images/social_mail.png" align="left" />&nbsp;<strong>Email:</strong>
+<p><img src="${ctxPath}/static/Salaryweb/images/social_mail.png" align="left" />&nbsp;<strong>Email:</strong>
 <br />
-support@yoursite.com<br />
+support yoursite.com<br />
 </p>
 </div><!-- end-contact2 -->
 </div><!-- end-footer-in -->
@@ -288,8 +293,8 @@ support@yoursite.com<br />
 </div><!-- end-wrap -->
 <!-- End Document
 ================================================== -->
-	<script type="text/javascript" src="js/latest-twitt.js"></script>
-	<script type="text/javascript" src="js/vincie-send.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/latest-twitt.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/vincie-send.js"></script>
 
 </body>
 </html>
