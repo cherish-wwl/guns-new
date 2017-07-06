@@ -13,7 +13,7 @@ import java.util.Date;
 public class UserDto{
 
 	private Integer id;
-	private String account;
+	private String username;
 	private String password;
 	private String salt;
 	private String name;
@@ -27,8 +27,10 @@ public class UserDto{
 	private Integer deptid;
 	private Integer status;
 	private Date createtime;
+	private Date lastlogin;
 	private Integer version;
 	private String avatar;
+	private String priv;
 
 
 	public Integer getId() {
@@ -39,12 +41,12 @@ public class UserDto{
 		this.id = id;
 	}
 
-	public String getAccount() {
-		return account;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setAccount(String account) {
-		this.account = account;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getPassword() {
@@ -149,5 +151,21 @@ public class UserDto{
 
 	public void setAvatar(String avatar) {
 		this.avatar = avatar;
+	}
+
+	public Date getLastlogin() {
+		return lastlogin;
+	}
+
+	public void setLastlogin(Date lastlogin) {
+		this.lastlogin = lastlogin;
+	}
+
+	public String getPriv() {
+		return priv;
+	}
+
+	public void setPriv(String priv) {
+		this.priv = priv;
 	}
 }

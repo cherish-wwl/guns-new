@@ -47,7 +47,7 @@ public class ConstantFactory implements IConstantFactory {
     public String getUserNameById(Integer userId) {
         User user = userMapper.selectById(userId);
         if (user != null) {
-            return user.getName();
+            return user.getAccount();
         } else {
             return "--";
         }

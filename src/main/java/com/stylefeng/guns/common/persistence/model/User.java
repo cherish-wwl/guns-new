@@ -76,11 +76,19 @@ public class User extends Model<User> {
      * 创建时间
      */
 	private Date createtime;
+	/**
+	* 最近登录时间
+	*/
+	private Date lastlogin;
     /**
      * 保留字段
      */
 	private Integer version;
 
+	/**
+	 * 保留字段2
+	 */
+    private String priv;
 
 	public Integer getId() {
 		return id;
@@ -194,12 +202,28 @@ public class User extends Model<User> {
 		this.createtime = createtime;
 	}
 
+	public Date getLastlogin() {
+		return lastlogin;
+	}
+
+	public void setLastlogin(Date lastlogin) {
+		this.lastlogin = lastlogin;
+	}
+
 	public Integer getVersion() {
 		return version;
 	}
 
 	public void setVersion(Integer version) {
 		this.version = version;
+	}
+
+	public String getPriv() {
+		return priv;
+	}
+
+	public void setPriv(String priv) {
+		this.priv = priv;
 	}
 
 	@Override

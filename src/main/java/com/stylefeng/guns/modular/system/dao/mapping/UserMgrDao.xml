@@ -6,14 +6,16 @@
 		id, account, name, birthday, sex, email, avatar,
 		phone, roleid,
 		deptid, status,
-		createtime, version
+		createtime,lastlogin,
+		version,priv
 	</sql>
 	
 	<sql id="Base_Column_List_With_Pwd">
 		id, account, name, birthday,password, sex, email, avatar,
 		phone, roleid,salt,
 		deptid, status,
-		createtime, version
+		createtime, lastlogin,
+		version,priv
 	</sql>
 
 	<select id="selectUsers" resultType="map">
