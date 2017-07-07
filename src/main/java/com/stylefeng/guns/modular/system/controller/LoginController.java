@@ -128,6 +128,25 @@ public class LoginController extends BaseController {
 
 
     /**
+     * 跳转到注册新用户页面
+     */
+    @RequestMapping(value = "/salaryWeb/registerNewUserPage", method = RequestMethod.GET)
+    public String registerNewUserPage() {
+        return "/register.html";
+    }
+
+    /**
+     * 注册新用户
+     */
+    @RequestMapping(value = "/salaryWeb/registerNewUser", method = RequestMethod.POST)
+    public String registerNewUser() {
+        String username = super.getPara("username").trim();
+        String password = super.getPara("password").trim();
+        return "/register.html";
+    }
+
+
+    /**
      * 点击登录执行的动作
      */
     @RequestMapping(value = "/login", method = RequestMethod.POST)
