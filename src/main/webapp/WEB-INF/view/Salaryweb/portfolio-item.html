@@ -15,21 +15,21 @@
 
 	<!-- CSS
   ================================================== -->
-	<link rel="stylesheet" href="css/style.css" type="text/css" />
-	<link rel="stylesheet" href="css/slide1.css" type="text/css" />
-	<link rel="stylesheet" href="fancybox/fancybox.css" type="text/css" />
+	<link rel="stylesheet" href="${ctxPath}/static/Salaryweb/css/style.css" type="text/css" />
+	<link rel="stylesheet" href="${ctxPath}/static/Salaryweb/css/slide1.css" type="text/css" />
+	<link rel="stylesheet" href="${ctxPath}/static/Salaryweb/fancybox/fancybox.css" type="text/css" />
     
 	<!-- JS
   ================================================== -->
-   <script type="text/javascript" src="js/jquery.min.js"></script>
+   <script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/jquery.min.js"></script>
 	<!-- HTML5 Shiv events -->
    <script type="text/javascript" src="js/modernizr.custom.11889.js"></script>
     <!-- HTML5 Shiv events (end)-->
-   <script type="text/javascript" src="js/nav-resp.js"></script>
+   <script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/nav-resp.js"></script>
 
 	<!-- Favicons
   ================================================== -->
-	<link rel="shortcut icon" href="images/favicon.ico" />
+	<link rel="shortcut icon" href="${ctxPath}/static/Salaryweb/images/favicon.ico" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body>
@@ -39,11 +39,16 @@
 
 <div id="wrap">
 <header id="header" class="container">
-<div class="top-link"><a href="contact.html">登录/注册</a></div>
-<div class="four columns"><a href="#"><img src="images/logo.png" /></a></div>
+<div class="top-link"><a href="${ctxPath}/login">登录/注册</a></div>
+<div class="four columns"><a href="#"><img src="${ctxPath}/static/Salaryweb/images/logo.png" /></a></div>
 <nav id="nav-wrap" class="twelve columns">
 					<ul id="nav">
-					‘’
+						<li><a href="${ctxPath}/salaryIndex">首页</a></li>
+						<li><a href="${ctxPath}/salaryWeb/salaryIndexAbout">平台介绍</a></li>
+						<li><a href="${ctxPath}/salaryWeb/salaryIndexServices">岗位薪酬</a></li>
+						<li><a href="${ctxPath}/salaryWeb/salaryIndexPortfolio3col">行业薪酬</a></li>
+						<li><a href="${ctxPath}/salaryWeb/salaryIndexBlog">薪酬查询</a></li>
+						<li><a href="${ctxPath}/salaryWeb/salaryIndexBlogSingle">专项报告</a></li>					<!--‘’
 				<li><a href="index.html">首页</a></li>
 				<li><a href="about.html">平台介绍</a></li>
 				<li><a href="#">岗位薪酬
@@ -68,12 +73,12 @@
 				</li>
 				<li><a href="blog.html">薪酬查询</a></li>
 				<li><a href="blog-single.html">专项报告</a></li>
-			</ul>
+			</ul>-->
 	</nav>
 		<!-- /nav-wrap -->
 </header><!-- end-header -->
 <section id="full-width">
-<img src="images/hero-pages2.jpg" class="full-width" />
+<img src="${ctxPath}/static/Salaryweb/images/hero-pages2.jpg" class="full-width" />
 <div class="page-subtitle"> 
 <h3>Portfolio Item</h3>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
@@ -93,28 +98,28 @@
 				<div class="slides_container">
 					<div class="slide">
 						<a href="#" title="Set 1" target="_blank">
-                        <img src="images/slide1/slide-1.jpg" alt="Slide 1" border="0" /></a>
+                        <img src="${ctxPath}/static/Salaryweb/images/slide1/slide-1.jpg" alt="Slide 1" border="0" /></a>
 						<div class="caption">
 							<p><a href="#">www.example1.com </a>- Example Project at April</p>
 						</div>
 					</div>
 					<div class="slide">
 						<a href="#" title="Set 2" target="_blank">
-                        <img src="images/slide1/slide-2.jpg" alt="Slide 2" border="0" /></a>
+                        <img src="${ctxPath}/static/Salaryweb/images/slide1/slide-2.jpg" alt="Slide 2" border="0" /></a>
 						<div class="caption">
 							<p><a href="#">www.example2.com </a>- Example 2 Project at June</p>
 						</div>
 					</div>
 					<div class="slide">
 						<a href="#" title="Set 3" target="_blank">
-                        <img src="images/slide1/slide-3.jpg" alt="Slide 3" border="0" /></a>
+                        <img src="${ctxPath}/static/Salaryweb/images/slide1/slide-3.jpg" alt="Slide 3" border="0" /></a>
 						<div class="caption">
 							<p><a href="#">www.example3.com </a>- Example 3 Project at July</p>
 						</div>
 					</div>
 				</div>
-				<a href="#" class="prev"><img src="images/slide1/arrow-prev.png" border="0" /></a>
-				<a href="#" class="next"><img src="images/slide1/arrow-next.png" border="0" /></a>
+				<a href="#" class="prev"><img src="${ctxPath}/static/Salaryweb/images/slide1/arrow-prev.png" border="0" /></a>
+				<a href="#" class="next"><img src="${ctxPath}/static/Salaryweb/images/slide1/arrow-next.png" border="0" /></a>
 			</div>
 			
 		</div><!--example Over-->
@@ -133,7 +138,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo tristiq
 <div class="eight columns">
 <h4 class="subtitle">Testimonials:</h4>
 <div class="block-q1">
-<p><img src="images/quote-ico1.png" /></p>
+<p><img src="${ctxPath}/static/Salaryweb/images/quote-ico1.png" /></p>
 <p>Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis.
 <br />
 <em><strong>— Donie Boil</strong>, STW Business</em>
@@ -141,7 +146,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo tristiq
 </div>
 
 <div class="block-q2">
-<p><img src="images/quote-ico1.png" /></p>
+<p><img src="${ctxPath}/static/Salaryweb/images/quote-ico1.png" /></p>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor sollicitudin dignissim cursus.
 <br />
 <em><strong>— John Smith</strong>, Viona Business</em>
@@ -166,7 +171,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo tristiq
 	<footer id="footer" align="center">
 <div class="container footer-in">
 <div class="disclaimer four columns" align="left">
-<h4>Disclaimer <img src="images/footer-p1.png" /></h4>
+<h4>Disclaimer <img src="${ctxPath}/static/Salaryweb/images/footer-p1.png" /></h4>
 <br />
 <p>
 Important: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at felis mi, at auctor mi. Donec vel nibh sem. Etiam ut lacus a dui accumsan accumsan. 
@@ -176,21 +181,21 @@ Important: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at fel
   <a href="#" class="terms">Terms of Service</a> | <a href="#" class="terms">Privacy Policy</a></div>
   </div><!-- content220 -->
 <div class="three columns navi2" align="left">
-<h4>Navigation <img src="images/footer-p3.png" /></h4>
+<h4>Navigation <img src="${ctxPath}/static/Salaryweb/images/footer-p3.png" /></h4>
 <br />
-<p><a href="#"><img src="images/rowp6.png" />Services</a></p>
+<p><a href="#"><img src="${ctxPath}/static/Salaryweb/images/rowp6.png" />Services</a></p>
 
-<p><a href="#"><img src="images/rowp6.png" />Our Portfolio</a></p>
+<p><a href="#"><img src="${ctxPath}/static/Salaryweb/images/rowp6.png" />Our Portfolio</a></p>
 
-<p><a href="#"><img src="images/rowp6.png" />Blog</a></p>
+<p><a href="#"><img src="${ctxPath}/static/Salaryweb/images/rowp6.png" />Blog</a></p>
 
-<p><a href="#"><img src="images/rowp6.png" />Prices</a></p>
+<p><a href="#"><img src="${ctxPath}/static/Salaryweb/images/rowp6.png" />Prices</a></p>
 
-<p><a href="#"><img src="images/rowp6.png" />Contact Form</a></p>
+<p><a href="#"><img src="${ctxPath}/static/Salaryweb/images/rowp6.png" />Contact Form</a></p>
 </div><!-- end-navi2 -->
 
 <div class="five columns" align="left">
-<h4>Newsletter <img src="images/footer-p2.png" /></h4>
+<h4>Newsletter <img src="${ctxPath}/static/Salaryweb/images/footer-p2.png" /></h4>
 <br />
 <p>Subscribe to our newsletter to always be up to date! See more, learn more.</p>
 <form action="" method="post" id="frmSubscribe" />
@@ -199,27 +204,27 @@ Important: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at fel
 </form>
 <div class="clear"></div>
 <div class="social-icons">
-<a href="#"><img src="images/social_twitter.png" align="right" /></a>
-<a href="#"><img src="images/social_facebook.png" align="right" /></a>
-<a href="#"><img src="images/social_vimeo.png" align="right" /></a>
+<a href="#"><img src="${ctxPath}/static/Salaryweb/images/social_twitter.png" align="right" /></a>
+<a href="#"><img src="${ctxPath}/static/Salaryweb/images/social_facebook.png" align="right" /></a>
+<a href="#"><img src="${ctxPath}/static/Salaryweb/images/social_vimeo.png" align="right" /></a>
 </div><!-- end-social-icons -->
 </div><!-- end-follow2 -->
 
 <div class="four columns" align="left">
-<h4>Contact <img src="images/footer-p4.png" /></h4>
+<h4>Contact <img src="${ctxPath}/static/Salaryweb/images/footer-p4.png" /></h4>
 <br />
-<p><img src="images/social_address.png" align="left" />&nbsp;<strong>Address:</strong>
+<p><img src="${ctxPath}/static/Salaryweb/images/social_address.png" align="left" />&nbsp;<strong>Address:</strong>
 <br />
 No.28 - 63739 street lorem ipsum City, Country</p>
 
-<p><img src="images/social_phone.png" align="left" />&nbsp;<strong>Phone:</strong>
+<p><img src="${ctxPath}/static/Salaryweb/images/social_phone.png" align="left" />&nbsp;<strong>Phone:</strong>
 <br />
 + 1 (234) 567 8901<br />
 </p>
 
-<p><img src="images/social_mail.png" align="left" />&nbsp;<strong>Email:</strong>
+<p><img src="${ctxPath}/static/Salaryweb/images/social_mail.png" align="left" />&nbsp;<strong>Email:</strong>
 <br />
-support@yoursite.com<br />
+support yoursite.com<br />
 </p>
 </div><!-- end-contact2 -->
 </div><!-- end-footer-in -->
@@ -230,12 +235,12 @@ support@yoursite.com<br />
 </div><!-- end-wrap -->
 <!-- End Document
 ================================================== -->
-<script type="text/javascript" src="js/slide1.min.jquery.js"></script>
+<script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/slide1.min.jquery.js"></script>
 	<script>
 		$(function(){
 			$('#slides').slides({
 				preload: true,
-				preloadImage: 'images/slide1/loading.gif',
+				preloadImage: '${ctxPath}/static/Salaryweb/images/slide1/loading.gif',
 				play: 5000,
 				pause: 2500,
 				hoverPause: true,
@@ -265,8 +270,8 @@ support@yoursite.com<br />
 			});
 		});
 	</script>
-		<script type="text/javascript" src="js/latest-twitt.js"></script>
-	<script type="text/javascript" src="js/vincie-send.js"></script>
+		<script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/latest-twitt.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/vincie-send.js"></script>
 
 </body>
 </html>
