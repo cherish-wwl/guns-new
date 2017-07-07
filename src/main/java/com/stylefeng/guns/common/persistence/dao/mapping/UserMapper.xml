@@ -18,7 +18,9 @@
 		<result column="deptid" property="deptid" />
 		<result column="status" property="status" />
 		<result column="createtime" property="createtime" />
+		<result column="lastlogin" property="lastlogin"/>
 		<result column="version" property="version" />
+		<result column="priv" property="priv"/>
 	</resultMap>
 
 </mapper>

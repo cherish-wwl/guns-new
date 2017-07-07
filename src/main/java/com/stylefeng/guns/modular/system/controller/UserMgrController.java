@@ -177,7 +177,7 @@ public class UserMgrController extends BaseController {
         }
 
         // 判断账号是否重复
-        User theUser = managerDao.getByAccount(user.getAccount());
+        User theUser = managerDao.getByAccount(user.getUsername());
         if (theUser != null) {
             throw new BussinessException(BizExceptionEnum.USER_ALREADY_REG);
         }
