@@ -22,6 +22,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 import static com.stylefeng.guns.core.support.HttpKit.getIp;
@@ -181,6 +183,23 @@ public class LoginController extends BaseController {
         return REDIRECT + "/";
     }
 
+    /**
+     * 用户注册
+     */
+    @RequestMapping(value = "/register",method = RequestMethod.POST)
+    public String register(HttpServletRequest request) {
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        String password2 = request.getParameter("password2");
+        if(password.equals(password2)){
+            User user = new User();
+            user.setAccount(username);
+            user.setPassword(password);
+            return "login.html";
+        }else {
+            return "register.html";
+        }
+    }
     /**
      * 退出登录
      */
