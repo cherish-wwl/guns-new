@@ -1,6 +1,10 @@
 package com.stylefeng.guns.modular.system.controller;
 
 import com.google.code.kaptcha.Constants;
+import com.stylefeng.guns.common.annotion.Permission;
+import com.stylefeng.guns.common.annotion.log.BussinessLog;
+import com.stylefeng.guns.common.constant.state.ManagerStatus;
+import com.stylefeng.guns.common.constant.tips.Tip;
 import com.stylefeng.guns.common.controller.BaseController;
 import com.stylefeng.guns.common.exception.BizExceptionEnum;
 import com.stylefeng.guns.common.exception.BussinessException;
@@ -14,16 +18,25 @@ import com.stylefeng.guns.core.shiro.ShiroKit;
 import com.stylefeng.guns.core.shiro.ShiroUser;
 import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.modular.system.dao.MenuDao;
+import com.stylefeng.guns.modular.system.dao.UserMgrDao;
+import com.stylefeng.guns.modular.system.factory.UserFactory;
+import com.stylefeng.guns.modular.system.transfer.ManagerUser;
+import com.stylefeng.guns.modular.system.transfer.UserDto;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
+import java.util.Date;
 import java.util.List;
 
 import static com.stylefeng.guns.core.support.HttpKit.getIp;
@@ -43,6 +56,8 @@ public class LoginController extends BaseController {
     @Autowired
     UserMapper userMapper;
 
+    @Resource
+    private UserMgrDao managerDao;
     /**
      * 跳转到主页
      */
@@ -140,11 +155,26 @@ public class LoginController extends BaseController {
     /**
      * 注册新用户
      */
-    @RequestMapping(value = "/salaryWeb/registerNewUser", method = RequestMethod.POST)
-    public String registerNewUser() {
-        String username = super.getPara("username").trim();
-        String password = super.getPara("password").trim();
-        return "/register.html";
+    @RequestMapping(value="/salaryWeb/registerUser")
+    public String registerUser(@Valid UserDto user,BindingResult result) {
+        if (result.hasErrors()) {
+            throw new BussinessException(BizExceptionEnum.REQUEST_NULL);
+        }
+        // 判断账号是否重复
+        User theUser = managerDao.getByAccount(user.getUsername());
+        if (theUser != null) {
+            throw new BussinessException(BizExceptionEnum.USER_ALREADY_REG);
+        }
+        // 完善账号信息
+        user.setUsername(user.getUsername());
+        user.setSalt(ShiroKit.getRandomSalt(5));
+        user.setPassword(ShiroKit.md5(user.getPassword(), user.getSalt()));
+        user.setStatus(ManagerStatus.OK.getCode());
+        user.setCreatetime(new Date());
+        user.setPhone(user.getPhone());
+        System.out.println("account:"+user.getUsername()+",phone:"+user.getPhone());
+        this.userMapper.insert(UserFactory.createUser(user));
+        return REDIRECT+"/login";
     }
 
 
@@ -181,24 +211,6 @@ public class LoginController extends BaseController {
         ShiroKit.getSession().setAttribute("sessionFlag",true);
 
         return REDIRECT + "/";
-    }
-
-    /**
-     * 用户注册
-     */
-    @RequestMapping(value = "/register",method = RequestMethod.POST)
-    public String register(HttpServletRequest request) {
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        String password2 = request.getParameter("password2");
-        if(password.equals(password2)){
-            User user = new User();
-            user.setAccount(username);
-            user.setPassword(password);
-            return "login.html";
-        }else {
-            return "register.html";
-        }
     }
     /**
      * 退出登录
