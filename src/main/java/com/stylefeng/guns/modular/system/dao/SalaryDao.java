@@ -18,7 +18,21 @@ public interface SalaryDao {
     List<Map<String,Object>> selectTrades();
 
     /**
-     * 根据行业id查询其下的专业列表
+     * 根据父代码查询子集
+      * @param gradecode
+     * @return
+     */
+    List<Map<String,Object>> selectSonByTrades(@Param("grandcode") String gradecode);
+
+    /**
+     * 根据二级id查询三级列表
+     * @param
+     * @return
+     */
+    List<Map<String,Object>> selectThirdByParentId(@Param("parentId") String parentId);
+
+    /**
+     *
      * @param tradeId
      * @return
      */

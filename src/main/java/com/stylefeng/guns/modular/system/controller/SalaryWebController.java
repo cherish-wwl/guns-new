@@ -4,6 +4,7 @@ import com.stylefeng.guns.common.controller.BaseController;
 import com.stylefeng.guns.modular.system.dao.SalaryDao;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -47,11 +48,31 @@ public class SalaryWebController extends BaseController {
     }*/
 
     @RequestMapping("/trade")
+    @ResponseBody
     public String trade()throws Exception{
         List list = salaryDao.selectTrades();
         System.out.println(list);
-        return PREFIX + "portfolio3col.html";
+        return "111";
     }
 
+    @RequestMapping("/tradeSecond")
+    @ResponseBody
+    public String tradeSecond(String gradecode)throws Exception{
+        List list = salaryDao.selectSonByTrades(gradecode);
+        System.out.println(list);
+        return "123";
+    }
+
+    @RequestMapping("/tradeThird")
+    @ResponseBody
+    public String tradeThird(String parentId)throws Exception{
+        List list = salaryDao.selectThirdByParentId(parentId);
+        System.out.println(list);
+        return "123";
+    }
+    /*@RequestMapping("/tradeSon")
+    public String tradeSon()throws Exception{
+        return "111";
+    }*/
 
 }
