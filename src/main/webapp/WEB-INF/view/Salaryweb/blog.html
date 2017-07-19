@@ -18,7 +18,7 @@
 	<!-- CSS
   ================================================== -->
 	<link rel="stylesheet" href="${ctxPath}/static/Salaryweb/css/style.css" type="text/css" />
-   
+	<link rel="shortcut icon" href="${ctxPath}/static/Salaryweb/images/favicon.ico" />
 
 	<!-- JS
   ================================================== -->
@@ -27,11 +27,22 @@
    <script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/modernizr.custom.11889.js"></script>
     <!-- HTML5 Shiv events (end)-->
    <script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/nav-resp.js"></script>
-	<script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/web-js/blog.js"></script>
+
+
+	<!-- jqGrid组件基础样式包-必要 -->
+	<link rel="stylesheet" href="${ctxPath}/static/Salaryweb/jQgrid/css/ui.jqgrid.css" />
+	<!-- jqGrid主题包-非必要 -->
+	<!-- 在jqgrid/css/css这个目录下还有其他的主题包，可以尝试更换看效果 -->
+	<link rel="stylesheet" href="${ctxPath}/static/Salaryweb/jQgrid/css/css/redmond/jquery-ui-1.8.16.custom.css" />
+	<!-- jqGrid插件包-必要 -->
+	<script type="text/javascript" src="${ctxPath}/static/Salaryweb/jQgrid/js/jquery.jqGrid.src.js"></script>
+	<!-- jqGrid插件的多语言包-非必要 -->
+	<!-- 在jqgrid/js/i18n下还有其他的多语言包，可以尝试更换看效果 -->
+	<script type="text/javascript" src="${ctxPath}/static/Salaryweb/jQgrid/js/i18n/grid.locale-cn.js"></script>
 	<!-- Favicons
   ================================================== -->
-	<link rel="shortcut icon" href="${ctxPath}/static/Salaryweb/images/favicon.ico" />
 
+	<script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/web-js/blog.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 
 <body>
@@ -81,6 +92,8 @@
 						1.查询条件：  <br />
 						2.数据说明：.
 					</p>
+					<table id="list2"></table>
+					<div id="pager2"></div>
 					<!--
 					<a href="blog-single.html" class="readmore">read more</a>
 					-->

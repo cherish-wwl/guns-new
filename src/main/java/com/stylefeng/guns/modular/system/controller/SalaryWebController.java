@@ -4,6 +4,7 @@ import com.stylefeng.guns.common.controller.BaseController;
 import com.stylefeng.guns.modular.system.dao.SalaryDao;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -12,7 +13,7 @@ import java.util.List;
  * Created by Cherish on 2017/7/5.
  */
 @Controller
-@RequestMapping("/salaryWeb")
+@RequestMapping("/salary")
 public class SalaryWebController extends BaseController {
 
     private static String PREFIX = "/Salaryweb/";
@@ -47,10 +48,11 @@ public class SalaryWebController extends BaseController {
     }*/
 
     @RequestMapping("/trade")
+    @ResponseBody
     public String trade()throws Exception{
         List list = salaryDao.selectTrades();
         System.out.println(list);
-        return PREFIX + "portfolio3col.html";
+        return   "hahaha";
     }
 
 
