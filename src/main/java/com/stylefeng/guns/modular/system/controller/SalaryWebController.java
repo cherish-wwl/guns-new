@@ -13,7 +13,7 @@ import java.util.List;
  * Created by Cherish on 2017/7/5.
  */
 @Controller
-@RequestMapping("/salary")
+@RequestMapping("/salaryWeb")
 public class SalaryWebController extends BaseController {
 
     private static String PREFIX = "/Salaryweb/";
@@ -52,8 +52,27 @@ public class SalaryWebController extends BaseController {
     public String trade()throws Exception{
         List list = salaryDao.selectTrades();
         System.out.println(list);
-        return   "hahaha";
+        return "111";
     }
 
+    @RequestMapping("/tradeSecond")
+    @ResponseBody
+    public String tradeSecond(String gradecode)throws Exception{
+        List list = salaryDao.selectSonByTrades(gradecode);
+        System.out.println(list);
+        return "123";
+    }
+
+    @RequestMapping("/tradeThird")
+    @ResponseBody
+    public String tradeThird(String parentId)throws Exception{
+        List list = salaryDao.selectThirdByParentId(parentId);
+        System.out.println(list);
+        return "123";
+    }
+    /*@RequestMapping("/tradeSon")
+    public String tradeSon()throws Exception{
+        return "111";
+    }*/
 
 }
