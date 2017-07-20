@@ -4,6 +4,7 @@ import com.stylefeng.guns.common.controller.BaseController;
 import com.stylefeng.guns.modular.system.dao.SalaryDao;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
@@ -22,7 +23,7 @@ public class SalaryWebController extends BaseController {
     /**
      * 跳转到查看管理员列表的页面
      */
-    /*@RequestMapping("/about")
+    @RequestMapping("/about")
      public String about() {
         return PREFIX + "about.html";
     }
@@ -45,7 +46,7 @@ public class SalaryWebController extends BaseController {
     @RequestMapping("/blogSingle")
     public String blogSingle() {
         return PREFIX + "blog-single.html";
-    }*/
+    }
 
     @RequestMapping("/trade")
     @ResponseBody
@@ -69,6 +70,14 @@ public class SalaryWebController extends BaseController {
         List list = salaryDao.selectThirdByParentId(parentId);
         System.out.println(list);
         return "123";
+    }
+
+    @RequestMapping(value = "/tradeGroupMethod1",method = RequestMethod.POST)
+    @ResponseBody
+    public String tradeGroupMethod1()throws Exception{
+        List list = salaryDao.selectGroupMethod1();
+        System.out.println(list);
+        return "111";
     }
     /*@RequestMapping("/tradeSon")
     public String tradeSon()throws Exception{

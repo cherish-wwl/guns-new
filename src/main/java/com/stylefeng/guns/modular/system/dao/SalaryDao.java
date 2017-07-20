@@ -45,5 +45,6 @@ public interface SalaryDao {
      *//*
     List<Map<String,Object>> selectMajorByGroup(@Param("trade") String tradeId);*/
 
+    List<Map<String,Object>> selectGroupMethod1();
 
 }
