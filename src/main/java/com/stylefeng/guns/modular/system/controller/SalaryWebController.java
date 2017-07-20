@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Cherish on 2017/7/5.
@@ -50,18 +51,18 @@ public class SalaryWebController extends BaseController {
 
     @RequestMapping("/trade")
     @ResponseBody
-    public String trade()throws Exception{
-        List list = salaryDao.selectTrades();
-        System.out.println(list);
-        return "111";
+    public List<Map<String,Object>> trade()throws Exception{
+        List<Map<String,Object>> map = salaryDao.selectTrades();
+        System.out.println(map);
+        return map;
     }
 
     @RequestMapping("/tradeSecond")
     @ResponseBody
-    public String tradeSecond(String gradecode)throws Exception{
+    public Object tradeSecond(String gradecode)throws Exception{
         List list = salaryDao.selectSonByTrades(gradecode);
         System.out.println(list);
-        return "123";
+        return list;
     }
 
     @RequestMapping("/tradeThird")
