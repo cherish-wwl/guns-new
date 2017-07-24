@@ -1,0 +1,38 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal" id="bonusInfoForm">
+
+            <input type="hidden" id="id" value="">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                    <#input id="personal_id" name="人员" underline="true"/>
+                    <#input id="OrgName" name="机构名称" underline="true"/>
+                    <#input id="DeptName" name="部门名称" underline="true"/>
+                    <#input id="achievements_bounus" name="绩效奖金" underline="true"/>
+                    <#input id="year_bounus" name="年度奖金" underline="true"/>
+                    <#input id="quarter_bounus" name="季度奖金" underline="true"/>
+                </div>
+
+                <div class="col-sm-6">
+                    <#input id="explore_bounus" name="开拓奖金" underline="true"/>
+                    <#input id="attendance_bounus" name="全勤奖金" underline="true"/>
+                    <#input id="special_bounus" name="特别年薪奖" underline="true"/>
+                    <#input id="bo_date" name="日期" underline="true"/>
+                    <#input id="PostName" name="职位" underline="true"/>
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="BonusInfoDlg.addSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="BonusInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/system/bonus/bonus_info.js"></script>
+@}

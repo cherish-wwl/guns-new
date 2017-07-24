@@ -7,11 +7,11 @@ import com.stylefeng.guns.common.constant.tips.Tip;
 import com.stylefeng.guns.common.controller.BaseController;
 import com.stylefeng.guns.common.exception.BizExceptionEnum;
 import com.stylefeng.guns.common.exception.BussinessException;
-import com.stylefeng.guns.common.persistence.model.Salary;
+import com.stylefeng.guns.common.persistence.model.Bonus;
 import com.stylefeng.guns.core.cache.CacheKit;
 import com.stylefeng.guns.core.log.LogObjectHolder;
 import com.stylefeng.guns.core.util.ToolUtil;
-import com.stylefeng.guns.modular.system.dao.SalaryDao;
+import com.stylefeng.guns.modular.system.dao.BonusDao;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -26,83 +26,82 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 测试控制器
+ * 奖金控制器
  *
  * @author fengshuonan
- * @Date 2017-07-21 12:30:22
+ * @Date 2017-07-24 12:48:19
  */
 @Controller
-@RequestMapping("/salary")
-public class SalaryController extends BaseController {
+@RequestMapping("/bonus")
+public class BonusController extends BaseController {
 
-    private String PREFIX = "/system/salary/";
+    private String PREFIX = "/system/bonus/";
 
     @Resource
-    private SalaryDao salaryDao;
-
+    private BonusDao bonusDao;
 
     /**
-     * 跳转到工资首页
+     * 跳转到奖金首页
      */
     @RequestMapping("")
     public String index() {
-        return PREFIX + "salary.html";
+        return PREFIX + "bonus.html";
     }
 
     /**
-     * 跳转到添加测试
+     * 跳转到添加奖金
      */
-    @RequestMapping("/salary_add")
-    public String salaryAdd() {
-        return PREFIX + "salary_add.html";
+    @RequestMapping("/bonus_add")
+    public String bonusAdd() {
+        return PREFIX + "bonus_add.html";
     }
 
     /**
-     * 跳转到修改页面
+     * 跳转到修改奖金
      */
     @Permission(Const.ADMIN_NAME)
-    @RequestMapping("/salary_update/{salaryId}")
-    public String salaryUpdate(@PathVariable Integer salaryId, Model model) {
-        if (ToolUtil.isEmpty(salaryId)) {
+    @RequestMapping("/bonus_update/{bonusId}")
+    public String bonusUpdate(@PathVariable Integer bonusId, Model model) {
+        if (ToolUtil.isEmpty(bonusId)) {
             throw new BussinessException(BizExceptionEnum.REQUEST_NULL);
         }
-        Salary salary = this.salaryDao.selectById(salaryId);
-        model.addAttribute(salary);
-        LogObjectHolder.me().set(salary);//被修改的been临时存放
-        return PREFIX + "salary_edit.html";
+        Bonus bonus = this.bonusDao.selectById(bonusId);
+        model.addAttribute(bonus);
+        LogObjectHolder.me().set(bonus);//被修改的been临时存放
+        return PREFIX + "bonus_edit.html";
     }
 
     /**
-     * 获取薪酬列表
+     * 获取奖金列表
      */
     @RequestMapping(value = "/list")
     @ResponseBody
     public Object list() {
-        List<Map<String,Object>> list = salaryDao.selectSalaries();
-        System.out.println(list);
+        List<Map<String,Object>> list = bonusDao.selectBonus();
         return list;
     }
 
     /**
-     * 新增工资
+     * 新增奖金
      */
     @RequestMapping(value = "/add")
     @ResponseBody
-    public Tip add(Salary salary) {
-        salaryDao.add(salary);
+    public Tip add(Bonus bonus) {
+        bonusDao.add(bonus);
         return SUCCESS_TIP;
     }
 
     /**
-     * 删除薪酬数据
+     * 删除奖金
      */
+    @Permission(Const.ADMIN_NAME)
     @RequestMapping(value = "/delete")
     @ResponseBody
     public Tip delete(@RequestParam Integer id) {
         if(ToolUtil.isEmpty(id)){
             throw new BussinessException(BizExceptionEnum.REQUEST_NULL);
         }
-        salaryDao.deleteById(id);
+        bonusDao.deleteById(id);
         //删除缓存
         CacheKit.removeAll(Cache.CONSTANT);
         return SUCCESS_TIP;
@@ -110,21 +109,21 @@ public class SalaryController extends BaseController {
 
 
     /**
-     * 修改
+     * 修改奖金
      */
     @Permission(Const.ADMIN_NAME)
     @RequestMapping(value = "/update")
     @ResponseBody
-    public Tip update(@Valid Salary salary,BindingResult result) {
+    public Object update(@Valid Bonus bonus,BindingResult result) {
         if (result.hasErrors()) {
             throw new BussinessException(BizExceptionEnum.REQUEST_NULL);
         }
-        this.salaryDao.updateSalary(salary);
+        this.bonusDao.updateBonus(bonus);
         return super.SUCCESS_TIP;
     }
 
     /**
-     * 详情
+     * 奖金详情
      */
     @RequestMapping(value = "/detail")
     @ResponseBody
