@@ -10,16 +10,19 @@ import com.stylefeng.guns.common.exception.BussinessException;
 import com.stylefeng.guns.common.persistence.dao.SalaryMapper;
 import com.stylefeng.guns.common.persistence.model.Salary;
 import com.stylefeng.guns.core.cache.CacheKit;
+import com.stylefeng.guns.core.log.LogObjectHolder;
 import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.modular.system.dao.SalaryDao;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Map;
 
@@ -60,8 +63,15 @@ public class SalaryController extends BaseController {
     /**
      * 跳转到修改页面
      */
+    @Permission(Const.ADMIN_NAME)
     @RequestMapping("/salary_update/{salaryId}")
     public String salaryUpdate(@PathVariable Integer salaryId, Model model) {
+        if (ToolUtil.isEmpty(salaryId)) {
+            throw new BussinessException(BizExceptionEnum.REQUEST_NULL);
+        }
+        Salary salary = this.salaryDao.selectById(salaryId);
+        model.addAttribute(salary);
+        LogObjectHolder.me().set(salary);//被修改的been临时存放
         return PREFIX + "salary_edit.html";
     }
 
@@ -104,17 +114,21 @@ public class SalaryController extends BaseController {
 
 
     /**
-     * 修改测试
+     * 修改
      */
     @Permission(Const.ADMIN_NAME)
     @RequestMapping(value = "/update")
     @ResponseBody
-    public Object update() {
+    public Tip update(@Valid Salary salary,BindingResult result) {
+        if (result.hasErrors()) {
+            throw new BussinessException(BizExceptionEnum.REQUEST_NULL);
+        }
+        this.salaryDao.updateSalary(salary);
         return super.SUCCESS_TIP;
     }
 
     /**
-     * 测试详情
+     * 详情
      */
     @RequestMapping(value = "/detail")
     @ResponseBody

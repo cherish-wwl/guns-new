@@ -84,7 +84,7 @@ Salary.delete = function () {
         }, function (data) {
             Feng.error("删除失败!" + data.responseJSON.message + "!");
         });
-        ajax.set("id",this.seItem.id);
+        ajax.set("salaryId",this.seItem.id);
         ajax.start();
     }
 };
@@ -94,7 +94,6 @@ Salary.delete = function () {
  */
 Salary.search = function () {
     var queryData = {};
-    queryData['id'] = $("#id").val();
     queryData['personal_id'] = $("#personal_id").val();
     queryData['base_salary'] = $("#base_salary").val();
     queryData['post_salary'] = $("#post_salary").val();

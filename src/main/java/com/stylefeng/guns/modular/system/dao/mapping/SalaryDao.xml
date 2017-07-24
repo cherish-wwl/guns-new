@@ -20,4 +20,13 @@
     <delete id="deleteById">
         DELETE FROM salary WHERE id=#{id}
     </delete>
+
+    <select id="selectById" parameterType="int" resultType="com.stylefeng.guns.common.persistence.model.Salary">
+        SELECT * FROM salary where id=#{salaryId}
+    </select>
+
+    <update id="updateSalary">
+        UPDATE salary set OrgName=#{OrgName},personal_id=#{personal_id},DeptID=#{DeptID},DeptName=#{DeptName},PostName=#{PostName},ParentTradid=#{ParentTradid},TradID=#{TradID},EmpName=#{EmpName},base_salary=#{base_salary},post_salary=#{post_salary},grade_salary=#{grade_salary},years_salary=#{years_salary},skill_salary=#{skill_salary},archives_salary=#{archives_salary},overtime_salary=#{overtime_salary},sal_date=#{sal_date},region=#{region},StatFlag=#{StatFlag}
+        WHERE id=#{id}
+    </update>
 </mapper>

@@ -21,4 +21,8 @@ public interface SalaryDao {
 
     void deleteById(Integer id);
 
+    Salary selectById(Integer salaryId);
+
+    void updateSalary(Salary salary);
+
 }

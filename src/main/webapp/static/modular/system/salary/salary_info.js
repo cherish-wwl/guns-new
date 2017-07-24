@@ -44,7 +44,7 @@ SalaryInfoDlg.close = function() {
  * 收集数据
  */
 SalaryInfoDlg.collectData = function() {
-    this.set('id');
+    this.set('id').set('personal_id').set('base_salary').set('post_salary').set('years_salary').set('grade_salary').set('skill_salary').set('archives_salary').set('overtime_salary').set('sal_date');
 }
 
 /**
