@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stylefeng.guns.common.persistence.dao.SalaryMapper">
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.stylefeng.guns.common.persistence.model.Salary">
+        <id column="id" property="id" />
+        <result column="OrgName" property="OrgName" />
+        <result column="personal_id" property="personal_id" />
+        <result column="DeptID" property="DeptID" />
+        <result column="DeptName" property="DeptName" />
+        <result column="PostName" property="PostName" />
+        <result column="ParentTradid" property="ParentTradid" />
+        <result column="TradID" property="TradID" />
+        <result column="EmpName" property="EmpName" />
+        <result column="base_salary" property="base_salary" />
+        <result column="post_salary" property="post_salary" />
+        <result column="grade_salary" property="grade_salary" />
+        <result column="years_salary" property="years_salary" />
+        <result column="skill_salary" property="skill_salary" />
+        <result column="archives_salary" property="archives_salary" />
+        <result column="overtime_salary" property="overtime_salary" />
+        <result column="sal_date" property="sal_date" />
+        <result column="region" property="region" />
+        <result column="StatFlag" property="StatFlag"/>
+        <result column="reserve2" property="reserve2" />
+        <result column="reserve3" property="reserve3"/>
+
+    </resultMap>
+</mapper>

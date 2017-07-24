@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stylefeng.guns.modular.system.dao.SalaryWebDao">
+    <select id="selectTrades" resultType="map">
+        SELECT DISTINCT granddescription FROM trade_dictionary
+    </select>
+
+    <select id="selectSonByTrades" resultType="map">
+       SELECT DISTINCT Parentdescription FROM trade_dictionary where grandcode=#{grandcode}
+    </select>
+
+    <select id="selectThirdByParentId" resultType="map">
+        SELECT DISTINCT select DISTINCT tradeName from trade_dictionary
+        WHERE parentId =#{parentId}
+    </select>
+
+    <select id="selectGroupMethod1" resultType="map">
+        SELECT region,postName,Avg_sal,max_sal,min_sal FROM post_sal_stat where postId=#{postId}
+    </select>
+    <select id="selectMajorNameByTradeId" resultType="map">
+       SELECT ma.majorName FROM trade_dictionary trd,major_dictionary ma
+       WHERE trd.tradeId = ma.trade_id AND trd.tradeId = #{tradeId}
+    </select>
+</mapper>

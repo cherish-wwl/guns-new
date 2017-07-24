@@ -1,7 +1,7 @@
 package com.stylefeng.guns.modular.system.controller;
 
 import com.stylefeng.guns.common.controller.BaseController;
-import com.stylefeng.guns.modular.system.dao.SalaryDao;
+import com.stylefeng.guns.modular.system.dao.SalaryWebDao;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,7 +20,7 @@ public class SalaryWebController extends BaseController {
 
     private static String PREFIX = "/Salaryweb/";
     @Resource
-    private SalaryDao salaryDao;
+    private SalaryWebDao salaryWebDao;
     /**
      * 跳转到查看管理员列表的页面
      */
@@ -52,7 +52,7 @@ public class SalaryWebController extends BaseController {
     @RequestMapping("/trade")
     @ResponseBody
     public List<Map<String,Object>> trade()throws Exception{
-        List<Map<String,Object>> map = salaryDao.selectTrades();
+        List<Map<String,Object>> map = salaryWebDao.selectTrades();
         System.out.println(map);
         return map;
     }
@@ -60,7 +60,7 @@ public class SalaryWebController extends BaseController {
     @RequestMapping("/tradeSecond")
     @ResponseBody
     public Object tradeSecond(String gradecode)throws Exception{
-        List list = salaryDao.selectSonByTrades(gradecode);
+        List list = salaryWebDao.selectSonByTrades(gradecode);
         System.out.println(list);
         return list;
     }
@@ -68,7 +68,7 @@ public class SalaryWebController extends BaseController {
     @RequestMapping("/tradeThird")
     @ResponseBody
     public String tradeThird(String parentId)throws Exception{
-        List list = salaryDao.selectThirdByParentId(parentId);
+        List list = salaryWebDao.selectThirdByParentId(parentId);
         System.out.println(list);
         return "123";
     }
@@ -76,7 +76,7 @@ public class SalaryWebController extends BaseController {
     @RequestMapping(value = "/tradeGroupMethod1",method = RequestMethod.POST)
     @ResponseBody
     public String tradeGroupMethod1()throws Exception{
-        List list = salaryDao.selectGroupMethod1();
+        List list = salaryWebDao.selectGroupMethod1();
         System.out.println(list);
         return "111";
     }
