@@ -21,4 +21,8 @@
        SELECT ma.majorName FROM trade_dictionary trd,major_dictionary ma
        WHERE trd.tradeId = ma.trade_id AND trd.tradeId = #{tradeId}
     </select>
+
+    <select id="selectPostNamesAndOrigin" resultType="map">
+        SELECT DISTINCT PostName,DISTINCT region FROM salary
+    </select>
 </mapper>

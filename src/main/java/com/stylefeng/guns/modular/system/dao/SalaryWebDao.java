@@ -47,4 +47,6 @@ public interface SalaryWebDao {
 
     List<Map<String,Object>> selectGroupMethod1();
 
+    List<Map<String,Object>> selectPostNamesAndOrigin();
+
 }

@@ -67,22 +67,29 @@ public class SalaryWebController extends BaseController {
 
     @RequestMapping("/tradeThird")
     @ResponseBody
-    public String tradeThird(String parentId)throws Exception{
-        List list = salaryWebDao.selectThirdByParentId(parentId);
+    public Object tradeThird(String parentId)throws Exception{
+        List<Map<String,Object>> list = salaryWebDao.selectThirdByParentId(parentId);
         System.out.println(list);
-        return "123";
+        return list;
     }
 
     @RequestMapping(value = "/tradeGroupMethod1",method = RequestMethod.POST)
     @ResponseBody
-    public String tradeGroupMethod1()throws Exception{
-        List list = salaryWebDao.selectGroupMethod1();
+    public Object tradeGroupMethod1()throws Exception{
+        List<Map<String,Object>> list = salaryWebDao.selectGroupMethod1();
         System.out.println(list);
-        return "111";
+        return list;
     }
     /*@RequestMapping("/tradeSon")
     public String tradeSon()throws Exception{
         return "111";
     }*/
 
+
+    @RequestMapping(value = "/selectPostNamesAndOrigin",method = RequestMethod.POST)
+    @ResponseBody
+    public Object selectPostNamesAndOrigin()throws Exception {
+        List<Map<String,Object>> list = salaryWebDao.selectGroupMethod1();
+        return list;
+    }
 }

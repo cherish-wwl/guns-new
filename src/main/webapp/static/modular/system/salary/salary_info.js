@@ -117,7 +117,7 @@ SalaryInfoDlg.collectData = function() {
 SalaryInfoDlg.validate = function(){
     $("#salaryInfoForm").data("bootstrapValidator").resetForm();
     $("#salaryInfoForm").bootstrapValidator('validate');
-    return $('salaryInfoForm').data('bootstrapValidator').isValid();
+    return $('#salaryInfoForm').data('bootstrapValidator').isValid();
 }
 /**
  * 提交添加
@@ -149,7 +149,9 @@ SalaryInfoDlg.editSubmit = function() {
 
     this.clearData();
     this.collectData();
-
+    if(!this.validate()){
+    return;
+    }
     //提交信息
     var ajax = new $ax(Feng.ctxPath + "/salary/update", function(data){
         Feng.success("修改成功!");

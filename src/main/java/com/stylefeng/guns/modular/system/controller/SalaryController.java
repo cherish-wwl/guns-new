@@ -128,7 +128,7 @@ public class SalaryController extends BaseController {
      */
     @RequestMapping(value = "/detail")
     @ResponseBody
-    public Object detail() {
-        return null;
+    public Object detail(@PathVariable("salarytId") Integer salaryId) {
+        return salaryDao.selectById(salaryId);
     }
 }

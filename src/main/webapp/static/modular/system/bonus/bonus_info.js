@@ -1,5 +1,5 @@
 /**
- * 初始化奖金详情对话框
+ * 初始化测试详情对话框
  */
 var BonusInfoDlg = {
     bonusInfoData : {},
@@ -125,16 +125,14 @@ BonusInfoDlg.close = function() {
 BonusInfoDlg.collectData = function() {
     this.set('id').set('personal_id').set('OrgName').set('DeptName').set('achievements_bounus').set('year_bounus').set('quarter_bounus').set('explore_bounus').set('attendance_bounus').set('special_bounus').set('bo_date').set('PostName');
 }
-
 /**
  * 验证数据是否为空
  */
 BonusInfoDlg.validate = function(){
     $("#bonusInfoForm").data("bootstrapValidator").resetForm();
     $("#bonusInfoForm").bootstrapValidator('validate');
-    return $('bonusInfoForm').data('bootstrapValidator').isValid();
+    return $('#bonusInfoForm').data('bootstrapValidator').isValid();
 }
-
 /**
  * 提交添加
  */
@@ -148,7 +146,6 @@ BonusInfoDlg.addSubmit = function() {
     }
     //提交信息
     var ajax = new $ax(Feng.ctxPath + "/bonus/add", function(data){
-        console.log(data);
         Feng.success("添加成功!");
         window.parent.Bonus.table.refresh();
         BonusInfoDlg.close();
@@ -166,10 +163,6 @@ BonusInfoDlg.editSubmit = function() {
 
     this.clearData();
     this.collectData();
-
-    if(!this.validate()){
-        return
-    }
 
     //提交信息
     var ajax = new $ax(Feng.ctxPath + "/bonus/update", function(data){
