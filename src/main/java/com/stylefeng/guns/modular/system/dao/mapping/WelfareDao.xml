@@ -2,11 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.stylefeng.guns.modular.system.dao.WelfareDao">
     <select id="selectWelfares" resultType="map">
-        SELECT * FROM  salary
+        SELECT * FROM  welfare
     </select>
 
     <insert id="add" useGeneratedKeys="true" keyProperty="id">
-        INSERT into welfare (id,personal_id,OrgName,DeptID,post_allowance,housing_allowance,traffic_allowance,meal_allowance,communication_fee,only_child_fee,sunstroke_fee,pro_women_fee,duty_allowance,special_post_allowance,hydropower_allowance,stationery_expenses,outskirts_allowannce,secrecy_fee,expatriate_allowance,housing_fund,endowment_insurance,medical_insurance,employment_injury_insurance,maternity_insurance,unemployment_insurance,wf_date,PostName) values(#{id},#{personal_id},#{OrgName},#{DeptID},#{post_allowance},#{housing_allowance},#{traffic_allowance},#{meal_allowance},#{communication_fee},#{only_child_fee},#{sunstroke_fee},#{pro_women_fee},#{duty_allowance},#{special_post_allowance},#{hydropower_allowance},#{stationery_expenses},#{outskirts_allowannce},#{secrecy_fee},#{expatriate_allowance},#{housing_fund},#{endowment_insurance},#{medical_insurance},#{employment_injury_insurance},#{maternity_insurance},#{unemployment_insurance},#{wf_date},#{PostName})
+        INSERT into welfare (id,personal_id,OrgName,DeptID,DeptName,post_allowance,housing_allowance,traffic_allowance,meal_allowance,communication_fee,only_child_fee,sunstroke_fee,pro_women_fee,duty_allowance,special_post_allowance,hydropower_allowance,stationery_expenses,outskirts_allowannce,secrecy_fee,expatriate_allowance,housing_fund,endowment_insurance,medical_insurance,employment_injury_insurance,maternity_insurance,unemployment_insurance,wf_date,PostName) values(#{id},#{personal_id},#{OrgName},#{DeptID},#{DeptName},#{post_allowance},#{housing_allowance},#{traffic_allowance},#{meal_allowance},#{communication_fee},#{only_child_fee},#{sunstroke_fee},#{pro_women_fee},#{duty_allowance},#{special_post_allowance},#{hydropower_allowance},#{stationery_expenses},#{outskirts_allowannce},#{secrecy_fee},#{expatriate_allowance},#{housing_fund},#{endowment_insurance},#{medical_insurance},#{employment_injury_insurance},#{maternity_insurance},#{unemployment_insurance},#{wf_date},#{PostName})
     </insert>
 
     <delete id="deleteById">
@@ -17,8 +17,8 @@
         SELECT * FROM welfare where id=#{welfareId}
     </select>
 
-    <update id="updateSalary">
-        UPDATE welfare set personal_id=#{personal_id},OrgName=#{OrgName},DeptID=#{DeptID},post_allowance=#{post_allowance},housing_allowance=#{housing_allowance},traffic_allowance=#{traffic_allowance},meal_allowance=#{meal_allowance},communication_fee=#{communication_fee},only_child_fee=#{only_child_fee},sunstroke_fee=#{sunstroke_fee},pro_women_fee=#{pro_women_fee},duty_allowance=#{duty_allowance},special_post_allowance=#{special_post_allowance},hydropower_allowance=#{hydropower_allowance},stationery_expenses=#{stationery_expenses},outskirts_allowannce=#{outskirts_allowannce},secrecy_fee=#{secrecy_fee},expatriate_allowance=#{expatriate_allowance},housing_fund=#{housing_fund},endowment_insurance=#{endowment_insurance},medical_insurance=#{medical_insurance},employment_injury_insurance=#{employment_injury_insurance},maternity_insurance=#{maternity_insurance},unemployment_insurance=#{unemployment_insurance},wf_date=#{wf_date},PostName=#{PostName}
+    <update id="updateWelfare">
+        UPDATE welfare set personal_id=#{personal_id},OrgName=#{OrgName},DeptName=#{DeptName},post_allowance=#{post_allowance},housing_allowance=#{housing_allowance},traffic_allowance=#{traffic_allowance},meal_allowance=#{meal_allowance},communication_fee=#{communication_fee},only_child_fee=#{only_child_fee},sunstroke_fee=#{sunstroke_fee},pro_women_fee=#{pro_women_fee},duty_allowance=#{duty_allowance},special_post_allowance=#{special_post_allowance},hydropower_allowance=#{hydropower_allowance},stationery_expenses=#{stationery_expenses},outskirts_allowannce=#{outskirts_allowannce},secrecy_fee=#{secrecy_fee},expatriate_allowance=#{expatriate_allowance},housing_fund=#{housing_fund},endowment_insurance=#{endowment_insurance},medical_insurance=#{medical_insurance},employment_injury_insurance=#{employment_injury_insurance},maternity_insurance=#{maternity_insurance},unemployment_insurance=#{unemployment_insurance},wf_date=#{wf_date},PostName=#{PostName}
         WHERE id=#{id}
     </update>
 </mapper>

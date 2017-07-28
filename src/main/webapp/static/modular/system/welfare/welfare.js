@@ -40,7 +40,10 @@ Welfare.initColumn = function () {
         {title: '生育保险', field: 'maternity_insurance', align: 'center', valign: 'middle', sortable: true},
         {title: '失业保险', field: 'unemployment_insurance', align: 'center', valign: 'middle', sortable: true},
         {title: '年/月', field: 'wf_date', align: 'center', valign: 'middle', sortable: true},
-        {title: '岗位名称', field: 'PostName', align: 'center', valign: 'middle', sortable: true}
+        {title: '岗位名称', field: 'PostName', align: 'center', valign: 'middle', sortable: true},
+        {field:"operate",title:"操作",align:"center",valign:"middle",formatter:function(value,row,index){
+            return "<a href='javascript:;' onclick='Welfare.openWelfareDetail()'>修改</a>&nbsp;&nbsp;<a href='javascript:;' onclick='Welfare.delete()'>删除</a>";
+        }}
     ];
 };
 
@@ -95,14 +98,20 @@ Welfare.openWelfareDetail = function () {
  */
 Welfare.delete = function () {
     if (this.check()) {
-        var ajax = new $ax(Feng.ctxPath + "/welfare/delete", function (data) {
-            Feng.success("删除成功!");
-            Welfare.table.refresh();
-        }, function (data) {
-            Feng.error("删除失败!" + data.responseJSON.message + "!");
-        });
-        ajax.set("id",this.seItem.id);
-        ajax.start();
+
+        var operation = function () {
+            var id = Welfare.seItem.id;
+            var ajax = new $ax(Feng.ctxPath + "/welfare/delete", function (data) {
+                Feng.success("删除成功!");
+                Welfare.table.refresh();
+            }, function (data) {
+                Feng.error("删除失败!" + data.responseJSON.message + "!");
+            });
+            ajax.set("id",id);
+            ajax.start();
+        };
+
+        Feng.confirm("是否删除此条奖金数据" + Welfare.seItem.id + "?",operation);
     }
 };
 

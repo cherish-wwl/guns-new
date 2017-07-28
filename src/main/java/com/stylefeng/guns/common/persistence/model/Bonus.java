@@ -8,7 +8,7 @@ public class Bonus {
     private Integer id;
     private String personal_id;
     private String OrgName;
-    private String DeptID;
+    private Integer DeptID;
     private String DeptName;
     private Double achievements_bounus;
     private Double year_bounus;
@@ -16,9 +16,9 @@ public class Bonus {
     private Double explore_bounus;
     private Double attendance_bounus;
     private Double special_bounus;
-    private String bo_date;
-    private String reserve1;
-    private String reserve2;
+    private Double bo_date;
+    private Double reserve1;
+    private Double reserve2;
     private String reserve3;
     private String PostName;
 
@@ -46,11 +46,11 @@ public class Bonus {
         OrgName = orgName;
     }
 
-    public String getDeptID() {
+    public Integer getDeptID() {
         return DeptID;
     }
 
-    public void setDeptID(String deptID) {
+    public void setDeptID(Integer deptID) {
         DeptID = deptID;
     }
 
@@ -110,27 +110,27 @@ public class Bonus {
         this.special_bounus = special_bounus;
     }
 
-    public String getBo_date() {
+    public Double getBo_date() {
         return bo_date;
     }
 
-    public void setBo_date(String bo_date) {
+    public void setBo_date(Double bo_date) {
         this.bo_date = bo_date;
     }
 
-    public String getReserve1() {
+    public Double getReserve1() {
         return reserve1;
     }
 
-    public void setReserve1(String reserve1) {
+    public void setReserve1(Double reserve1) {
         this.reserve1 = reserve1;
     }
 
-    public String getReserve2() {
+    public Double getReserve2() {
         return reserve2;
     }
 
-    public void setReserve2(String reserve2) {
+    public void setReserve2(Double reserve2) {
         this.reserve2 = reserve2;
     }
 

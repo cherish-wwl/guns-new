@@ -12,7 +12,7 @@
     </select>
 
     <insert id="add" useGeneratedKeys="true" keyProperty="id">
-        INSERT into bonus (id,OrgName,personal_id,DeptID,DeptName,PostName,achievements_bounus,year_bounus,quarter_bounus,explore_bounus,attendance_bounus,special_bounus,bo_date,reserve1,reserve2,reserve3) values(id=#{id},OrgName=#{OrgName},personal_id=#{personal_id},DeptID=#{DeptID},DeptName=#{DeptName},PostName=#{PostName},achievements_bounus=#{achievements_bounus},year_bounus=#{year_bounus},quarter_bounus=#{quarter_bounus},explore_bounus=#{explore_bounus},attendance_bounus=#{attendance_bounus},special_bounus=#{special_bounus},bo_date=#{bo_date},reserve1=#{reserve1},reserve2=#{reserve2},reserve3=#{reserve3})
+        INSERT into bonus ( id,personal_id,OrgName,DeptID,DeptName,achievements_bounus,year_bounus,quarter_bounus,explore_bounus,attendance_bounus,special_bounus,bo_date,reserve1,reserve2,reserve3,PostName) values(#{id},#{personal_id},#{OrgName},#{DeptID},#{DeptName},#{achievements_bounus},#{year_bounus},#{quarter_bounus},#{explore_bounus},#{attendance_bounus},#{special_bounus},#{bo_date},#{reserve1},#{reserve2},#{reserve3},#{OrgName})
     </insert>
 
     <delete id="deleteById">
