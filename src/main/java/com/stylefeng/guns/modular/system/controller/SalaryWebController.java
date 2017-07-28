@@ -1,10 +1,10 @@
 package com.stylefeng.guns.modular.system.controller;
 
 import com.stylefeng.guns.common.controller.BaseController;
-import com.stylefeng.guns.modular.system.dao.SalaryDao;
-import com.stylefeng.guns.modular.system.trade.Trade;
+import com.stylefeng.guns.modular.system.dao.SalaryWebDao;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
@@ -20,11 +20,11 @@ public class SalaryWebController extends BaseController {
 
     private static String PREFIX = "/Salaryweb/";
     @Resource
-    private SalaryDao salaryDao;
+    private SalaryWebDao salaryWebDao;
     /**
      * 跳转到查看管理员列表的页面
      */
-    /*@RequestMapping("/about")
+    @RequestMapping("/about")
      public String about() {
         return PREFIX + "about.html";
     }
@@ -47,32 +47,49 @@ public class SalaryWebController extends BaseController {
     @RequestMapping("/blogSingle")
     public String blogSingle() {
         return PREFIX + "blog-single.html";
-    }*/
+    }
 
     @RequestMapping("/trade")
     @ResponseBody
     public List<Map<String,Object>> trade()throws Exception{
-        return salaryDao.selectTrades();
+        List<Map<String,Object>> map = salaryWebDao.selectTrades();
+        System.out.println(map);
+        return map;
     }
 
     @RequestMapping("/tradeSecond")
     @ResponseBody
-    public String tradeSecond(String gradecode)throws Exception{
-        List list = salaryDao.selectSonByTrades(gradecode);
+    public Object tradeSecond(String gradecode)throws Exception{
+        List list = salaryWebDao.selectSonByTrades(gradecode);
         System.out.println(list);
-        return "123";
+        return list;
     }
 
     @RequestMapping("/tradeThird")
     @ResponseBody
-    public String tradeThird(String parentId)throws Exception{
-        List list = salaryDao.selectThirdByParentId(parentId);
+    public Object tradeThird(String parentId)throws Exception{
+        List<Map<String,Object>> list = salaryWebDao.selectThirdByParentId(parentId);
         System.out.println(list);
-        return "123";
+        return list;
+    }
+
+    @RequestMapping(value = "/tradeGroupMethod1",method = RequestMethod.POST)
+    @ResponseBody
+    public Object tradeGroupMethod1()throws Exception{
+        List<Map<String,Object>> list = salaryWebDao.selectGroupMethod1();
+        System.out.println(list);
+        return list;
     }
     /*@RequestMapping("/tradeSon")
     public String tradeSon()throws Exception{
         return "111";
     }*/
 
+
+    @RequestMapping(value = "/selectPostNamesAndOrigin",method = RequestMethod.POST)
+    @ResponseBody
+    public Object selectPostNamesAndOrigin()throws Exception {
+        List<Map<String,Object>> list = salaryWebDao.selectGroupMethod1();
+        return list;
+    }
 }

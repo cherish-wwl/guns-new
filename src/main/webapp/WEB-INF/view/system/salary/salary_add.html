@@ -1,0 +1,38 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal" id="salaryInfoForm">
+
+            <input type="hidden" id="id" value="">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                    <#input id="personal_id" name="姓名" underline="true"/>
+                    <#input id="base_salary" name="基本工资" underline="true"/>
+                    <#input id="post_salary" name="岗位工资" underline="true"/>
+                    <#input id="grade_salary" name="薪级工资" underline="true"/>
+
+
+                </div>
+
+                <div class="col-sm-6">
+                    <#input id="years_salary" name="工龄工资" underline="true"/>
+                    <#input id="skill_salary" name="技能工资" underline="true"/>
+                    <#input id="archives_salary" name="档案工资" underline="true"/>
+                    <#input id="overtime_salary" name="加班工资" underline="true"/>
+                    <#input id="sal_date" name="年月" underline="true" placeholder="格式：201203"/>
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="SalaryInfoDlg.addSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="SalaryInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/system/salary/salary_info.js"></script>
+@}

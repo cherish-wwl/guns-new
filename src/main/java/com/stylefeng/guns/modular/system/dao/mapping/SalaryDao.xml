@@ -1,20 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.stylefeng.guns.modular.system.dao.SalaryDao">
-    <select id="selectTrades" resultType="map">
-        SELECT DISTINCT granddescription FROM trade_dictionary
+    <sql id="Base_Column_list">
+        id,OrgName,personal_id,DeptID,DeptName,PostName,ParentTradid,TradID,EmpName,base_salary,
+        post_salary,grade_salary,years_salary,skill_salary,archives_salary,overtime_salary,
+        sal_date,region,StatFlag
+    </sql>
+
+    <select id="selectSalaries" resultType="map">
+        SELECT
+        <include refid="Base_Column_list"/>
+        FROM  salary
     </select>
 
-    <select id="selectSonByTrades" resultType="map">
-       SELECT DISTINCT Parentdescription FROM trade_dictionary where grandcode=#{grandcode}
+    <insert id="add" useGeneratedKeys="true" keyProperty="id">
+        INSERT into salary (id,OrgName,personal_id,DeptID,DeptName,PostName,ParentTradid,TradID,EmpName,base_salary,post_salary,grade_salary,years_salary,skill_salary,archives_salary,overtime_salary,sal_date,region,StatFlag) values(#{id},#{OrgName},#{personal_id},#{DeptID},#{DeptName},#{PostName},#{ParentTradid},#{TradID},#{EmpName},#{base_salary},#{post_salary},#{grade_salary},#{years_salary},#{skill_salary},#{archives_salary},#{overtime_salary},#{sal_date},#{region},#{StatFlag})
+    </insert>
+
+    <delete id="deleteById">
+        DELETE FROM salary WHERE id=#{id}
+    </delete>
+
+    <select id="selectById" parameterType="int" resultType="com.stylefeng.guns.common.persistence.model.Salary">
+        SELECT * FROM salary where id=#{salaryId}
     </select>
 
-    <select id="selectThirdByParentId" resultType="map">
-        SELECT DISTINCT select DISTINCT tradeName from trade_dictionary
-        WHERE parentId =#{parentId}
-    </select>
-    <select id="selectMajorNameByTradeId" resultType="map">
-       SELECT ma.majorName FROM trade_dictionary trd,major_dictionary ma
-       WHERE trd.tradeId = ma.trade_id AND trd.tradeId = #{tradeId}
-    </select>
+    <update id="updateSalary">
+        UPDATE salary set OrgName=#{OrgName},personal_id=#{personal_id},DeptID=#{DeptID},DeptName=#{DeptName},PostName=#{PostName},ParentTradid=#{ParentTradid},TradID=#{TradID},EmpName=#{EmpName},base_salary=#{base_salary},post_salary=#{post_salary},grade_salary=#{grade_salary},years_salary=#{years_salary},skill_salary=#{skill_salary},archives_salary=#{archives_salary},overtime_salary=#{overtime_salary},sal_date=#{sal_date},region=#{region},StatFlag=#{StatFlag}
+        WHERE id=#{id}
+    </update>
 </mapper>

@@ -4,7 +4,7 @@
 
 ###################  guns配置  ###################
 guns:
-  swagger-open: true #是否开启swagger (true/false)
+  swagger-open: false #是否开启swagger (true/false)
   kaptcha-open: false #是否开启登录时验证码 (true/false)
   session-open: false #是否开启session验证 (true/false)
   #file-upload-path: d:/tmp  #文件上传目录(不配置的话为java.io.tmpdir目录)
@@ -66,7 +66,7 @@ spring:
   datasource:
       url: jdbc:mysql://127.0.0.1:3306/hksal?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
       username: root
-      password:
+      password: 123
       filters: log4j,wall,mergeStat
 
 #多数据源
@@ -74,7 +74,7 @@ biz:
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/biz?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
     username: root
-    password:
+    password: 123
 
 logging:
   level: debug
@@ -90,7 +90,7 @@ spring:
   datasource:
       url: jdbc:mysql://127.0.0.1:3306/hksal?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
       username: root
-      password:
+      password: 123
       filters: log4j,wall,mergeStat
 
 logging:
