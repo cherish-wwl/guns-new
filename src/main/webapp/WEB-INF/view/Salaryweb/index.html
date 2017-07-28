@@ -17,7 +17,8 @@
 	<!-- CSS
   ================================================== -->
 	<link rel="stylesheet" href="${ctxPath}/static/Salaryweb/css/style.css" />
-
+	<!--自定义样式-->
+	<link rel="stylesheet" href="${ctxPath}/static/Salaryweb/css/web-css/index.css" />
 
 	<!-- JS
   ================================================== -->
@@ -38,244 +39,216 @@
 	<!-- Primary Page Layout
 	================================================== -->
 
-<div id="wrap">
+<div  id="wrap">
 	<header id="header" class="container">
-	<div class="top-link"><a href="${ctxPath}/login">登录/注册</a></div>
-	<div class="four columns">
-		<a href="#"><img src="${ctxPath}/static/Salaryweb/images/logo.png" /></a>
-	</div>
-	<nav id="nav-wrap" class="twelve columns">
-		<ul id="nav">
-				<!--	 -->
-			<li><a href="${ctxPath}/salaryIndex">首页</a></li>
-			<li><a href="${ctxPath}/salaryWeb/salaryIndexAbout">平台介绍</a></li>
-			<li><a href="${ctxPath}/salaryWeb/salaryIndexServices">岗位薪酬</a></li>
-			<li><a href="${ctxPath}/salaryWeb/salaryIndexPortfolio3col">行业薪酬</a></li>
-			<li><a href="${ctxPath}/salaryWeb/salaryIndexBlog">薪酬查询</a></li>
-			<li><a href="${ctxPath}/salaryWeb/salaryIndexBlogSingle">专项报告</a></li>
-		</ul>
-	</nav>
-		<!-- /nav-wrap -->
-</header><!-- end-header -->
-	<section id="full-width">
-
-	<div class="theme-default">
-		<div id="slider" class="nivoSlider">
-			<img src="${ctxPath}/static/Salaryweb/images/hero-pic-home1.jpg" title="#htmlcaption" />
-			<img src="${ctxPath}/static/Salaryweb/images/hero-pic-home2.jpg" title="#htmlcaption2" />
-		    <img src="${ctxPath}/static/Salaryweb/images/hero-pic-home3.jpg" title="#htmlcaption3" />
-      	</div>
-		<div id="htmlcaption" class="nivo-html-caption">
-	  		<h2>Modern Business Template </h2>
+		<div class="top-link">
+			<a href="${ctxPath}/login">登录/注册</a>
 		</div>
-	    <div id="htmlcaption2" class="nivo-html-caption">
-	    	<h2>Creative & Clean Design </h2>
-	   	</div>
-	    <div id="htmlcaption3" class="nivo-html-caption">
-	    	<h2> Responsive & grid based  </h2>
+		<div class="four columns">
+			<a href="#"><img src="${ctxPath}/static/Salaryweb/images/logo.png" /></a>
 		</div>
-    </div><!-- end-slider -->
-
-	<div class="take-tour">
-		<a href="#">
-			<span class="play-tour"></span>
-			<img src="${ctxPath}/static/Salaryweb/images/tour-pic3.png" />
-		</a>
-	</div>
-</section><!-- end-full-width -->
-	
-
-	<section class="container home-content">
-	<div class="two-thirds column">
-		<h1>使命与愿景</h1>
-		<h4>聚焦战略变革咨询与管理数字技术研发，成为企业与区域最贴心的协同交互创新智库。华景是做战略变革的。
-		变革也就是转型升级，为打算从现在地方走向目标地的企业与行政事业单位设计桥梁、规划道路的。
-		自上而下的转型升级是变革。在“变革”前加个“战略‘这个定语，现在的企业和政府事业单位没有单一的，都是牵一发动
-		全身的变革，时髦词汇就是顶层设计</h4>
-		<p>&nbsp;</p>
-	</div>
-	<div class="one-third column">
-		<img src="${ctxPath}/static/Salaryweb/images/resp1.png" />
-		<br />
-		<h3>华景咨询9大关键词：</h3>
-		<div class="listbox1">
-			<ul>
-				<li>1. 全球智慧本地运营,5家全球100强合资合作，整合麦肯锡、BCG、IMS等全球商业智慧  </li>
-				<li>2. 深商基因教父，从实践到理论，从理论到实践 </li>
-				<li>3. 中国管理科学院士汪应洛倾情打造 </li>
-				<li>4. 国务院国资委12年考验  </li>
-				<li>5. 30余家上市公司战略合作</li>
-				<li>6. 4家上市公司董事10年决策阅历 </li>
-				<li>7. 国务院三峡办、工信部、商务部反垄断局、科技部等中央或地方经验 </li>
-				<li>8. 全球公认商学院（AACSB：The Association to Advance Collegiate Schools of Business(美国国际管理教育联合
-				会））教学资格、复旦大学管理学院、香港中文大学管理学院等10年讲授《中国制度与企业行为概论》 </li>
-				<li>9. 国家开发银行等中小企业银行资信信贷评审专家 </li>
+		<nav id="nav-wrap" class="twelve columns">
+			<ul id="nav">
+					<!--	 -->
+				<li><a href="${ctxPath}/salaryIndex">首页</a></li>
+				<li><a href="${ctxPath}/salaryWeb/salaryIndexAbout">平台介绍</a></li>
+				<li><a href="${ctxPath}/salaryWeb/salaryIndexServices">岗位薪酬</a></li>
+				<li><a href="${ctxPath}/salaryWeb/salaryIndexPortfolio3col">行业薪酬</a></li>
+				<li><a href="${ctxPath}/salaryWeb/salaryIndexBlog">薪酬查询</a></li>
+				<li><a href="${ctxPath}/salaryWeb/salaryIndexBlogSingle">专项报告</a></li>
 			</ul>
-		</div><!-- end-listbox1 -->
-	</div>
-	<br class="clear" />
-	<h4 class="subtitle r1dd">Who We Are</h4>
-	<div class="one-third column">
-		<img src="${ctxPath}/static/Salaryweb/images/pd2.jpg" />
-		<h4>Technology</h4>
-		<p>
-			The easiest way to really get started with Integer commodo tristique odio, quis fringilla ligulte Maecenas sed justo
-			<a href="#">about us</a>
-		</p>
-	</div>
-	<div class="one-third column with-bg">
-		<h4>Design</h4>
-		<p>
-			<img src="${ctxPath}/static/Salaryweb/images/leaf_icon.png" />
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-			<a href="#"> exercitation</a>
-				ut labore et dolore magna aliqua. Ut enim ad
-			<span class="highlight3"> If you have any questions, thoughts, concerns or feedback, </span>
-			please don't hesitate to email us at
+		</nav><!-- /nav-wrap -->
+	</header><!-- end-header -->
 
-		</p>
-	</div>
-	<div class="one-third column">
-		<p>
-			<img src="${ctxPath}/static/Salaryweb/images/ibox2.png" />
-			<br />
-				 The easiest way to really get started with  Web Hosting Services consectetur adipisicing elit, sed do eiusmod tempor
-			<a href="#"> exercitation</a>
-			ut labore et dolore magna aliqua. Ut enim ad quis fringilla ligulte Maecenas sed justo odio, quis fringilla ligula aliquet ut. Maecenas sed justo varius velit imperdiet bibendum. Vivamus nec sapien massa, a imperdiet diam.
-		</p>
-		<p />
-	</div>
-	<div class="clear"></div>
-	<h4 class="subtitle">Latest Projects:</h4>
-		
-	<div class="four columns">
-		<a class="portfolio-item" href="#">
-		<img src="${ctxPath}/static/Salaryweb/images/portfo/port1.jpg" />
-			<h5> Lorem </h5>		
-			<em>desgn, illustration</em>
-			</a>
-	</div>
-		
-	<div class="four columns">
-		<a class="portfolio-item" href="#">
-			<img src="${ctxPath}/static/Salaryweb/images/portfo/port2.jpg" />
-			<h5> Quis </h5>		
-			<em>auctor, dignissim</em>
-		</a>
-	</div>
-		
-	<div class="four columns">
-		<a class="portfolio-item" href="#">
-			<img src="${ctxPath}/static/Salaryweb/images/portfo/port3.jpg" />
-			<h5> Dignissim Quis</h5>		
-			<em>Business, illustration</em>
-		</a>
-	</div>
-		
-	<div class="four columns">
-		<a class="portfolio-item" href="#">
-			<img src="${ctxPath}/static/Salaryweb/images/portfo/port4.jpg" />
-			<h5> Nam dui </h5>		
-			<em>desgn, auctor</em>
-		</a>
-	</div>
-	<div class="clear"></div>
-	<div class="eight columns">
-		<h4 class="subtitle">Our Clients:</h4>
-		<div class="our-clients">
-		<img src="${ctxPath}/static/Salaryweb/images/clients/sony.png" />
-		<img src="${ctxPath}/static/Salaryweb/images/clients/philips.png" />
-		<img src="${ctxPath}/static/Salaryweb/images/clients/hsbc.png" />
-		<img src="${ctxPath}/static/Salaryweb/images/clients/humax.png" />
-		<img src="${ctxPath}/static/Salaryweb/images/clients/jlt.png" />
-		<img src="${ctxPath}/static/Salaryweb/images/clients/canon.png" />
-	</div>
+	<!--图片轮播区-->
+	<section id="full-width">
+		<div class="theme-default">
+			<div id="slider" class="nivoSlider">
+				<img src="${ctxPath}/static/Salaryweb/images/index/banner.png" title="#htmlcaption0" />
+				<!--<img src="${ctxPath}/static/Salaryweb/images/hero-pic-home1.jpg" title="#htmlcaption" />
+				<img src="${ctxPath}/static/Salaryweb/images/hero-pic-home2.jpg" title="#htmlcaption2" />
+				<img src="${ctxPath}/static/Salaryweb/images/hero-pic-home3.jpg" title="#htmlcaption3" />-->
+			</div>
+			<div id="htmlcaption0" class="nivo-html-caption">
+				<h2>组织机构与岗位矩阵 </h2>
+			</div>
 
-	<div class="eight columns">
-		<h4 class="subtitle">Testimonials:</h4>
-		<div class="block-q1">
-			<p><img src="${ctxPath}/WEB-INF/view/Salaryweb/images/quote-ico1.png" /></p>
-			<p>Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis.
-				<br />
-				<em><strong>— Donie Boil</strong>, STW Business</em>
+		</div><!-- end-slider -->
+		<div class="waves">
+			<img class="waves-img" src="${ctxPath}/static/Salaryweb/images/index/bolang_img.png" />
+		</div>
+
+	</section><!-- end-full-width -->
+
+
+	<!--内容区-->
+	<section class="container home-content container-index">
+		<!--第一行-->
+		<div class="four columns">
+			<div><img src="${ctxPath}/static/Salaryweb/images/index/mianfei_img.png"/></div>
+			<h6>三次免费查询</h6>
+			<p>
+				未注册用户可以免费查询三次岗位月总收入
 			</p>
 		</div>
-	</div>
-
-	<div class="block-q2">
-		<p><img src="${ctxPath}/static/Salaryweb/images/quote-ico1.png" /></p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor sollicitudin dignissim cursus.
+		<div class="four columns">
+			<div><img src="${ctxPath}/static/Salaryweb/images/index/yongjiuchaxun_img.png"/></div>
+			<h6>会员永久查询</h6>
+			<p>
+				注册会员用户可以永久免费查询岗位月总收入
+			</p>
+			</div>
+		<div class="four columns">
+			<div><img src="${ctxPath}/static/Salaryweb/images/index/sujuchaxun_img.png"/></div>
+			<h6>数据查询</h6>
+			<p>
+				注册企业会员用户并提交公司薪酬信息，可以每年免费查询
+			</p>
+		</div>
+		<div class="four columns">
+			<div><img src="${ctxPath}/static/Salaryweb/images/index/more_img.png"/></div>
+			<h6>获取更多</h6>
+			<p>
+				注册企业会员用户并付费客户，可以美男查询岗位月基本收入、月绩效收入、月总收入、年几本收入
+			</p>
+		</div>
+		<br class="clear" />
+		<!--第二行：使命与愿景-->
+		<h4 class="subtitle r1dd">    </h4>
+		<div class="two-thirds column">
+			<h1>使命与愿景<small>/ Mission & Vision</small></h1>
+				<h4>聚焦战略变革咨询与管理数字技术研发，成为企业与区域最贴心的协同交互创新智库。华景是做战略变革的。
+				变革也就是转型升级，为打算从现在地方走向目标地的企业与行政事业单位设计桥梁、规划道路的。
+				自上而下的转型升级是变革。在“变革”前加个“战略‘这个定语，现在的企业和政府事业单位没有单一的，都是牵一发动
+				全身的变革，时髦词汇就是顶层设计</h4>
+			<p>&nbsp;</p>
+		</div>
+		<div class="one-third column">
+			<img src="${ctxPath}/static/Salaryweb/images/index/shimingyuyuanjing_img.png" />
 			<br />
-			<em><strong>— John Smith</strong>, Viona Business</em>
-		</p>
-	</div>
+		</div>
+	</section>
+	<!--第三行:我们是谁-->
+	<section class="home-content">
+		<br class="clear" />
 
-</div><!-- end-Testimonials -->
-	
-</section><!-- container -->
+		<div class="whoweare">
+			<img  class="self-introduct-img" src="${ctxPath}/static/Salaryweb/images/index/who we are.png" title="#self-introduction" />
+			<div id="self-introduction" class="self-introduct">
+				<h2 class="self-introduction-h2">我们是谁<small>/ Who We Are</small></h2>
+				<p class="self-introduction-p">
+					聚焦战略变革咨询与管理数字技术研究，成为企业与区域最贴心的协同交研发，
+					互创新智库，聚焦战略变革咨询与管理数字技术研发，成为企业与区域最贴心的。
+				</p>
+			</div>
+		</div>
+
+		<!--第四行：华景咨询9大关键词：-->
+		<div class="column">
+			<div class="feature-9-item">
+				<label class="feature-number">9</label>
+				<div class="feature-title">
+					<div class="feature-title-company">华景咨询</div>
+					<div class="feature-title-font">大关键词</div>
+				</div>
+			</div>
+
+			<div class="listbox1">
+				<img  class="feature-img" src="${ctxPath}/static/Salaryweb/images/index/9da.png" />
+				<ul  class="ul-9da">
+					<li class="li-9da-odd-1 li-9da">全球智慧本地运营,5家全球100强合资合作，整合麦肯锡、BCG、IMS等全球商业智慧  </li>
+					<li class="li-9da-even li-9da">深商基因教父，从实践到理论，从理论到实践 </li>
+					<li class="li-9da-odd li-9da">中国管理科学院士汪应洛倾情打造 </li>
+					<li class="li-9da-even li-9da">国务院国资委12年考验  </li>
+					<li class="li-9da-odd li-9da">30余家上市公司战略合作</li>
+					<li class="li-9da-even li-9da">4家上市公司董事10年决策阅历 </li>
+					<li class="li-9da-odd li-9da">国务院三峡办、工信部、商务部反垄断局、科技部等中央或地方经验 </li>
+					<li class="li-9da-even li-9da">全球公认商学院（AACSB：The Association to Advance Collegiate Schools of Business(美国国际管理教育联合
+						会））教学资格、复旦大学管理学院、香港中文大学管理学院等10年讲授《中国制度与企业行为概论》 </li>
+					<li class="li-9da-odd li-9da">国家开发银行等中小企业银行资信信贷评审专家 </li>
+				</ul>
+				<!--第五行：最新资讯-->
+				<div class="last_news">
+					<h1 class="last-news-title">最新咨询<small>/Last News</small></h1>
+					<div class="last-news-content">
+						<div class="four columns last-news-item">
+							<img src="${ctxPath}/static/Salaryweb/images/index/new1.png"/>
+							<p>资信信贷评估信信贷...</p>
+						</div>
+						<div class="four columns last-news-item">
+							<img src="${ctxPath}/static/Salaryweb/images/index/new2.png"/>
+							<p>资信信贷评估信信贷...</p>
+						</div>
+						<div class="four columns last-news-item">
+							<img src="${ctxPath}/static/Salaryweb/images/index/new3.png"/>
+							<p>资信信贷评估信信贷...</p>
+						</div>
+						<div class="four columns last-news-item">
+							<img src="${ctxPath}/static/Salaryweb/images/index/new4.png"/>
+							<p>资信信贷评估信信贷...</p>
+						</div>
+					</div>
+				</div>
+			</div><!-- end-listbox1 -->
+
+		</div>
+	</section>
+	<section class="container home-content">
+		<!--第六行：合作伙伴-->
+		<div class="clear"></div>
+		<div class="partner columns">
+			<h1 class="subtitle">合作伙伴 <small>/Our Clents</small></h1>
+			<div class="our-clients">
+				<img src="${ctxPath}/static/Salaryweb/images/index/hezuohuoban.png" />
+			</div>
+		</div>
+	</section><!-- container -->
 		
 	<footer id="footer" align="center">
 		<div class="container footer-in">
-			<div class="disclaimer four columns" align="left">
-				<h4>Disclaimer <img src="${ctxPath}/static/Salaryweb/images/footer-p1.png" /></h4>
+		<!--第一行-->
+			<!--分享到-->
+			<div class="one-third column" align="left">
+				<h4>分享到</h4>
 				<br />
-				<p>
-				Important: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at felis mi, at auctor mi. Donec vel nibh sem. Etiam ut lacus a dui accumsan accumsan.
-				</p>
-				<br />
-				<div class="copyright-txt">&nbsp; ©  2016. All Rights Reserved.
-					<br />
-					<a href="#" class="terms">Terms of Service</a> | <a href="#" class="terms">Privacy Policy</a>
+				<div style="display: inline-block">
+					<img src="/static/Salaryweb/images/index/qq.png" align="left">
 				</div>
-			</div><!-- content220 -->
+				<div>
+					<img src="/static/Salaryweb/images/index/wechat.png" align="left">
+				</div>
 
-			<div class="three columns navi2" align="left">
-				<h4>Navigation <img src="${ctxPath}/static/Salaryweb/images/footer-p3.png" /></h4>
 				<br />
-				<p><a href="#"><img src="${ctxPath}/static/Salaryweb/images/rowp6.png" />Services</a></p>
-
-				<p><a href="#"><img src="${ctxPath}/static/Salaryweb/images/rowp6.png" />Our Portfolio</a></p>
-
-				<p><a href="#"><img src="${ctxPath}/static/Salaryweb/images/rowp6.png" />Blog</a></p>
-
-				<p><a href="#"><img src="${ctxPath}/static/Salaryweb/images/rowp6.png" />Prices</a></p>
-
-				<p><a href="#"><img src="${ctxPath}/static/Salaryweb/images/rowp6.png" />Contact Form</a></p>
-			</div><!-- end-navi2 -->
-
-			<div class="five columns" align="left">
-				<h4>Newsletter <img src="${ctxPath}/static/Salaryweb/images/footer-p2.png" /></h4>
+			</div>
+			<!--联系我们-->
+			<div class="one-third column" align="left">
+				<h4>联系我们</h4>
 				<br />
-				<p>Subscribe to our newsletter to always be up to date! See more, learn more.</p>
-				<form action="" method="post" id="frmSubscribe" />
-					<input name="txtSubscribe" class="textbox1" type="text" placeholder="Email" />
-					<input name="btn-send" id="btnSubscribe" type="button" class="btn1" value="SEND" />
-				</form>
-				<div class="clear"></div>
-				<div class="social-icons">
-					<a href="#"><img src="${ctxPath}/static/Salaryweb/images/social_twitter.png" align="right" /></a>
-					<a href="#"><img src="${ctxPath}/static/Salaryweb/images/social_facebook.png" align="right" /></a>
-					<a href="#"><img src="${ctxPath}/static/Salaryweb/images/social_vimeo.png" align="right" /></a>
-				</div><!-- end-social-icons -->
-			</div><!-- end-follow2 -->
 
-			<div class="four columns" align="left">
-				<h4>Contact <img src="${ctxPath}/static/Salaryweb/images/footer-p4.png" /></h4>
-				<br />
-				<p><img src="${ctxPath}/static/Salaryweb/images/social_address.png" align="left" />&nbsp;<strong>Address:</strong>
-					<br />
-				No.28 - 63739 street lorem ipsum City, Country</p>
-
-				<p><img src="${ctxPath}/static/Salaryweb/images/social_phone.png" align="left" />&nbsp;<strong>Phone:</strong>
-				<br />
-				+ 1 (234) 567 8901<br />
+				<p><img src="${ctxPath}/static/Salaryweb/images/social_phone.png" align="left" />&nbsp;
+					028-87099345<br />
 				</p>
-
-				<p><img src="${ctxPath}/static/Salaryweb/images/social_mail.png" align="left" />&nbsp;<strong>Email:</strong>
-				<br />
-				supportyoursite.com<br />
+				<p>
+					<img src="${ctxPath}/static/Salaryweb/images/social_mail.png" align="left" />&nbsp;
+					youxianghao\@huoking.com<br />
 				</p>
-			</div><!-- end-contact2 -->
+			</div>
+			<!--意见反馈-->
+			<div class="one-third column" align="left">
+				<h4>意见反馈</h4>
+				<br />
+				<ul style="margin-left: 20px;">
+					<li type="square">意见建议</li>
+					<li type="square">在线客服</li>
+					<li type="square">关于我们</li>
+				</ul>
+			</div>
+		<!--第二行-->
+			<div  style="text-align: center">
+				<div><img src="${ctxPath}/static/Salaryweb/images/logo.png"/></div>
+				<div><p>Copyright© 2015 华景咨询有限公司</p></div>
+			</div>
+
 		</div><!-- end-footer-in -->
 	</footer>
 	<!-- end-footer -->

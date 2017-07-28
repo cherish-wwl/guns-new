@@ -1,5 +1,6 @@
 package com.stylefeng.guns.modular.system.dao;
 
+import com.stylefeng.guns.modular.system.trade.Trade;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html lang="en">
-<!--<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
 
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8" />
-	<title> 华景- 薪酬查询</title>
+	<title>华景-薪酬查询  </title>
 	<meta name="description" content="" />
 	<meta name="author" content="" />
 
@@ -17,232 +15,308 @@
 
 	<!-- CSS
   ================================================== -->
-	<link rel="stylesheet" href="${ctxPath}/static/Salaryweb/css/style.css" type="text/css" />
-	<link rel="shortcut icon" href="${ctxPath}/static/Salaryweb/images/favicon.ico" />
+	<!--引用bootstrap-->
+	<link rel="stylesheet" href="/static/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="${ctxPath}/static/Salaryweb/css/style.css" />
+	<link rel="stylesheet" href="/static/Salaryweb/css/web-css/blog.css" type="text/css" />
 
 	<!-- JS
   ================================================== -->
-   <script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/jquery.min.js"></script>
+	<script src="/static/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/jquery.min.js"></script>
 	<!-- HTML5 Shiv events -->
-   <script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/modernizr.custom.11889.js"></script>
-    <!-- HTML5 Shiv events (end)-->
-   <script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/nav-resp.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/modernizr.custom.11889.js"></script>
+	<!-- HTML5 Shiv events (end)-->
+	<script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/nav-resp.js"></script>
 
-
-	<!-- jqGrid组件基础样式包-必要 -->
-	<link rel="stylesheet" href="${ctxPath}/static/Salaryweb/jQgrid/css/ui.jqgrid.css" />
-	<!-- jqGrid主题包-非必要 -->
-	<!-- 在jqgrid/css/css这个目录下还有其他的主题包，可以尝试更换看效果 -->
-	<link rel="stylesheet" href="${ctxPath}/static/Salaryweb/jQgrid/css/css/redmond/jquery-ui-1.8.16.custom.css" />
-	<!-- jqGrid插件包-必要 -->
-	<script type="text/javascript" src="${ctxPath}/static/Salaryweb/jQgrid/js/jquery.jqGrid.src.js"></script>
-	<!-- jqGrid插件的多语言包-非必要 -->
-	<!-- 在jqgrid/js/i18n下还有其他的多语言包，可以尝试更换看效果 -->
-	<script type="text/javascript" src="${ctxPath}/static/Salaryweb/jQgrid/js/i18n/grid.locale-cn.js"></script>
 	<!-- Favicons
   ================================================== -->
+	<link rel="shortcut icon" href="${ctxPath}/static/Salaryweb/images/favicon.ico" />
 
-	<script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/web-js/blog.js"></script>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
-
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!--highcharts-->
+	<link rel="icon" href="https://static.jianshukeji.com/highcharts/images/favicon.ico">
+	<!--<script src="https://img.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>-->
+	<script src="https://img.hcharts.cn/highcharts/highcharts.js"></script>
+	<script src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>
+	<script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+	<script src="/static/Salaryweb/js/web-js/blog.js"></script>
+</head>
 <body>
 
-	<!-- Primary Page Layout
+<!-- Primary Page Layout
 ================================================== -->
 
-	<div id="wrap">
-		<header id="header" class="container">
-			<div class="top-link">
-				<a href="${ctxPath}/login">登录/注册</a>
-			</div>
+<div id="wrap">
+	<header id="header" class="container">
+		<div class="top-link"><a href="${ctxPath}/login">登录/注册</a></div>
+		<div class="four columns"><a href="#"><img src="${ctxPath}/static/Salaryweb/images/logo.png" /></a></div>
+		<nav id="nav-wrap" class="twelve columns">
+			<ul id="nav">
+				<li><a href="${ctxPath}/salaryIndex">首页</a></li>
+				<li><a href="${ctxPath}/salaryWeb/salaryIndexAbout">平台介绍</a></li>
+				<li><a href="${ctxPath}/salaryWeb/salaryIndexServices">岗位薪酬</a></li>
+				<li><a href="${ctxPath}/salaryWeb/salaryIndexPortfolio3col">行业薪酬</a></li>
+				<li><a href="${ctxPath}/salaryWeb/salaryIndexBlog">薪酬查询</a></li>
+				<li><a href="${ctxPath}/salaryWeb/salaryIndexBlogSingle">专项报告</a></li>
+			</ul>
+		</nav><!-- /nav-wrap -->
+	</header><!-- end-header -->
 
-			<div class="four columns">
-				<a href="#"><img src="${ctxPath}/static/Salaryweb/images/logo.png" /></a>
-			</div>
-			<nav id="nav-wrap" class="twelve columns">
-				<ul id="nav">
-					<li><a href="${ctxPath}/salaryIndex">首页</a></li>
-					<li><a href="${ctxPath}/salaryWeb/salaryIndexAbout">平台介绍</a></li>
-					<li><a href="${ctxPath}/salaryWeb/salaryIndexServices">岗位薪酬</a></li>
-					<li><a href="${ctxPath}/salaryWeb/salaryIndexPortfolio3col">行业薪酬</a></li>
-					<li><a href="${ctxPath}/salaryWeb/salaryIndexBlog">薪酬查询</a></li>
-					<li><a href="${ctxPath}/salaryWeb/salaryIndexBlogSingle">专项报告</a></li>
-				</ul>
-			</nav><!-- /nav-wrap -->
-		</header><!-- end-header -->
+	<section id="full-width">
+		<img src="/static/Salaryweb/images/postSalary/gangweixingchou_bgimg.png" class="full-width" />
+		<div class="new-page-subtitle">
+			<p class="new-page-subtitle01">薪酬查询</p>
+			<p class="new-page-subtitle02">Salary inqurey</p>
+			<p class="new-page-subtitle03">根据数据应用的需要，以不同的查询条件进行数据查询；以图表的形式表现</p>
+		</div>
+	</section><!-- end-full-width -->
 
-		<section id="full-width">
-			<img src="${ctxPath}/static/Salaryweb/images/hero-pages2.jpg" class="full-width" />
-			<div class="page-subtitle">
-				<h3>薪酬查询</h3>
-				<p>根据数据应用的需要，
-					以不同的查询条件进行
-					数据查询;以图表的形式展现</p>
-			</div>
-		</section><!-- end-full-width -->
-	
-		<section class="container page-content">
 
-			<section id="main-content">
-
-				<article class="eleven columns blog-post">
-					<p>
-						<img src="${ctxPath}/static/Salaryweb/images/blog-post-pic1.jpg" />
-						<br />
-						1.查询条件：  <br />
-						2.数据说明：.
-					</p>
-					<table id="list2"></table>
-					<div id="pager2"></div>
-					<!--
-					<a href="blog-single.html" class="readmore">read more</a>
-					-->
-				</article>
-			</section><!-- end-main-content -->
-
-			<section id="sidebar">
-				<h4 class="subtitle">查询目标</h4>
-				<div class="listbox1">
-					<ul>
-						<li>区域 <input type="text" name="fname1" maxlength="30" /> </li>
-						<li>行业<input type="text" name="fname2" maxlength="30" /> </li>
-						<li>企业性质<input type="text" name="fname3" maxlength="30" /> </li>
-						<li>部门 <input type="text" name="fname4" maxlength="30" /> </li>
-						<li>岗级<input type="text" name="fname5" maxlength="30" /> </li>
-						<li>职级<input type="text" name="fname6" maxlength="30" /> </li>
-						<li>行业工龄<input type="text" name="fname7" maxlength="30" /> </li>
-						<li>专业 <input type="text" name="fname8" maxlength="30" /> </li>
-					</ul>
-				</div><!-- end-listbox1 -->
-				<div class="btnarea">
-					<button id="searchSalaryBtn">查询</button>
-					<button id="resetBtn">清空</button>
-				</div>
-				<br class="clear" />
-				<h4 class="subtitle">数据选项</h4>
-				<div class="listbox1">
-					<ul>
-						<li>固定收入 <input name="chk1" type="checkbox" value="" /> </li>
-						<li>绩效收入<input name="chk3" type="checkbox" value="" /> </li>
-						<li>基本收入<input name="chk2" type="checkbox" value="" /> </li>
-						<li>中长期收益<input name="chk4" type="checkbox" value="" /> </li>
-						<li>福利<input name="chk5" type="checkbox" value="" /> </li>
-					</ul>
-				</div>
-				<br class="clear" />
-				<h4 class="subtitle">查询历史</h4>
-				<div class="listbox1">
-					<ul>
-						<li><a href="#">May 2016 (2)</a></li>
-						<li><a href="#">April 2016 (3)</a></li>
-						<li><a href="#">March 2016 (5)</a></li>
-						<li><a href="#">February 2016 (1) </a></li>
-					</ul>
-					<a href="#" class="show-all">Show All</a>
-				</div><!-- end-listbox1 -->
-
-				<br class="clear" />
-				<h4 class="subtitle">最近热点</h4>
-				<div class="listbox1">
-					<ul>
-						<li><a href="#">Praesent vestibulum mole sti..e</a></li>
-						<li><a href="#">Lac enean nonummy hen tor.. </a></li>
-						<li><a href="#">Praesent vestibulum mole bem..</a></li>
-						<li><a href="#">Lorem ipsum dolor sit amres.. </a></li>
-						<li><a href="#">Praesent vestibulum mole..</a></li>
-						<li><a href="#">Lac enean nonummy hen dea..</a></li>
-						<li><a href="#">Praesent vestibulum mole voro..</a></li>
-						<li><a href="#">Lorem ipsum dolor sit gety... </a></li>
-						<li><a href="#">Praesent vestibulum mole stie..</a></li>
-						<li><a href="#">Lac enean nonummy hen.. </a></li>
-						<li><a href="#">Praesent vestibulum mole go..</a></li>
-						<li><a href="#">Lorem ipsum dolor sit amet.. </a></li>
-					</ul>
-					<a href="#" class="show-all">Show All</a>
-				</div><!-- end-listbox1 -->
-
-				<br class="clear" />
-
-			</section><!-- end-sidebar-->
-
-			<div class="white-space"></div>
-
-		</section><!-- container -->
-
-		<footer id="footer" align="center">
-			<div class="container footer-in">
-				<div class="disclaimer four columns" align="left">
-					<h4>Disclaimer <img src="${ctxPath}/static/Salaryweb/images/footer-p1.png" /></h4>
-					<br />
-					<p>
-					Important: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at felis mi, at auctor mi. Donec vel nibh sem. Etiam ut lacus a dui accumsan accumsan.
-					</p>
-					<br />
-					<div class="copyright-txt">&nbsp; © 2016. All Rights Reserved.<br />
-						  <a href="#" class="terms">Terms of Service</a> | <a href="#" class="terms">Privacy Policy</a>
+	<section class="container page-content">
+		<div class="row">
+			<label style="font-size: 36px;color: #464646;">查询目标</label>
+			<br />
+			<div class="select-div">
+				<div class="col-xs-12">
+					<div class="col-xs-4 hang">
+						<span style="font-size: 20px;">区域：</span>
+						<select  class="select-item" id="enterArea">
+							<option>点击选择区域...</option>
+							<option>岗位1</option>
+							<option>岗位2</option>
+							<option>岗位3</option>
+							<option>岗位4</option>
+							<option>岗位5</option>
+						</select>
 					</div>
-			    </div><!-- content220 -->
-				<div class="three columns navi2" align="left">
-				<h4>Navigation <img src="${ctxPath}/static/Salaryweb/images/footer-p3.png" /></h4>
+
+					<div class="col-xs-4 hang">
+						<span style="font-size: 20px;">行业：</span>
+						<select class="select-item" id="enterIndustry">
+							<option>点击选择行业...</option>
+							<option>区域1</option>
+							<option>区域2</option>
+							<option>区域3</option>
+							<option>区域4</option>
+							<option>区域5</option>
+						</select>
+					</div>
+					<hr style="width: 85%;float: right;" />
+				</div>
+				<div class="col-xs-12">
+					<div class="col-xs-4 hang">
+						<span style="font-size: 20px;">企业性质：</span>
+						<select class="select-item" id="enterNature">
+							<option>点击选择企业性质...</option>
+							<option>区域1</option>
+							<option>区域2</option>
+							<option>区域3</option>
+							<option>区域4</option>
+							<option>区域5</option>
+						</select>
+					</div>
+					<div class="col-xs-4 hang">
+						<span style="font-size: 20px;">部门：</span>
+						<select class="select-item" id="enterSection">
+							<option>点击选择部门...</option>
+							<option>区域1</option>
+							<option>区域2</option>
+							<option>区域3</option>
+							<option>区域4</option>
+							<option>区域5</option>
+						</select>
+					</div>
+
+					<div class="col-xs-4 hang">
+						<span style="font-size: 20px;">岗位：</span>
+						<select class="select-item" id="enterPost">
+							<option>点击选择岗位...</option>
+							<option>区域1</option>
+							<option>区域2</option>
+							<option>区域3</option>
+							<option>区域4</option>
+							<option>区域5</option>
+						</select>
+					</div>
+
+				</div>
+
+
+
+				<div class="col-xs-12">
+					<div class="col-xs-4 hang">
+						<span style="font-size: 20px;">职级：</span>
+						<select class="select-item" id="enterRank">
+							<option>点击选择职级...</option>
+							<option>区域1</option>
+							<option>区域2</option>
+							<option>区域3</option>
+							<option>区域4</option>
+							<option>区域5</option>
+						</select>
+					</div>
+					<div class="col-xs-4 hang">
+						<span style="font-size: 20px;">行业工龄：</span>
+						<select class="select-item" id="enterIndustryAge">
+							<option>点击选择行业工龄...</option>
+							<option>区域1</option>
+							<option>区域2</option>
+							<option>区域3</option>
+							<option>区域4</option>
+							<option>区域5</option>
+						</select>
+					</div>
+					<div class="col-xs-4 hang">
+						<span style="font-size: 20px;">专业：</span>
+						<select class="select-item" id="enterProfessional">
+							<option>点击选择专业...</option>
+							<option>区域1</option>
+							<option>区域2</option>
+							<option>区域3</option>
+							<option>区域4</option>
+							<option>区域5</option>
+						</select>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<hr />
+		<div class="dataOptionsDiv">
+			<label  style="font-size: 36px;color: #464646;">数据选项</label>
+			<div class="dataOptions col-xs-12">
+				<label class="col-xs-2"><input  type="checkbox" />&nbsp;&nbsp;固定收入</label>
+				<label class="col-xs-2"><input  type="checkbox" />&nbsp;&nbsp;绩效收入</label>
+				<label class="col-xs-2"><input  type="checkbox" />&nbsp;&nbsp;基本收入</label>
+				<label class="col-xs-2"><input  type="checkbox" />&nbsp;&nbsp;中长期收入</label>
+				<label class="col-xs-2"><input  type="checkbox" />&nbsp;&nbsp;福利</label>
+			</div>
+			<div class="search-div col-xs-12">
+				<span id="searchSalary">一键查询</span>
+			</div>
+		</div>
+
+		<hr />
+		<div class="result-div col-xs-12">
+			<label style="font-size: 36px;color: #464646;">薪酬分位值</label>
+			<br />
+			<div class="show-result col-xs-12">
+				<div id="container" style="min-width:400px;height:400px"></div>
 				<br />
-				<p><a href="#"><img src="${ctxPath}/static/Salaryweb/images/rowp6.png" />Services</a></p>
+				<hr />
+				<label style="font-size: 29px;color: #464646;">数据分析</label>
 
-				<p><a href="#"><img src="${ctxPath}/static/Salaryweb/images/rowp6.png" />Our Portfolio</a></p>
-
-				<p><a href="#"><img src="${ctxPath}/static/Salaryweb/images/rowp6.png" />Blog</a></p>
-
-				<p><a href="#"><img src="${ctxPath}/static/Salaryweb/images/rowp6.png" />Prices</a></p>
-
-				<p><a href="#"><img src="${ctxPath}/static/Salaryweb/images/rowp6.png" />Contact Form</a></p>
-			</div><!-- end-navi2 -->
-
-				<div class="five columns" align="left">
-					<h4>Newsletter <img src="${ctxPath}/static/Salaryweb/images/footer-p2.png" /></h4>
-					<br />
-					<p>Subscribe to our newsletter to always be up to date! See more, learn more.</p>
-					<form action="" method="post" id="frmSubscribe" />
-						<input name="txtSubscribe" class="textbox1" type="text" placeholder="Email" />
-						<input name="btn-send" id="btnSubscribe" type="button" class="btn1" value="SEND" />
-					</form>
-					<div class="clear"></div>
-					<div class="social-icons">
-						<a href="#"><img src="${ctxPath}/static/Salaryweb/images/social_twitter.png" align="right" /></a>
-						<a href="#"><img src="${ctxPath}/static/Salaryweb/images/social_facebook.png" align="right" /></a>
-						<a href="#"><img src="${ctxPath}/static/Salaryweb/images/social_vimeo.png" align="right" /></a>
-					</div><!-- end-social-icons -->
-				</div><!-- end-follow2 -->
-
-				<div class="four columns" align="left">
-					<h4>Contact <img src="${ctxPath}/static/Salaryweb/images/footer-p4.png" /></h4>
-					<br />
-					<p><img src="${ctxPath}/static/Salaryweb/images/social_address.png" align="left" />&nbsp;<strong>Address:</strong>
-					<br />
-					No.28 - 63739 street lorem ipsum City, Country</p>
-
-					<p><img src="${ctxPath}/static/Salaryweb/images/social_phone.png" align="left" />&nbsp;<strong>Phone:</strong>
-					<br />
-					+ 1 (234) 567 8901<br />
+				<div class="anlay-result">
+					<p>1.显著增加了市场份额，但没有增加营销开支；<br />
+						2.每年大约能节约1000万美元的集成和相关成本；<br />
+					3.避免向同一用户家庭重复邮寄信函丙炔消除冗余系统，从而同时降低邮寄与运营
+					<br/>
+					4.由此可见，Suncorp-Metway公司通过该方案将此前多个孤立来源的数据集成起来，实现智慧营销，对控制成本，增加利润起到非常积极的作用
 					</p>
+				</div>
+			</div>
+		</div>
+		<hr />
+		<div class="bottom-area col-xs-12">
 
-					<p><img src="${ctxPath}/static/Salaryweb/images/social_mail.png" align="left" />&nbsp;<strong>Email:</strong>
-					<br />
-					support yoursite.com<br />
-					</p>
-				</div><!-- end-contact2 -->
-			</div><!-- end-footer-in -->
+			<div class="history-search-area col-xs-6">
+				<div class="row">
+					<label style="font-size: 30px;color: #464646;">历史查询</label>
+					<span class="getMoreHistorys">了解更多...</span>
+				</div>
 
-		</footer><!-- end-footer -->
+				<br />
+				<ul class="historyList">
+					<li class="history-item"> > May 2016(2)</li>
+					<li class="history-item"> > May 2016(2)</li>
+					<li class="history-item"> > May 2016(2)</li>
+					<li class="history-item"> > May 2016(2)</li>
+					<li class="history-item"> > May 2016(2)</li>
+					<li class="history-item"> > May 2016(2)</li>
+					<li class="history-item"> > May 2016(2)</li>
+					<li class="history-item"> > May 2016(2)</li>
+				</ul>
+			</div>
+			<div class="recent-hot-area col-xs-6">
+				<div class="row">
+					<label style="font-size: 30px;color: #464646;">最近热点</label>
+					<span class="getMoreHots">了解更多...</span>
+				</div>
 
-	</div><!-- end-wrap -->
+				<br />
+				<ul class="hotList">
+					<li class="hot-item"> > May 2016(2)</li>
+					<li class="hot-item"> > May 2016(2)</li>
+					<li class="hot-item"> > May 2016(2)</li>
+					<li class="hot-item"> > May 2016(2)</li>
+					<li class="hot-item"> > May 2016(2)</li>
+					<li class="hot-item"> > May 2016(2)</li>
+					<li class="hot-item"> > May 2016(2)</li>
+					<li class="hot-item"> > May 2016(2)</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="white-space"></div>
+
+	</section><!-- container -->
+
+	<footer id="footer" align="center">
+		<div class="container footer-in">
+			<!--第一行-->
+			<!--分享到-->
+			<div class="one-third column" align="left">
+				<h4>分享到</h4>
+				<br />
+				<div style="display: inline-block">
+					<img src="/static/Salaryweb/images/index/qq.png" align="left">
+				</div>
+				<div>
+					<img src="/static/Salaryweb/images/index/wechat.png" align="left">
+				</div>
+
+				<br />
+			</div>
+			<!--联系我们-->
+			<div class="one-third column" align="left">
+				<h4>联系我们</h4>
+				<br />
+
+				<p><img src="${ctxPath}/static/Salaryweb/images/social_phone.png" align="left" />&nbsp;
+					028-87099345<br />
+				</p>
+				<p>
+					<img src="${ctxPath}/static/Salaryweb/images/social_mail.png" align="left" />&nbsp;
+					youxianghao\@huoking.com<br />
+				</p>
+			</div>
+			<!--意见反馈-->
+			<div class="one-third column" align="left">
+				<h4>意见反馈</h4>
+				<br />
+				<ul style="margin-left: 20px;">
+					<li type="square">意见建议</li>
+					<li type="square">在线客服</li>
+					<li type="square">关于我们</li>
+				</ul>
+			</div>
+			<!--第二行-->
+			<div c style="text-align: center">
+				<div><img src="${ctxPath}/static/Salaryweb/images/logo.png"/></div>
+				<div><p>Copyright© 2015 华景咨询有限公司</p></div>
+			</div>
+
+		</div><!-- end-footer-in -->
+	</footer><!-- end-footer -->
+
+</div><!-- end- -->
 <!-- End Document
 ================================================== -->
-	<script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/latest-twitt.js"></script>
-	<script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/vincie-send.js"></script>
+<script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/latest-twitt.js"></script>
+<script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/vincie-send.js"></script>
 
-<!--<script>
-	$("#searchSalaryBtn").click(function(){
-		console.log("i'm search btn");
-	});
-</script>-->
 </body>
 </html>

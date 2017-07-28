@@ -2,12 +2,14 @@ package com.stylefeng.guns.modular.system.controller;
 
 import com.stylefeng.guns.common.controller.BaseController;
 import com.stylefeng.guns.modular.system.dao.SalaryDao;
+import com.stylefeng.guns.modular.system.trade.Trade;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Cherish on 2017/7/5.
@@ -49,10 +51,8 @@ public class SalaryWebController extends BaseController {
 
     @RequestMapping("/trade")
     @ResponseBody
-    public String trade()throws Exception{
-        List list = salaryDao.selectTrades();
-        System.out.println(list);
-        return "111";
+    public List<Map<String,Object>> trade()throws Exception{
+        return salaryDao.selectTrades();
     }
 
     @RequestMapping("/tradeSecond")

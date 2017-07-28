@@ -1,0 +1,82 @@
+.new-page-subtitle {
+    text-align: center;
+    width: 100%;
+    top: 150px;
+}
+.page-content{
+    background-color: #fff;
+    margin-top: -5px;
+    padding-top: 37px;
+    padding-left: 37px;
+}
+#full-width {
+    /* display: -webkit-inline-box;*/
+}
+
+@media only screen and (max-width: 959px) and (min-width: 480px){
+    .page-content {
+        top: -50px;
+    }
+}
+.hang{
+    text-align: right;
+}
+.select-div .select-item{
+    height: 35px;
+    width: 150px;
+    float: right;
+}
+.hang span{
+    vertical-align: -webkit-baseline-middle;
+}
+.dataOptions{
+    display: flex;
+    margin: 37px;
+}
+.search-div {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+span#searchSalary {
+    padding: 10px 30px 10px 30px;
+    font-size: 34px;
+    background-color: #7583e7;
+    color: #fff;
+    border-radius: 15px;
+}
+
+.anlay-result p{
+    font-size: 24px;
+    color: #666666;
+    line-height: 26px
+}
+.anlay-result {
+    background-color: #f7f9fc;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    margin-top: 28px;
+    margin-bottom: 52px;
+}
+.history-search-area{
+    border-right: 1px solid #ddd;
+    padding-right: 80px;
+}
+.recent-hot-area.col-xs-6 {
+    padding-left: 80px;
+}
+.getMoreHistorys ,.getMoreHots{
+    float: right;
+    color: #4c5eec;
+}
+.history-item,.hot-item {
+    color: #666666;
+    font-size: 24px;
+    line-height: 30px;
+    padding-left: 30px;
+}
+.report-content .title{
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 22px;
+}

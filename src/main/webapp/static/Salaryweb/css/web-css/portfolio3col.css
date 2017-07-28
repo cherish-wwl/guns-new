@@ -1,0 +1,42 @@
+.page-content{
+    background-color: #fff;
+    padding-top: 37px;
+    margin-top: -5px;
+    padding-left: 50px;
+    padding-right: 37px;
+}
+label.font01 {
+    font-size: 36px;
+    margin-bottom: 25px;
+
+}
+label {
+    display: inherit;
+}
+.font02 {
+    padding: 10px 25px 10px 25px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    margin-right: 15px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    display: inline-block;
+}
+.pagination-div{
+    text-align: center;
+}
+.backgroup-color-red{
+    background-color: #f26666;
+    color:#fff;
+    border: 1px solid #fff;
+}
+span.font03 {
+    margin: 15px;
+    background: #ddd;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 20px 15px 20px 15px;
+    text-align: center;
+    text-overflow: ellipsis;
+}

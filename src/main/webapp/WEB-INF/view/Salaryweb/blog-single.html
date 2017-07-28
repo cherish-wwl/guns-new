@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html lang="en"> <!--<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
 
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8" />
-	<title>Blog - Vincie.web</title>
+	<title>华景-专项报告</title>
 	<meta name="description" content="" />
 	<meta name="author" content="" />
 
@@ -14,259 +13,253 @@
   ================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
+
 	<!-- CSS
   ================================================== -->
+	<!--引用bootstrap-->
+	<link rel="stylesheet" href="/static/css/bootstrap.min.css">
+
 	<link rel="stylesheet" href="${ctxPath}/static/Salaryweb/css/style.css" type="text/css" />
-   
+	<link rel="stylesheet" href="/static/Salaryweb/css/web-css/blog-single.css" type="text/css" />
+
+
 
 	<!-- JS
   ================================================== -->
-   <script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/jquery.min.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/jquery.min.js"></script>
+	<script src="/static/js/bootstrap.min.js"></script>
+
 	<!-- HTML5 Shiv events -->
-   <script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/modernizr.custom.11889.js"></script>
-    <!-- HTML5 Shiv events (end)-->
-   <script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/nav-resp.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/modernizr.custom.11889.js"></script>
+	<!-- HTML5 Shiv events (end)-->
+	<script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/nav-resp.js"></script>
 
 	<!-- Favicons
   ================================================== -->
 	<link rel="shortcut icon" href="${ctxPath}/static/Salaryweb/images/favicon.ico" />
 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+
+	<script type="text/javascript" src="/static/Salaryweb/js/web-js/blog-single.js"></script>
+
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+</head>
 <body>
 
-	<!-- Primary Page Layout
+<!-- Primary Page Layout
 ================================================== -->
 
 <div id="wrap">
-<header id="header" class="container">
-<div class="top-link"><a href="${ctxPath}/login">登录/注册</a></div>
-<div class="four columns"><a href="#"><img src="${ctxPath}/static/Salaryweb/images/logo.png" /></a></div>
-<nav id="nav-wrap" class="twelve columns">
-					<ul id="nav">
-						<li><a href="${ctxPath}/salaryIndex">首页</a></li>
-						<li><a href="${ctxPath}/salaryWeb/salaryIndexAbout">平台介绍</a></li>
-						<li><a href="${ctxPath}/salaryWeb/salaryIndexServices">岗位薪酬</a></li>
-						<li><a href="${ctxPath}/salaryWeb/salaryIndexPortfolio3col">行业薪酬</a></li>
-						<li><a href="${ctxPath}/salaryWeb/salaryIndexBlog">薪酬查询</a></li>
-						<li><a href="${ctxPath}/salaryWeb/salaryIndexBlogSingle">专项报告</a></li>
-			</ul>
-	</nav>
-		<!-- /nav-wrap -->
-</header><!-- end-header -->
-
-<section id="full-width">
-	<img src="${ctxPath}/static/Salaryweb/images/hero-pages2.jpg" class="full-width" />
-	<div class="page-subtitle">
-		<h3>专项报告</h3>
-		<p>根据需要，进行不同专题的薪酬报告</p>
-	</div>
-</section><!-- end-full-width -->
-	
-<section class="container page-content">
-
-	<section id="main-content">
-
-		<article class="eleven columns blog-single-post">
-				<!--
-			<h6 class="blog-author">John Smith </h6>
-			<h6 class="blog-date">15 April 2016 </h6>
-			<h3>Lorem ipsum dolor sit amet, consectetur</h3>
-			<br />
-			<p><img src="images/blog-post-pic1.jpg" /><br />
-			-->
-				<p>
-			Lorem ipsum dolor sit amet nec, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes. Lorem ipsum dolor sit amet nec, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.<br />
-			Lorem ipsum dolor sit amet nec, consectetuer adipiscing elit. Aenean commodo ligula eget dolor</p>
-			<br class="clear" />
-			<div class="six columns">
-			<h4>Penatibus et magnis dis parturient montes consectetuer adipiscing</h4>
-			<br />
-			<p>Adipiscing elit commodo ligula eget dolor Lorem ipsum dolor sit amet nec, consectetuer adipiscing elit. Aenean commodo ligula eget dolor Cum sociis natoque penatibus et magnis dis parturient montes. Lorem ipsum dolor sit amet nec penatibus et magnis dis parturient montes.</p>
-			</div>
-			<div class="four columns blog-q">
-			<br />
-			<p><em>Cum sociis natoque penatibus et magnis dis parturient montes. dolor sit amet nec, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.<br />
-			Lorem ipsum dolor sit amet nec, consectetuer adipiscing elit</em>
-			</p>
-			</div>
-			<br class="clear" />
-			<p class="blog-inpic"><img src="${ctxPath}/static/Salaryweb/images/portfo/port1.jpg" />
-			 Lorem ipsum dolor sit amet nec, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.<br />
-			Lorem ipsum dolor sit amet nec, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes. Lorem ipsum dolor sit amet nec, consectetuer adipiscing elit. Aenean commodo ligula commodo.</p>
-		</article>
-
-		<div class="clear"></div>
-
-		<!--以下备注的代码有问题-->
-
-	<!--	<div class="likebox">
-			<div class="likepic">
-				<img src="${ctxPath}/static/Salaryweb/images/likebox1.png" border="0" id="like-1" class="likebtn" />
-			</div>
-			<div class="likemetlftpic"></div>
-			<div class="likemetric boxlike" id="boxlike-1">0</div>
-		</div> end-likebox  -->
-		<br class="clear" />
-		<hr />
-		<div class="commentbox">
-			<div><img src="${ctxPath}/static/Salaryweb/images/comments-ico.png" /></div>
-
-			<div class="commentin">
-				<img src="${ctxPath}/static/Salaryweb/images/avatar01.png" />
-				<div>John Doil / <span class="blgdatebox ">May 22, 2016</span> - <a href="#">Reply</a></div>
-				<p>Praesent tempor sollicitudin cursus. Nullam quis mi risus, adipiscing rutrum ipsum</p>
-			</div><!-- end-commentin  -->
-			<div class="commentin">
-				<img src="${ctxPath}/static/Salaryweb/images/avatar02.png" />
-				<div>Rose Smith / <span class="blgdatebox ">May 19, 2016</span> - <a href="#">Reply</a></div>
-				<p>adipiscing rutrum ipsum. Aliquam volutpat mollis</p>
-			</div><!-- end-commentin  -->
-			<br class="clear" />
-			<h4 class="subtitle">Leave a Comment</h4>
-			<div class="contact-form" align="left">
-			<form action="" method="post" id="frmContact" />
-				<input name="txtName" type="text" class="txbx" value="Name" />
-				<input name="txtEmail" type="text" class="txbx" value="Email" />
-				<textarea name="txtText" cols="" rows="" class="txbx era" value="Message"></textarea><br />
-				<span id="spanMessage"></span>
-				<input name="" type="button" class="sendbtn" value="Submit Comment" align="left" id="btnSend" />
-			</form>
+	<header id="header" class="container">
+		<div class="top-link">
+			<a href="${ctxPath}/login">登录/注册</a>
 		</div>
-		</div><!-- end-commentbox  -->
-	</section><!-- end-main-conten -->
 
-	<section id="sidebar">
-		<h4 class="subtitle">专项报告目录</h4>
-		<div class="listbox1">
-			<ul>
-				<li><a href="#">专项报告 </a></li>
-				<li><a href="#">专项报告</a></li>
-				<li><a href="#">专项报告</a></li>
-				<li><a href="#">专项报告 </a></li>
-				<li><a href="#">专项报告 </a></li>
-				<li><a href="#">专项报告</a></li>
-				<li><a href="#">专项报告</a></li>
+		<div class="four columns">
+			<a href="#"><img src="${ctxPath}/static/Salaryweb/images/logo.png" /></a>
+		</div>
+
+		<nav id="nav-wrap" class="twelve columns">
+			<ul id="nav">
+				<li><a href="${ctxPath}/salaryIndex">首页</a></li>
+				<li><a href="${ctxPath}/salaryWeb/salaryIndexAbout">平台介绍</a></li>
+				<li><a href="${ctxPath}/salaryWeb/salaryIndexServices">岗位薪酬</a></li>
+				<li><a href="${ctxPath}/salaryWeb/salaryIndexPortfolio3col">行业薪酬</a></li>
+				<li><a href="${ctxPath}/salaryWeb/salaryIndexBlog">薪酬查询</a></li>
+				<li><a href="${ctxPath}/salaryWeb/salaryIndexBlogSingle">专项报告</a></li>
 			</ul>
+		</nav><!-- /nav-wrap -->
+	</header><!-- end-header -->
 
-			<h4 class="subtitle">意见回馈</h4>
-			<div class="listbox1">
-				<ul>
-					<li><a href="#">意见建议</a></li>
-					<li><a href="#">在线客服</a></li>
-					<li><a href="#">关于我们 </a></li>
-				</ul>
-			</div><!-- end-listbox1 -->
+	<section id="full-width">
+		<img src="/static/Salaryweb/images/hangyetupian.png" class="full-width" />
+		<div class="new-page-subtitle">
+			<p class="new-page-subtitle01">专项报告</p>
+			<p class="new-page-subtitle02">Special report</p>
+			<p class="new-page-subtitle03">根据需要，进行不同专题的薪酬报告</p>
+		</div>
+	</section><!-- end-full-width -->
 
-			<br class="clear" />
-	<!--
-	<h4 class="subtitle">Text Widget</h4>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor<a href="#"> exercitation</a> ut labore et dolore magna aliqua. Ut enim ad</p>
+	<section class="container page-content">
+		<div class="row">
+			<div class="col-xs-3 left-div" id="sidebar">
 
-	<br class="clear" />
+				<div class="subtitle"><label class="circle"></label>专项报告目录</div>
+				<div class="listbox1">
+					<ul>
+						<li><a href="#">专项报告 </a></li>
+						<li><a href="#">专项报告</a></li>
+						<li><a href="#">专项报告</a></li>
+						<li><a href="#">专项报告 </a></li>
+						<li><a href="#">专项报告 </a></li>
+						<li><a href="#">专项报告</a></li>
+						<li><a href="#">专项报告</a></li>
+					</ul>
+				</div>
+				<br class="clear" />
+				<div class="subtitle">最新报告</div>
+				<div class="listbox1">
+					<ul>
+						<li><a href="#">Praesent vestibulum mole sti..e</a></li>
+						<li><a href="#">Lac enean nonummy hen tor.. </a></li>
+						<li><a href="#">Praesent vestibulum mole bem..</a></li>
+						<li><a href="#">Lorem ipsum dolor sit amres.. </a></li>
+					</ul>
+					<a href="#" class="show-all">Show All</a>
+				</div>
+			</div>
+			<div class="col-xs-9 report-content">
+				<div class="tool">
+					<span>
+						<img src="/static/Salaryweb/images/blog-single/yilliulan.png"/>
+						<span>38</span>
+					</span>
+					<span>
+						<img src="/static/Salaryweb/images/blog-single/dianzhan.png"/>
+						<span>28</span>
+					</span>
+				</div>
+				<div class="title">独家|2017 奢侈品行业的薪酬报告</div>
+				<div class="editor">管理员2845</div>
+				<div class="time">2017年7月26日16:58:54</div>
+				<article class="article">
+					<p data-role="original-title" style="display:none">原标题：2017年中国奢侈品报告</p>
+					<p><img src="http://img.mp.itc.cn/upload/20170701/ef7845a2c9e74ef7946c83f86bfdf2d2_th.jpg" alt=""></p>
+					<p><span>来源：《财富》（中文版）</span></p>
+					<p><span><strong><span>近年来</span></strong><span>，奢侈品行业一直弥漫着一股硝烟味道。其重点并非尔我之争，而是顾自的翻身大仗。到了今年年初，一些喜人的消息表明，<strong>奢侈品行业正从低迷中迎来拐点，出现回暖气象</strong>。</span></span></p>
+					<p>截至2016年年底，法国奢侈品集团爱马仕以11亿欧元的利润创下纪录；旗下拥有古驰、YSL等品牌的开云集团以123.9亿欧元的销售额实现了8.1%的同比涨幅，收获了四年以来业绩最佳的一年；在去年上半年利润同比下跌51%、被迫实施回购策略以及“去CEO”扁平化管理制度的历峰集团，也宣布实现了5%的总销售额正增长；今年第一季度末，路易威登成为全球首家市值超过千亿欧元的奢侈品集团。</p>
+					<p>虽然据贝恩公司统计，去年中国消费者对全球奢侈品的消费额贡献首次出现了1%的回落，但随着中国新富阶级的日益壮大，中国消费者依然会是全球奢侈品行业的重心所在。欧睿国际预测，中国将有望于五年内赶超美国，成为全球最大的奢侈品市场。<span><em></em></span></p>
+					<p><img src="http://img.mp.itc.cn/upload/20170701/e487086f502641a6a35dbe684147a2e9_th.jpg" alt=""></p>
+					<p><span><span></span><strong>“自动化”、“人工智能”、“大数据”</strong>，这是N-Partner公司中国区首席代表贾泉海眼中，2016~2017年来奢侈品行业发展的三大关键词。我们可以看到，奢侈品行业的风向开始转变了，<strong>或主动、或被动地拥抱互联网已经成为业内最近一年内最为显著的趋势，就如深受年轻人喜爱的意大利品牌D&amp;G的创始人所说：“对于奢侈品牌而言，网络并不是未来的趋势，而是眼下必须解决的现实。”</strong></span></p>
+					<p>比如，在今年年初举办的2017秋冬系列时装周上，已经有七成左右的奢侈品品牌开始使用社交媒体平台进行秀场直播；迪奥、巴黎世家等诸多奢侈品牌，正在使用VR技术吸引消费者；奢侈品数字研究机构L2于今年发布的报告称，目前进入中国的107个奢侈品牌中，已经有98个开通了微信账号。</p>
+					<p>如今，面对新兴的发展机遇与挑战，奢侈品品牌正在悄然调整策略，创建起自己高效而充满活力的永动创新生态链。</p>
+					<p><img src="http://img.mp.itc.cn/upload/20170701/03deec04fca5458daed2cce991266f08_th.jpg" alt=""></p>
+					<p><span>《财富》（中文版）调查发现，<strong>2017年受访者购买奢侈品最多的地方</strong>依次为：海外（44.7%）、中国大陆城市（32.7%）以及港澳台地区（22.6%）。可以看到，对于中国消费者而言，海外购买仍为主力，这个数字比三年前增长了17.7个百分点；而相比之下，在中国大陆城市以及港澳台地区的购买比例则分别减少了0.1及3.9个百分点。此外，在“中国大陆以外地点购买奢侈品”的主要原因调研中，占比最高的三者依次为：“价格更优惠”（47.8%）、“正品保证”（31.5%）、“产品的范围更大和选择更多”（12.9%）。</span></p>
+					<p><img src="http://img.mp.itc.cn/upload/20170701/085ea543a6a64406b9590288aced8ce7_th.jpg" alt=""></p>
+					<p><span><strong>中国是世界第一大出境旅游客源国及全球第四大入境旅游接待国，据财富品质研究院统计，连续五年，中国消费者超出七成的购买行为发生在境外，买走了全球三成至五成的奢侈品</strong>。虽然大量的出境游人数以及悬殊的价格差一直是导致中国奢侈品消费外流严重的重要根源，然而一些数字却表明，不论是前者的涨幅还是后者的差距，皆于今年体现出缩减迹象，<strong>未来的市场重心正朝向内地偏移</strong>。</span></p>
+					<p>首先，在出境游人次的增长幅度方面，据中国国家旅游局统计，去年上半年全国旅行社共组织出境游人数同比增长17.99%，与历史数据相比呈现明显放缓；从分目的地角度看，虽然赴泰、韩、日三国的出境人次较去年同期均有提升，但受到继2015年来海外陆续爆发恐怖袭击事件的冲击，以及申根指纹签证的要求，去往中长线目的地的游人数却从2015年年底以来持续低迷，赴欧游客人次较去年同期出现了0.7个百分点的下滑。</p>
+					<p><span>就前往巴黎的中国游人数而言，在过去一年中同比减少了26.8万人次，跌幅高达21.5%；作为对比，港澳台地区的奢侈品消费比率也延续着逐年下降的趋势，由于政治紧张以及港币兑欧元、日元、韩元贬值等原因，今年春节期间内地赴港游客数也出现了近二十年中的首次下滑，较去年同期下降了0.16%。</span></p>
+					<p>其次，在价格方面，人民币对美元汇率已经连续三年出现贬值。去年全年，人民币中间价贬值高达6.83%，使得消费者对于海外购的热情有所减退；去年4月中旬中国政府出台了提高关税、加大跨国邮寄包裹清关力度的政策，也令海外代购出现了萎靡迹象；</p>
+					<p><span>同时，随着消费全球化的进一步展开，以及由奢侈品互联网业务带来的全球配送服务一体化，部分奢侈品品牌针对中国消费市场再次进行了降价调整。<strong>而缩减的价差直接影响了海外购的优势，也使得中国奢侈品消费者开始逐渐将购物阵地移回了国内，令未来一年的奢侈品消费回流成为必然趋势。有机构预测称，在未来会有近八成的奢侈品下单发生在国内，那时中国人出国买的一定是在国内买不到的产品</strong>。</span></p>
+					<p><img src="http://img.mp.itc.cn/upload/20170701/fb12f8bba2df4ce9908911b72e9043c6_th.jpg" alt=""></p>
+					<p><span>在今年的调研中，我们发现，<strong>奢侈品消费者对于产品类别的选择</strong>较去年并未出现显著的变化，位列三甲的依旧为：手表（50.36%）、手包和行李箱（46.8%）以及服装和配饰（46.2%）。如若剔除手表类别0.04%的轻微下跌，其余二者皆呈现出大于两个百分点的增幅。化妆品、香水和个人护理产品较去年提升了4.2个百分点；而消费电子产品由去年的38.3%下降了4.8个百分点至33.5%，成为跌幅最大的奢侈品类别；此外，珠宝、家居用品类已经连续三年呈现递减趋势。</span></p>
+					<p>虽然手表类奢侈品已经连年位居榜首，曾于去年对滞销腕表下达紧急回购令的历峰集团也在去年迎来了全年手表销售额正增长，但是，行业整体的形势并不算乐观。</p>
+					<p><span>比如，受到智能手表崛起等因素的影响，瑞士钟表出口于去年连续第二年出现下滑，同比下跌9.9%，创下了继金融危机后的最大跌幅；而对于连年萎靡的珠宝行业来说，不论是源自消费者购买行为的变化还是源自行业内不规范的竞争，2016年亦是压力颇多的一年。</span></p>
+					<p><span>在行业遭遇瓶颈的情况下，很多企业开始着手于品牌延伸。例如近年来销售额连续下跌的著名珠宝零售商周大福，于今年上半年拍下了世界最大的内部无瑕艳彩粉红钻，希望能够由此进一步减少对黄金以及中国内地市场的依赖。</span></p>
+					<p><img src="http://img.mp.itc.cn/upload/20170701/9b31e7ff4ec4446b82e3f68dea8f3834_th.jpg" alt=""></p>
+					<p><span>在此次奢侈品调查的选项“<strong>购买大多数奢侈品的主要原因</strong>”中，选择“自用”的比例继去年5.2%的涨幅后继续提升了1个百分点；选择“给亲友的礼物”的比例也提升了0.6个百分点。在自身消费能力的提升，以及“反腐”政策等外力的作用下，“自用”目的的比例仍将呈上升趋势。</span></p>
+					<p><img src="http://img.mp.itc.cn/upload/20170701/52f2e6d87dea4b8e98b6cd5264370553_th.jpg" alt=""></p>
+					<p><span><strong>显而易见的是，奢侈品市场已经趋于理性，消费者购买行为也已日趋成熟。相比于盲目炫富，如今的人们更加懂得如何利用奢侈品提升自己的生活品质。对于逐渐成为购买主力的、且更加追求“自我”的千禧一代，奢侈品品牌能否成功地把握其心理并与之搭建联系，便直接影响了品牌活力</strong>。去年，品牌老化现象严重的香奈儿曾经分别任用了从15岁到17岁的新生代明星为品牌代言，其在推出新款香水No.5 L'eau时，则邀请深受年轻群体喜爱的胡歌录制短片，并于三天后取得了高达11万的微博转发量。此外，在今年的秋冬系列展会上，随着香奈儿新款时装共同发布的，还有其为推出新款唇釉而特别设计的全粉色系品牌表情包，目的皆是为了与活跃于社交网络的千禧一代建立联系。</span></p>
+					<p><img src="http://img.mp.itc.cn/upload/20170701/8cc1860e5dc944b080f7a89d4ac15451_th.jpg" alt=""></p>
+					<p><span>在<strong>品牌忠诚度</strong>方面，74%的消费者表示他们会对某些固定品牌有忠诚度，继去年又有了1%的提升；而人们对奢侈品品牌进行选择时，最为关注的三大因素依旧是：“产品的做工和品质”（79%）、“产品性价比”（53.1%）、“品牌历史和文化”（51.9%）。其中，“产品的做工和品质”也是奢侈品消费者认为的中国本土品牌与国外高端品牌的最主要差距，占比高达68.2%。</span></p>
+					<p><img src="http://img.mp.itc.cn/upload/20170701/0299fa36d0cc42b1bb5427eef5a089ab_th.jpg" alt=""></p>
+					<p><img src="http://img.mp.itc.cn/upload/20170701/17555ede85b94f75a74ca17cce5881bf_th.jpg" alt=""></p>
+					<p><span><strong>对于各奢侈品品牌决胜市场的最大“矛盾”，便在于既要保持产品的“稀缺”，又要保证信息的足够“普及”</strong>。如今，仅仅保持产品稀有性早已不足以笼住忠实的客户群体，在互联网与大数据的协同动力下，人们大多不会拒绝去尝试另外一种新的可能性。有调查发现，中国消费者对于奢侈品品牌的忠诚度远远低于西方消费者。基于这样一个时代，各奢侈品品牌开始着手大力加强其信息普及度，利用数字化营销手段更广泛地传播产品工艺及品牌文化。虽然在最近一年里，奢侈品消费者们了解奢侈品牌及服务最经常的渠道魁首依然是杂志（65.4%），但是还有一个在今年表现不俗的角色——数字化平台。</span></p>
+					<p><img src="http://img.mp.itc.cn/upload/20170701/cdbc4d802f744d218b1e7842b387c9d9_th.jpg" alt=""></p>
+					<p><span>我们可以看到，<strong>越来越多的品牌开始联手拥有8.89亿月活用户总量的微信平台，推出自己的定制化服务，发展电商，并继续推进线上、线下的无缝对接</strong>。</span></p>
+					<p><span>例如，去年5月，香奈儿在北京举办的高级手工坊系列发布会的过程中，便为其微信用户提供了一次独特的线上参与体验：从邀请函、路线设计、扫码入场，到预览经典款式及分享；当古驰为自己的微信订阅用户提供“保养”、“维修”等服务细则时，博柏利则开始为其定制个性化专属名片；当多数品牌的微信订阅号只能提供自动回复时，路易威登已经着手配置了一对一的人性化专属客服，据报道，其预计将于今年年中推出自己的电商平台，在线销售集团旗下的奢侈品品牌；而早在2015年10月便开设了除官网以外的自营线上精品店的卡地亚，则继续开拓了微信的定位功能，将目光放到了出境游的中国消费者身上—为其提供附近的门店地址、联系方式，甚至还有相关的产品翻译功能，为顾客实现与各地店员的便利沟通。</span></p>
+					<p><img src="http://img.mp.itc.cn/upload/20170701/c3f3ac112f654de98c68a660adc022c4_th.jpg" alt=""></p>
+					<blockquote>
+						<p><span>香奈儿在一次品牌推广活动中用互动科技的方式向用户介绍旗下N°5香水产品的历史。</span></p>
+					</blockquote>
+					<p><span>数字化传播为各品牌与消费者之间建立起的透明反馈平台，以及其所带来的效率升级，令各大奢侈品牌尝到了甜头，然而对于其是否足以大幅改善品牌销售业绩，其答案却是否定的。在罗德公关高级副总裁、中国区奢侈品业务总经理高明眼中，<strong>虽然电商的大幅度发展是今年行业内最显著的改观之一，但也仅仅只算是个开始。“其实对于奢侈品消费者来讲，很重要的一点在于对整个购物过程的体验。”</strong></span></p>
+					<p><span><strong>他表示，“在这一方面，对电商平台进行整体体验方面的革新，在未来还会有很多全新的空间。毕竟，目前实体店内的体验感依然是电商难以匹敌的。”</strong></span></p>
+					<p>事实上，<strong>“体验感”始终是中国消费者最为关注的方向之一</strong>。根据调研数据显示，除了“相对于港澳和海外零售店有竞争力的价格”位于首位外，共同指向体验感的“售后服务”以及“零售环境”则分列第二、第三位。</p>
+					<p><span>而为了给顾客打造独特的体验感，部分品牌正积极拥抱新科技。比如在法国迪奥的时装屋内，配置了通过3D打印技术制造的VR头显，戴上它的用户可以直接观看其在米兰、巴黎举办的T台秀，他们为它取了个名字，叫做“Dior之眼”；作为男装假日系列宣传的一部分，Hugo Boss也在去年利用微信进行了一场VR体验的宣传活动，顾客们可以进入一个虚拟Hugo Boss精品店，并输入自己的个人身体数据，截至去年第四季度末，其在中国大陆地区的经营额涨幅高达20%。</span></p>
+					<p><img src="http://img.mp.itc.cn/upload/20170701/c743940245294a32a028332bc9d03b58_th.jpg" alt=""></p>
+					<p><span><strong>据汇丰银行预测，2017年的奢侈品行业将出现并购大潮，路易威登集团、蔻驰集团以及开云集团是进行收购可能性最高的三家企业</strong>。但是，谈及去年用于购买奢侈产品和服务的支出占比，达到家庭总收入11%~20%的人数达到了33.3%，较去年提高了3.7个百分点；对于在未来一年里对其的开支预算，71.8%的受访者表示将会“基本持平”。而在对品牌的认知及了解程度方面，66.1%的受访者则表示“略有增加”，较去年提升了2.3个百分点。</span></p>
+					<p><img src="http://img.mp.itc.cn/upload/20170701/ccaff8b9d4704cfa9e17fa11c480d640_th.jpg" alt=""></p>
+					<p><img src="http://img.mp.itc.cn/upload/20170701/f649606475894b1b85f1a3dad1813428_th.jpg" alt=""></p>
+					<p><span>或许，奢侈品市场是否已经迎来了真正的长线复苏尚需观察，但是，消费新贵正在崛起，他们对奢侈品的期待并未淡却。而对于始终在与“创新”死磕的奢侈品，也即将在不久的未来为高端人群的生活更添一抹亮色，就如法国开云集团研制了奢侈品行业内的第一个无金属皮革鞣制工艺，而ODO DENIM则发明了全球首款可以自我清洁并消除异味的牛仔布料……</span></p>
+					<p><span>日趋理性的中国奢侈品消费者们仍在期待，一场别样体验与娱乐盛宴的来临。</span></p>
+					<p><span>毕竟，<strong>相比于显示自身的财富与地位，当下他们更渴望拥有这样一种奢侈品——</strong><span><strong>它能够彰显自己独特的生活方式、态度与情感</strong></span>。</span></p>
+					<p><span><strong>从吴奇隆视角，微观奢侈品行业</strong></span></p>
+					<p><span><strong>他，是一位演员兼企业家的典型代表。透过他的视角，我们可以看到一个别致的奢侈品微观——从一只小巧腕表，到一个古老而又年轻的行当。</strong></span></p>
+					<p><img src="http://img.mp.itc.cn/upload/20170701/df91a515940d44b894310322d6335651_th.jpg" alt=""></p>
+					<p><strong><span>《财富》（中文版）：你对奢侈品品牌的忠诚度高吗？选购时最关注的是哪个点？</span></strong></p>
+					<p><strong>吴奇隆：</strong>对不同品类的东西会喜欢不同的品牌，我想每个人都会喜欢尝试新鲜的东西。我最关注的是工艺品质。首先外形当然要是你喜欢的，然后，它要在自己的品牌上面有坚持的地方，并且要跟着时代流行趋势的变化有一些创新。另外，我还有一些关注点是比较特殊的，譬如说可能会在拍卖会看到一些少有的古董，或是一些少有的限量版。</p>
+					<p><strong><span>你自己也以一重企业家的身份涉猎了很多行业，如果未来要创立一家奢侈品公司，会希望做什么？</span></strong></p>
+					<p><strong>吴奇隆：</strong>我暂时不会想要去做奢侈品品牌，因为如果想做，首先你要有一定的积累和底蕴。目前如果要我做奢侈品品牌的话，我想最快的方式就是跟某一些已经成熟的品牌去做结合。</p>
+					<p><span><strong>你认为本土奢侈品品牌与国外奢侈品品牌之间最大的差距在哪儿？</strong></span></p>
+					<p><strong>吴奇隆：</strong>对于品牌的认知。它们的积累是很不一样的。你说国内能够被称为奢侈品的有哪些？很少。如果要做一个所谓的奢侈品牌，除了你的设计要足够好之外，你必须要有一定的文化底蕴，这个不是我们从管理层面马上就能做到的。你一定要花时间去慢慢培养你的客户，培养他们的忠诚度，这就是一个长时间的工作了，不是十年、八年就能做到的。</p>
+					<p><strong><span>你在最近一到三年内看到行业内最大的变化是什么？你自己对奢侈品的认知和购买行为也发生了变化吗？</span></strong></p>
+					<p><strong>吴奇隆：</strong>最大的行业变化是奢侈品主力市场一直在向亚洲偏，而我自己也到了一个比较理性的阶段。以前是因为工作需要我有很多不同的服装、鞋子、各式各样的饰品，但现在我会更加清楚什么是适合自己的，什么是自己真正需要的。</p>
+					<p><span><strong>令你印象最深刻的奢侈品品牌是什么？它最打动你的是什么？</strong></span></p>
+					<p><strong>吴奇隆：</strong>是爱彼。印象最深刻的是他们对制表工艺的专注。我今年比较特别，去了一趟日内瓦的汝山谷，那是爱彼的发源地。我去看了看爱彼现在做手表的那些工匠，那是一个很简单的地方，他们每天没有别的事情做，就专心呆在那里面，心无旁骛做制表工作。而且你会发现，这里的所有人都不喜欢离开那儿，很愿意待在那样一个地方。</p>
+					<p>而且，那些工匠们在一个岗位上可能要做五六年才能升迁到另外一个位置上去，所以他们最高级的那些钟表技工可能已经有几十年的经验。他们一年只做一件事，就是完成一只手表。你可以看到，他们还保存着大概140年前最开始制表时候客人的记录，包括每一只手表的主人是谁、每一只表的设计图……全部是他们手写的资料。我想这不是一般人能做的。</p>
+					<p><span><strong><span>你对未来奢侈品的创新有哪些期待？</span></strong></span></p>
+					<p><strong>吴奇隆：</strong>其实你可以看到这些年奢侈品材质上的变化，比如腕表的材质，从最开始铁的、钢的变成玫瑰金的，到现在出现钛合金的或者陶瓷的。而且我觉得接下来可能会有一些跨界的、拼接的新东西出现，比如某些材质以前并不是用来制作某一产品的，但现在会开始通过解决技术上的问题去做一些尝试，我觉得这个会是将来很有趣的事情。</p>
 
-	<h4 class="subtitle">Archives</h4>
-	<div class="listbox1">
-	<ul>
-	<li><a href="#">May 2016 (2)</a></li>
-	<li><a href="#">April 2016 (3)</a></li>
-	<li><a href="#">March 2016 (5)</a></li>
-	<li><a href="#">February 2016 (1) </a></li>
-	</ul>
-	<a href="#" class="show-all">Show All</a>
-	-->
-		</div><!-- end-listbox1 -->
-		<br class="clear" />
+				</article>
+				<div class="col-xs-12 like-div">
+					<img  class="like-img" src="/static/Salaryweb/images/blog-single/dianzhan2.png"/>
+					<div class="like-font">点个赞呗！</div>
+				</div>
+			</div>
+		</div>
+		<div class="white-space"></div>
+	</section><!-- container -->
 
-		<br class="clear" />
-		<h4 class="subtitle">最新报告</h4>
-		<div class="listbox1">
-			<ul>
-				<li><a href="#">Praesent vestibulum mole sti..e</a></li>
-				<li><a href="#">Lac enean nonummy hen tor.. </a></li>
-				<li><a href="#">Praesent vestibulum mole bem..</a></li>
-				<li><a href="#">Lorem ipsum dolor sit amres.. </a></li>
-			</ul>
-			<a href="#" class="show-all">Show All</a>
-		</div><!-- end-listbox1 -->
-	</section><!-- end-sidebar-->
-
-	<div class="white-space"></div>
-</section><!-- container -->
-
-
-
-
-
-	
 	<footer id="footer" align="center">
-<div class="container footer-in">
-<div class="disclaimer four columns" align="left">
-<h4>Disclaimer <img src="${ctxPath}/static/Salaryweb/images/footer-p1.png" /></h4>
-<br />
-<p>
-Important: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at felis mi, at auctor mi. Donec vel nibh sem. Etiam ut lacus a dui accumsan accumsan. 
-</p>
-<br />
-<div class="copyright-txt">&nbsp; © 2016. All Rights Reserved.<br />
-  <a href="#" class="terms">Terms of Service</a> | <a href="#" class="terms">Privacy Policy</a></div>
-  </div><!-- content220 -->
-<div class="three columns navi2" align="left">
-<h4>Navigation <img src="${ctxPath}/static/Salaryweb/images/footer-p3.png" /></h4>
-<br />
-<p><a href="#"><img src="${ctxPath}/static/Salaryweb/images/rowp6.png" />Services</a></p>
+		<div class="container footer-in">
+			<!--第一行-->
+			<!--分享到-->
+			<div class="one-third column" align="left">
+				<h4>分享到</h4>
+				<br />
+				<div style="display: inline-block">
+					<img src="/static/Salaryweb/images/index/qq.png" align="left">
+				</div>
+				<div>
+					<img src="/static/Salaryweb/images/index/wechat.png" align="left">
+				</div>
 
-<p><a href="#"><img src="${ctxPath}/static/Salaryweb/images/rowp6.png" />Our Portfolio</a></p>
+				<br />
+			</div>
+			<!--联系我们-->
+			<div class="one-third column" align="left">
+				<h4>联系我们</h4>
+				<br />
 
-<p><a href="#"><img src="${ctxPath}/static/Salaryweb/images/rowp6.png" />Blog</a></p>
+				<p><img src="${ctxPath}/static/Salaryweb/images/social_phone.png" align="left" />&nbsp;
+					028-87099345<br />
+				</p>
+				<p>
+					<img src="${ctxPath}/static/Salaryweb/images/social_mail.png" align="left" />&nbsp;
+					youxianghao\@huoking.com<br />
+				</p>
+			</div>
+			<!--意见反馈-->
+			<div class="one-third column" align="left">
+				<h4>意见反馈</h4>
+				<br />
+				<ul style="margin-left: 20px;">
+					<li type="square">意见建议</li>
+					<li type="square">在线客服</li>
+					<li type="square">关于我们</li>
+				</ul>
+			</div>
+			<!--第二行-->
+			<div c style="text-align: center">
+				<div><img src="${ctxPath}/static/Salaryweb/images/logo.png"/></div>
+				<div><p>Copyright© 2015 华景咨询有限公司</p></div>
+			</div>
 
-<p><a href="#"><img src="${ctxPath}/static/Salaryweb/images/rowp6.png" />Prices</a></p>
-
-<p><a href="#"><img src="${ctxPath}/static/Salaryweb/images/rowp6.png" />Contact Form</a></p>
-</div><!-- end-navi2 -->
-
-<div class="five columns" align="left">
-<h4>Newsletter <img src="${ctxPath}/static/Salaryweb/images/footer-p2.png" /></h4>
-<br />
-<p>Subscribe to our newsletter to always be up to date! See more, learn more.</p>
-<form action="" method="post" id="frmSubscribe" />
-<input name="txtSubscribe" class="textbox1" type="text" placeholder="Email" />
-<input name="btn-send" id="btnSubscribe" type="button" class="btn1" value="SEND" />
-</form>
-<div class="clear"></div>
-<div class="social-icons">
-<a href="#"><img src="${ctxPath}/static/Salaryweb/images/social_twitter.png" align="right" /></a>
-<a href="#"><img src="${ctxPath}/static/Salaryweb/images/social_facebook.png" align="right" /></a>
-<a href="#"><img src="${ctxPath}/static/Salaryweb/images/social_vimeo.png" align="right" /></a>
-</div><!-- end-social-icons -->
-</div><!-- end-follow2 -->
-
-<div class="four columns" align="left">
-<h4>Contact <img src="${ctxPath}/static/Salaryweb/images/footer-p4.png" /></h4>
-<br />
-<p><img src="${ctxPath}/static/Salaryweb/images/social_address.png" align="left" />&nbsp;<strong>Address:</strong>
-<br />
-No.28 - 63739 street lorem ipsum City, Country</p>
-
-<p><img src="${ctxPath}/static/Salaryweb/images/social_phone.png" align="left" />&nbsp;<strong>Phone:</strong>
-<br />
-+ 1 (234) 567 8901<br />
-</p>
-
-<p><img src="${ctxPath}/static/Salaryweb/images/social_mail.png" align="left" />&nbsp;<strong>Email:</strong>
-<br />
-support yoursite.com<br />
-</p>
-</div><!-- end-contact2 -->
-</div><!-- end-footer-in -->
-
-</footer>
-<!-- end-footer -->
+		</div><!-- end-footer-in -->
+	</footer><!-- end-footer -->
 
 </div><!-- end-wrap -->
 <!-- End Document
 ================================================== -->
-	<script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/latest-twitt.js"></script>
-	<script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/vincie-send.js"></script>
+
+
+<script type="text/javascript" src="${ctxPath}/static/Salaryweb/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script type="text/javascript" src="${ctxPath}/static/Salaryweb/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+
+<script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/latest-twitt.js"></script>
+<script type="text/javascript" src="${ctxPath}/static/Salaryweb/js/vincie-send.js"></script>
+
 
 </body>
 </html>

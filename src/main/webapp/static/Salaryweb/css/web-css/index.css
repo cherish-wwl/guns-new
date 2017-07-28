@@ -1,0 +1,103 @@
+
+/*who we are  模块*/
+.whoweare{
+    position: relative;
+    margin: 0 -100px;
+}
+.self-introduct-img {
+    width: 100%;
+}
+.self-introduct{
+    position: absolute;
+    left: 900px;
+    top: 170px;
+    width: 450px;
+}
+.self-introduction-p,.self-introduction-h2{
+    color: #fff;
+}
+/*9大特点*/
+.feature-number{
+    color: #fd5b5b;
+    font-size: 160px;
+    display: inline-block;
+    font-family: inherit;
+}
+.feature-9-item{
+    text-align:center;
+}
+.feature-title{
+    display:inline-block;
+    margin-left: 10px;
+}
+.feature-title-company{
+    font-size: 36px;
+    color: #656565;
+    text-align: left;
+    margin-bottom: 47px;
+}
+.feature-title-font{
+    font-size: 72px;
+    color: #656565;
+}
+.listbox1{
+    position: relative;
+    text-align: center;
+}
+.ul-9da{
+    position: absolute;
+    top: 40px;
+    left: 400px;
+
+  }
+.li-9da{
+    font-size: 29px;
+    color: #818181;
+    width: 600px;
+    border-bottom: rgba(254, 254, 254, 0) !important;
+    line-height: 65px;
+    height:65px;
+    overflow: hidden;
+
+}
+.li-9da-odd-1{
+    margin-left: 100px !important;
+}
+.li-9da-odd{
+    margin-left: 100px !important;
+    margin-top: 50px !important;
+}
+.li-9da-even{
+    margin-top: 50px !important;
+}
+/*最新咨询*/
+.last_news {
+    position: absolute;
+    bottom: 200px;
+    width: 100%;
+}
+.last-news-content{
+    display: inline-flex;
+}
+.last-news-title {
+    margin-bottom: 55px;
+}
+/*合作伙伴*/
+.partner{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+
+
+.waves{
+    position: relative;
+    bottom: 90px;
+    z-index: 9999;
+}
+.waves-img{
+    width:100%;
+}
+.container-index {
+    margin-top: -100px;
+}

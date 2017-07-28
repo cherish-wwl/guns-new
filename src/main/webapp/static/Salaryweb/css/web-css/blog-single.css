@@ -1,0 +1,57 @@
+.page-content{
+    background-color: #fff;
+    padding-top: 37px;
+    margin-top: -5px;
+    padding-left: 50px;
+    padding-right: 37px;
+}
+#sidebar{
+    float: left;
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: auto;
+}
+.left-div .subtitle{
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.tool{
+    text-align: right;
+    vertical-align: middle!important;
+}
+.report-content .title{
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 15px;
+    color: #464646;
+    font-weight: bold;
+}
+.report-content .time,.tool .editor{
+    font-size: 24px;
+    color: #818181;
+    line-height: 30px;
+
+}
+article.article {
+    margin-top: 30px;
+}
+.like-div {
+    text-align: center;
+}
+img.like-img {
+    margin-bottom: 17px;
+}
+
+/*Ô²µã*/
+.circle{
+    height: 12px;
+    background-color: blue;
+    width: 12px;
+    vertical-align: middle;
+    line-height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 5px;
+}
