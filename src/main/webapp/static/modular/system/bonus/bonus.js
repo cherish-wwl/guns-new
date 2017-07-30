@@ -103,16 +103,16 @@ Bonus.delete = function () {
  */
 Bonus.search = function () {
     var queryData = {};
-    queryData['personal_id'] = $("#personal_id").val();
+    queryData['personal_id'] = $("#personalId").val();
     queryData['OrgName'] = $("#OrgName").val();
     queryData['DeptName'] = $("#DeptName").val();
-    queryData['achievements_bounus'] = $("#achievements_bounus").val();
-    queryData['year_bounus'] = $("#year_bounus").val();
-    queryData['quarter_bounus'] = $("#quarter_bounus").val();
-    queryData['explore_bounus'] = $("#explore_bounus").val();
-    queryData['attendance_bounus'] = $("#attendance_bounus").val();
-    queryData['special_bounus'] = $("#special_bounus").val();
-    queryData['bo_date'] = $("#bo_date").val();
+    queryData['achievements_bounus'] = $("#achievementsBounus").val();
+    queryData['year_bounus'] = $("#yearBounus").val();
+    queryData['quarter_bounus'] = $("#quarterBounus").val();
+    queryData['explore_bounus'] = $("#exploreBounus").val();
+    queryData['attendance_bounus'] = $("#attendanceBounus").val();
+    queryData['special_bounus'] = $("#specialBounus").val();
+    queryData['bo_date'] = $("#boDate").val();
     queryData['PostName'] = $("#PostName").val();
     console.log(queryData);
     Bonus.table.refresh({query: queryData});

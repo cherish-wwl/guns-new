@@ -6,19 +6,19 @@ package com.stylefeng.guns.common.persistence.model;
 public class Bonus {
 
     private Integer id;
-    private String personal_id;
+    private String personalId;
     private String OrgName;
-    private Integer DeptID;
+    private String DeptID;
     private String DeptName;
-    private Double achievements_bounus;
-    private Double year_bounus;
-    private Double quarter_bounus;
-    private Double explore_bounus;
-    private Double attendance_bounus;
-    private Double special_bounus;
-    private Double bo_date;
-    private Double reserve1;
-    private Double reserve2;
+    private Double achievementsBounus;
+    private Double yearBounus;
+    private Double quarterBounus;
+    private Double exploreBounus;
+    private Double attendanceBounus;
+    private Double specialBounus;
+    private String boDate;
+    private String reserve1;
+    private String reserve2;
     private String reserve3;
     private String PostName;
 
@@ -30,12 +30,12 @@ public class Bonus {
         this.id = id;
     }
 
-    public String getPersonal_id() {
-        return personal_id;
+    public String getPersonalId() {
+        return personalId;
     }
 
-    public void setPersonal_id(String personal_id) {
-        this.personal_id = personal_id;
+    public void setPersonalId(String personalId) {
+        this.personalId = personalId;
     }
 
     public String getOrgName() {
@@ -46,11 +46,11 @@ public class Bonus {
         OrgName = orgName;
     }
 
-    public Integer getDeptID() {
+    public String getDeptID() {
         return DeptID;
     }
 
-    public void setDeptID(Integer deptID) {
+    public void setDeptID(String deptID) {
         DeptID = deptID;
     }
 
@@ -62,75 +62,75 @@ public class Bonus {
         DeptName = deptName;
     }
 
-    public Double getAchievements_bounus() {
-        return achievements_bounus;
+    public Double getAchievementsBounus() {
+        return achievementsBounus;
     }
 
-    public void setAchievements_bounus(Double achievements_bounus) {
-        this.achievements_bounus = achievements_bounus;
+    public void setAchievementsBounus(Double achievementsBounus) {
+        this.achievementsBounus = achievementsBounus;
     }
 
-    public Double getYear_bounus() {
-        return year_bounus;
+    public Double getYearBounus() {
+        return yearBounus;
     }
 
-    public void setYear_bounus(Double year_bounus) {
-        this.year_bounus = year_bounus;
+    public void setYearBounus(Double yearBounus) {
+        this.yearBounus = yearBounus;
     }
 
-    public Double getQuarter_bounus() {
-        return quarter_bounus;
+    public Double getQuarterBounus() {
+        return quarterBounus;
     }
 
-    public void setQuarter_bounus(Double quarter_bounus) {
-        this.quarter_bounus = quarter_bounus;
+    public void setQuarterBounus(Double quarterBounus) {
+        this.quarterBounus = quarterBounus;
     }
 
-    public Double getExplore_bounus() {
-        return explore_bounus;
+    public Double getExploreBounus() {
+        return exploreBounus;
     }
 
-    public void setExplore_bounus(Double explore_bounus) {
-        this.explore_bounus = explore_bounus;
+    public void setExploreBounus(Double exploreBounus) {
+        this.exploreBounus = exploreBounus;
     }
 
-    public Double getAttendance_bounus() {
-        return attendance_bounus;
+    public Double getAttendanceBounus() {
+        return attendanceBounus;
     }
 
-    public void setAttendance_bounus(Double attendance_bounus) {
-        this.attendance_bounus = attendance_bounus;
+    public void setAttendanceBounus(Double attendanceBounus) {
+        this.attendanceBounus = attendanceBounus;
     }
 
-    public Double getSpecial_bounus() {
-        return special_bounus;
+    public Double getSpecialBounus() {
+        return specialBounus;
     }
 
-    public void setSpecial_bounus(Double special_bounus) {
-        this.special_bounus = special_bounus;
+    public void setSpecialBounus(Double specialBounus) {
+        this.specialBounus = specialBounus;
     }
 
-    public Double getBo_date() {
-        return bo_date;
+    public String getBoDate() {
+        return boDate;
     }
 
-    public void setBo_date(Double bo_date) {
-        this.bo_date = bo_date;
+    public void setBoDate(String boDate) {
+        this.boDate = boDate;
     }
 
-    public Double getReserve1() {
+    public String getReserve1() {
         return reserve1;
     }
 
-    public void setReserve1(Double reserve1) {
+    public void setReserve1(String reserve1) {
         this.reserve1 = reserve1;
     }
 
-    public Double getReserve2() {
+    public String getReserve2() {
         return reserve2;
     }
 
-    public void setReserve2(Double reserve2) {
+    public void setReserve2(String reserve2) {
         this.reserve2 = reserve2;
     }
 

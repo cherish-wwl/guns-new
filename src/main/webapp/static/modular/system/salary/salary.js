@@ -14,7 +14,7 @@ var Salary = {
 Salary.initColumn = function () {
     return [
         {field: 'selectItem', radio: true},
-        {title: 'id', field: 'id', visible: true, align: 'center', valign: 'middle'},
+        {title: 'id', field: 'id', visible: false, align: 'center', valign: 'middle'},
         {title: '人员', field: 'personal_id', align: 'center', valign: 'middle', sortable: true},
         {title: '基本工资', field: 'base_salary', align: 'center', valign: 'middle', sortable: true},
         {title: '岗位工资', field: 'post_salary', align: 'center', valign: 'middle', sortable: true},
@@ -102,15 +102,15 @@ Salary.delete = function () {
  */
 Salary.search = function () {
     var queryData = {};
-    queryData['personal_id'] = $("#personal_id").val();
-    queryData['base_salary'] = $("#base_salary").val();
-    queryData['post_salary'] = $("#post_salary").val();
-    queryData['grade_salary'] = $("#grade_salary").val();
-    queryData['years_salary'] = $("#years_salary").val();
-    queryData['skill_salary'] = $("#skill_salary").val();
-    queryData['archives_salary'] = $("#archives_salary").val();
-    queryData['overtime_salary'] = $("#overtime_salary").val();
-    queryData['sal_date'] = $("#sal_date").val();
+    queryData['personal_id'] = $("#personalId").val();
+    queryData['base_salary'] = $("#baseSalary").val();
+    queryData['post_salary'] = $("#postSalary").val();
+    queryData['grade_salary'] = $("#gradeSalary").val();
+    queryData['years_salary'] = $("#yearsSalary").val();
+    queryData['skill_salary'] = $("#skillSalary").val();
+    queryData['archives_salary'] = $("#archivesSalary").val();
+    queryData['overtime_salary'] = $("#overtimeSalary").val();
+    queryData['sal_date'] = $("#salDate").val();
     queryData['edit'] = $("#edit").val();
     console.log(queryData);
     Salary.table.refresh({query: queryData});

@@ -4,7 +4,7 @@
 var WelfareInfoDlg = {
     welfareInfoData : {},
     validateFields: {
-        personal_id: {
+        personalId: {
             validators: {
                 notEmpty: {
                     message: '员工编号不能为空'
@@ -25,7 +25,7 @@ var WelfareInfoDlg = {
                 }
             }
         },
-        wf_date: {
+        wfDate: {
             validators: {
                 notEmpty: {
                     message: '请填写日期，格式为：yyyy.MM'
@@ -81,7 +81,8 @@ WelfareInfoDlg.close = function() {
  * 收集数据
  */
 WelfareInfoDlg.collectData = function() {
-    this.set('id').set('personal_id').set('OrgName').set('DeptID').set('DeptName').set('post_allowance').set('housing_allowance').set('traffic_allowance').set('meal_allowance').set('communication_fee').set('only_child_fee').set('sunstroke_fee').set('pro_women_fee').set('duty_allowance').set('special_post_allowance').set('hydropower_allowance').set('stationery_expenses').set('outskirts_allowannce').set('secrecy_fee').set('expatriate_allowance').set('housing_fund').set('endowment_insurance').set('medical_insurance').set('employment_injury_insurance').set('maternity_insurance').set('unemployment_insurance').set('wf_date').set('PostName');
+    this.set('id').set('personalId').set('OrgName').set('DeptID').set('DeptName').set('postAllowance').set('housingAllowance').set('trafficAllowance').set('mealAllowance').set('communicationFee').set('onlyChildFee').set('sunstrokeFee').set('proWomenFee').set('dutyAllowance').set('specialPostAllowance').set('hydropowerAllowance').set('stationeryExpenses').set('outskirtsAllowannce').set('secrecyFee').set('expatriateAllowance').set('housingFund').set('endowmentInsurance').set('medicalInsurance').set('employmentInjuryInsurance').set('maternityInsurance').set('unemploymentInsurance').set('wfDate').set('PostName');
+
 }
 /**
  * 验证数据是否为空
