@@ -1,10 +1,7 @@
 package com.stylefeng.guns.modular.system.controller;
 
 import com.google.code.kaptcha.Constants;
-import com.stylefeng.guns.common.annotion.Permission;
-import com.stylefeng.guns.common.annotion.log.BussinessLog;
 import com.stylefeng.guns.common.constant.state.ManagerStatus;
-import com.stylefeng.guns.common.constant.tips.Tip;
 import com.stylefeng.guns.common.controller.BaseController;
 import com.stylefeng.guns.common.exception.BizExceptionEnum;
 import com.stylefeng.guns.common.exception.BussinessException;
@@ -20,7 +17,6 @@ import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.modular.system.dao.MenuDao;
 import com.stylefeng.guns.modular.system.dao.UserMgrDao;
 import com.stylefeng.guns.modular.system.factory.UserFactory;
-import com.stylefeng.guns.modular.system.transfer.ManagerUser;
 import com.stylefeng.guns.modular.system.transfer.UserDto;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
@@ -30,11 +26,8 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.Date;
 import java.util.List;
@@ -68,7 +61,7 @@ public class LoginController extends BaseController {
         if(roleList == null || roleList.size() == 0){
             ShiroKit.getSubject().logout();
             model.addAttribute("tips", "该用户没有角色，无法登陆");
-            return "/login.html";
+            return "/login01.html";
         }
         List<MenuNode> menus = menuDao.getMenusByRoleIds(roleList);
         List<MenuNode> titles = MenuNode.buildTitle(menus);
@@ -91,56 +84,8 @@ public class LoginController extends BaseController {
         if (ShiroKit.isAuthenticated() || ShiroKit.getUser() != null) {
             return REDIRECT + "/";
         } else {
-            return "/login.html";
+            return "/login01.html";
         }
-    }
-
-    /**
-     * 跳转到首页页面
-     */
-    @RequestMapping(value = "/salaryIndex", method = RequestMethod.GET)
-    public String salaryIndex() {
-            return "/Salaryweb/index.html";
-    }
-
-    /**
-     * 跳转到平台介绍页面
-     */
-    @RequestMapping(value = "/salaryWeb/salaryIndexAbout", method = RequestMethod.GET)
-    public String salaryIndexAbout() {
-        return "/Salaryweb/about.html";
-    }
-
-    /**
-     * 跳转到岗位薪酬页面
-     */
-    @RequestMapping(value = "/salaryWeb/salaryIndexServices", method = RequestMethod.GET)
-    public String salaryIndexServices() {
-        return "/Salaryweb/services.html";
-    }
-
-    /**
-     * 跳转到行业薪酬页面
-     */
-    @RequestMapping(value = "/salaryWeb/salaryIndexPortfolio3col", method = RequestMethod.GET)
-    public String salaryIndexPortfolio3col() {
-        return "/Salaryweb/portfolio3col.html";
-    }
-
-    /**
-     * 跳转到薪酬查询页面
-     */
-    @RequestMapping(value = "/salaryWeb/salaryIndexBlog", method = RequestMethod.GET)
-    public String salaryIndexBlog() {
-        return "/Salaryweb/blog.html";
-    }
-
-    /**
-     * 跳转到专项报告页面
-     */
-    @RequestMapping(value = "/salaryWeb/salaryIndexBlogSingle", method = RequestMethod.GET)
-    public String salaryIndexBlogSingle() {
-        return "/Salaryweb/blog-single.html";
     }
 
 
@@ -219,6 +164,6 @@ public class LoginController extends BaseController {
     public String logOut() {
         LogManager.me().executeLog(LogTaskFactory.exitLog(ShiroKit.getUser().getId(), getIp()));
         ShiroKit.getSubject().logout();
-        return REDIRECT + "/salaryIndex";
+        return REDIRECT + "/login01";
     }
 }
