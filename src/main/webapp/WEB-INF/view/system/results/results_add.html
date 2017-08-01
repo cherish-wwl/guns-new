@@ -1,0 +1,38 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal" id="resultsInfoForm">
+
+            <input type="hidden" id="id" value="">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                    <#input id="tradeId" name="行业编号" underline="true"/>
+                    <#input id="stockRight" name="股权" underline="true"/>
+                    <#input id="optionPay" name="期权" underline="true"/>
+                    <#input id="dra" name="分红" underline="true"/>
+                    <#input id="tenurePay" name="任期薪" underline="true"/>
+                </div>
+
+                <div class="col-sm-6">
+                    <#input id="employeeTurnover" name="员工流动率" underline="true"/>
+                    <#input id="profitGrowth" name="利润增长率" underline="true"/>
+                    <#input id="salesGrowth" name="销售量增长率" underline="true"/>
+                    <#input id="assets" name="资产额" underline="true"/>
+                    <#input id="personalId" name="人员编号" underline="true"/>
+
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="ResultsInfoDlg.addSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="ResultsInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/system/results/results_info.js"></script>
+@}

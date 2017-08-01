@@ -61,7 +61,7 @@ public class LoginController extends BaseController {
         if(roleList == null || roleList.size() == 0){
             ShiroKit.getSubject().logout();
             model.addAttribute("tips", "该用户没有角色，无法登陆");
-            return "/login01.html";
+            return "/login.html";
         }
         List<MenuNode> menus = menuDao.getMenusByRoleIds(roleList);
         List<MenuNode> titles = MenuNode.buildTitle(menus);
@@ -84,7 +84,7 @@ public class LoginController extends BaseController {
         if (ShiroKit.isAuthenticated() || ShiroKit.getUser() != null) {
             return REDIRECT + "/";
         } else {
-            return "/login01.html";
+            return "/login.html";
         }
     }
 
@@ -92,7 +92,7 @@ public class LoginController extends BaseController {
     /**
      * 跳转到注册新用户页面
      */
-    @RequestMapping(value = "/salaryWeb/registerNewUserPage", method = RequestMethod.GET)
+    @RequestMapping(value = "/registerNewUserPage", method = RequestMethod.GET)
     public String registerNewUserPage() {
         return "/register.html";
     }
@@ -100,7 +100,7 @@ public class LoginController extends BaseController {
     /**
      * 注册新用户
      */
-    @RequestMapping(value="/salaryWeb/registerUser")
+    @RequestMapping(value="/registerUser")
     public String registerUser(@Valid UserDto user,BindingResult result) {
         if (result.hasErrors()) {
             throw new BussinessException(BizExceptionEnum.REQUEST_NULL);
@@ -164,6 +164,6 @@ public class LoginController extends BaseController {
     public String logOut() {
         LogManager.me().executeLog(LogTaskFactory.exitLog(ShiroKit.getUser().getId(), getIp()));
         ShiroKit.getSubject().logout();
-        return REDIRECT + "/login01";
+        return REDIRECT + "/login";
     }
 }

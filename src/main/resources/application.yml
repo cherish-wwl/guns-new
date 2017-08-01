@@ -4,7 +4,7 @@
 
 ###################  guns配置  ###################
 guns:
-  swagger-open: false #是否开启swagger (true/false)
+  swagger-open: true #是否开启swagger (true/false)
   kaptcha-open: false #是否开启登录时验证码 (true/false)
   session-open: false #是否开启session验证 (true/false)
   #file-upload-path: d:/tmp  #文件上传目录(不配置的话为java.io.tmpdir目录)
@@ -14,7 +14,7 @@ guns:
 
 ###################  项目启动端口  ###################
 server:
-  port: 8080
+  port: 80
 
 ###################  beetl配置  ###################
 beetl:
@@ -64,7 +64,7 @@ mybatis-plus:
 spring:
   profiles: dev
   datasource:
-      url: jdbc:mysql://127.0.0.1:3306/hksal?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+      url: jdbc:mysql://127.0.0.1:3306/hksal0725?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
       username: root
       password: 123
       filters: log4j,wall,mergeStat
