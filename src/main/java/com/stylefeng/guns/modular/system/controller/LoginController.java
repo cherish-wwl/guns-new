@@ -92,7 +92,7 @@ public class LoginController extends BaseController {
     /**
      * 跳转到注册新用户页面
      */
-    @RequestMapping(value = "/registerNewUserPage", method = RequestMethod.GET)
+    @RequestMapping(value = "/salaryWeb/registerNewUserPage", method = RequestMethod.GET)
     public String registerNewUserPage() {
         return "/register.html";
     }
@@ -100,7 +100,7 @@ public class LoginController extends BaseController {
     /**
      * 注册新用户
      */
-    @RequestMapping(value="/registerUser")
+    @RequestMapping(value="/salaryWeb/registerUser")
     public String registerUser(@Valid UserDto user,BindingResult result) {
         if (result.hasErrors()) {
             throw new BussinessException(BizExceptionEnum.REQUEST_NULL);

@@ -92,6 +92,7 @@ public class SalaryController extends BaseController {
     @RequestMapping(value = "/add")
     @ResponseBody
     public Tip add(Salary salary) {
+
         salaryDao.add(salary);
         return SUCCESS_TIP;
     }
