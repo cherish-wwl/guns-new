@@ -103,16 +103,6 @@ Salary.delete = function () {
 Salary.search = function () {
     var queryData = {};
     queryData['personal_id'] = $("#personalId").val();
-    queryData['base_salary'] = $("#baseSalary").val();
-    queryData['post_salary'] = $("#postSalary").val();
-    queryData['grade_salary'] = $("#gradeSalary").val();
-    queryData['years_salary'] = $("#yearsSalary").val();
-    queryData['skill_salary'] = $("#skillSalary").val();
-    queryData['archives_salary'] = $("#archivesSalary").val();
-    queryData['overtime_salary'] = $("#overtimeSalary").val();
-    queryData['sal_date'] = $("#salDate").val();
-    queryData['edit'] = $("#edit").val();
-    console.log(queryData);
     Salary.table.refresh({query: queryData});
 };
 

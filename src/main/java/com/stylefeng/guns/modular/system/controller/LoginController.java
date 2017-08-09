@@ -16,7 +16,6 @@ import com.stylefeng.guns.core.shiro.ShiroUser;
 import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.modular.system.dao.MenuDao;
 import com.stylefeng.guns.modular.system.dao.UserMgrDao;
-import com.stylefeng.guns.modular.system.factory.UserFactory;
 import com.stylefeng.guns.modular.system.transfer.UserDto;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
@@ -28,6 +27,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.Date;
 import java.util.List;
@@ -101,27 +101,37 @@ public class LoginController extends BaseController {
      * 注册新用户
      */
     @RequestMapping(value="/salaryWeb/registerUser")
-    public String registerUser(@Valid UserDto user,BindingResult result) {
-        if (result.hasErrors()) {
+    public String registerUser(HttpServletRequest request,@Valid UserDto userDto,BindingResult result){
+        if(result.hasErrors()){
             throw new BussinessException(BizExceptionEnum.REQUEST_NULL);
         }
-        // 判断账号是否重复
-        User theUser = managerDao.getByAccount(user.getUsername());
-        if (theUser != null) {
+        //判断用户是否重复
+        User theUser = managerDao.getByAccount(userDto.getUsername());
+        if(theUser!= null){
             throw new BussinessException(BizExceptionEnum.USER_ALREADY_REG);
         }
-        // 完善账号信息
-        user.setUsername(user.getUsername());
-        user.setSalt(ShiroKit.getRandomSalt(5));
-        user.setPassword(ShiroKit.md5(user.getPassword(), user.getSalt()));
-        user.setStatus(ManagerStatus.OK.getCode());
-        user.setCreatetime(new Date());
-        user.setPhone(user.getPhone());
-        System.out.println("account:"+user.getUsername()+",phone:"+user.getPhone());
-        this.userMapper.insert(UserFactory.createUser(user));
-        return REDIRECT+"/login";
-    }
 
+        //完善信息
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        String phone = request.getParameter("phone");
+        String password2 = request.getParameter("password2");
+
+        if(password.equals(password2)){
+            User user = new User();
+            user.setAccount(username);
+            user.setSalt(ShiroKit.getRandomSalt(5));
+            user.setPassword(ShiroKit.md5(password ,user.getSalt()));
+            user.setPhone(phone);
+            user.setCreatetime(new Date());
+            user.setStatus(ManagerStatus.OK.getCode());
+            user.setRoleid("2");
+            userMapper.insert(user);
+            return "/login.html";
+        }else{
+            return "register.html";
+        }
+    }
 
     /**
      * 点击登录执行的动作
