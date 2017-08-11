@@ -4,63 +4,63 @@
 var SalaryInfoDlg = {
     salaryInfoData : {},
     validateFields: {
-        personal_id: {
+        personalId: {
             validators: {
                 notEmpty: {
                     message: '员工编号不能为空'
                 }
             }
         },
-        base_salary: {
+        baseSalary: {
             validators: {
                 notEmpty: {
                     message: '基本工资不能为空'
                 }
             }
         },
-        post_salary: {
+        postSalary: {
             validators: {
                 notEmpty: {
                     message: '岗位工资不能为空'
                 }
             }
         },
-        grade_salary: {
+        gradeSalary: {
             validators: {
                 notEmpty: {
                     message: '薪级工资不能为空'
                 }
             }
         },
-        years_salary: {
+        yearsSalary: {
             validators: {
                 notEmpty: {
                     message: '工龄工资不能为空'
                 }
             }
         },
-        archives_salary: {
+        archivesSalary: {
             validators: {
                 notEmpty: {
                     message: '档案工资不能为空'
                 }
             }
         },
-        skill_salary: {
+        skillSalary: {
             validators: {
                 notEmpty: {
                     message: '技能工资不能为空'
                 }
             }
         },
-        overtime_salary: {
+        overtimeSalary: {
             validators: {
                 notEmpty: {
                     message: '加班工资不能为空'
                 }
             }
         },
-        sal_date: {
+        salDate: {
             validators: {
                 notEmpty: {
                     message: '请填写年月，格式：yyyy.mm'
@@ -109,7 +109,7 @@ SalaryInfoDlg.close = function() {
  * 收集数据
  */
 SalaryInfoDlg.collectData = function() {
-    this.set('id').set('personal_id').set('base_salary').set('post_salary').set('years_salary').set('grade_salary').set('skill_salary').set('archives_salary').set('overtime_salary').set('sal_date');
+    this.set('id').set('personalId').set('baseSalary').set('postSalary').set('yearsSalary').set('gradeSalary').set('skillSalary').set('archivesSalary').set('overtimeSalary').set('salDate');
 }
 /**
  * 验证数据是否为空

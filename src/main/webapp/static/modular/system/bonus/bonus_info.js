@@ -4,7 +4,7 @@
 var BonusInfoDlg = {
     bonusInfoData : {},
     validateFields: {
-        personal_id: {
+        personalId: {
             validators: {
                 notEmpty: {
                     message: '员工编号不能为空'
@@ -25,49 +25,49 @@ var BonusInfoDlg = {
                 }
             }
         },
-        achievements_bounus: {
+        achievementsBounus: {
             validators: {
                 notEmpty: {
                     message: '绩效奖金不能为空'
                 }
             }
         },
-        year_bounus: {
+        yearBounus: {
             validators: {
                 notEmpty: {
                     message: '年度奖金不能为空'
                 }
             }
         },
-        quarter_bounus: {
+        quarterBounus: {
             validators: {
                 notEmpty: {
                     message: '季度奖金不能为空'
                 }
             }
         },
-        explore_bounus: {
+        exploreBounus: {
             validators: {
                 notEmpty: {
                     message: '开拓奖金不能为空'
                 }
             }
         },
-        attendance_bounus: {
+        attendanceBounus: {
             validators: {
                 notEmpty: {
                     message: '全勤奖金不能为空'
                 }
             }
         },
-        special_bounus: {
+        specialBounus: {
             validators: {
                 notEmpty: {
                     message: '特别年薪奖不能为空'
                 }
             }
         },
-        bo_date: {
+        boDate: {
             validators: {
                 notEmpty: {
                     message: '请填写日期，格式：yyyy.mm'
@@ -123,7 +123,7 @@ BonusInfoDlg.close = function() {
  * 收集数据
  */
 BonusInfoDlg.collectData = function() {
-    this.set('id').set('personal_id').set('OrgName').set('DeptName').set('achievements_bounus').set('year_bounus').set('quarter_bounus').set('explore_bounus').set('attendance_bounus').set('special_bounus').set('bo_date').set('PostName');
+    this.set('id').set('personalId').set('OrgName').set('DeptID').set('DeptName').set('achievementsBounus').set('yearBounus').set('quarterBounus').set('exploreBounus').set('attendanceBounus').set('specialBounus').set('boDate').set('reserve1').set('reserve2').set('reserve3').set('PostName');
 }
 /**
  * 验证数据是否为空

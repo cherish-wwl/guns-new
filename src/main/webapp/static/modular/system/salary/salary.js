@@ -14,7 +14,7 @@ var Salary = {
 Salary.initColumn = function () {
     return [
         {field: 'selectItem', radio: true},
-        {title: 'id', field: 'id', visible: true, align: 'center', valign: 'middle'},
+        {title: 'id', field: 'id', visible: false, align: 'center', valign: 'middle'},
         {title: '人员', field: 'personal_id', align: 'center', valign: 'middle', sortable: true},
         {title: '基本工资', field: 'base_salary', align: 'center', valign: 'middle', sortable: true},
         {title: '岗位工资', field: 'post_salary', align: 'center', valign: 'middle', sortable: true},
@@ -23,7 +23,10 @@ Salary.initColumn = function () {
         {title: '技能工资', field: 'skill_salary', align: 'center', valign: 'middle', sortable: true},
         {title: '档案工资', field: 'archives_salary', align: 'center', valign: 'middle', sortable: true},
         {title: '加班工资', field: 'overtime_salary', align: 'center', valign: 'middle', sortable: true},
-        {title: '年月', field: 'sal_date', align: 'center', valign: 'middle', sortable: true}
+        {title: '年月', field: 'sal_date', align: 'center', valign: 'middle', sortable: true},
+        {field:"operate",title:"操作",align:"center",valign:"middle",formatter:function(value,row,index){
+            return "<a href='javascript:;' onclick='Salary.openSalaryDetail()'>修改</a>&nbsp;&nbsp;<a href='javascript:;' onclick='Salary.delete()'>删除</a>";
+        }}
     ];
 };
 
@@ -47,7 +50,7 @@ Salary.check = function () {
 Salary.openAddSalary = function () {
     var index = layer.open({
         type: 2,
-        title: '添加测试',
+        title: '添加工资',
         area: ['800px', '420px'], //宽高
         fix: false, //不固定
         maxmin: true,
@@ -57,13 +60,13 @@ Salary.openAddSalary = function () {
 };
 
 /**
- * 打开查看测试详情
+ * 打开查看工资详情
  */
 Salary.openSalaryDetail = function () {
     if (this.check()) {
         var index = layer.open({
             type: 2,
-            title: '测试详情',
+            title: '工资详情',
             area: ['800px', '420px'], //宽高
             fix: false, //不固定
             maxmin: true,
@@ -74,19 +77,24 @@ Salary.openSalaryDetail = function () {
 };
 
 /**
- * 删除测试
+ * 删除工资
  */
 Salary.delete = function () {
     if (this.check()) {
-        var ajax = new $ax(Feng.ctxPath + "/salary/delete", function (data) {
-            Feng.success("删除成功!");
-            Salary.table.refresh();
-        }, function (data) {
-            Feng.error("删除失败!" + data.responseJSON.message + "!");
-        });
-        ajax.set("id",this.seItem.id);
-        ajax.start();
+        var operation = function () {
+            var id = Salary.seItem.id;
+            var ajax = new $ax(Feng.ctxPath + "/salary/delete", function (data) {
+                Feng.success("删除成功!");
+                Salary.table.refresh();
+            }, function (data) {
+                Feng.error("删除失败!" + data.responseJSON.message + "!");
+            });
+            ajax.set("id", id);
+            ajax.start();
+        };
+        Feng.confirm("是否删除此条工资数据" + Salary.seItem.id + "?",operation);
     }
+
 };
 
 /**
@@ -94,16 +102,7 @@ Salary.delete = function () {
  */
 Salary.search = function () {
     var queryData = {};
-    queryData['personal_id'] = $("#personal_id").val();
-    queryData['base_salary'] = $("#base_salary").val();
-    queryData['post_salary'] = $("#post_salary").val();
-    queryData['grade_salary'] = $("#grade_salary").val();
-    queryData['years_salary'] = $("#years_salary").val();
-    queryData['skill_salary'] = $("#skill_salary").val();
-    queryData['archives_salary'] = $("#archives_salary").val();
-    queryData['overtime_salary'] = $("#overtime_salary").val();
-    queryData['sal_date'] = $("#sal_date").val();
-    console.log(queryData);
+    queryData['personal_id'] = $("#personalId").val();
     Salary.table.refresh({query: queryData});
 };
 

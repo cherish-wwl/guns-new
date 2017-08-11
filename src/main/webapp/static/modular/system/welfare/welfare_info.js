@@ -4,7 +4,7 @@
 var WelfareInfoDlg = {
     welfareInfoData : {},
     validateFields: {
-        personal_id: {
+        personalId: {
             validators: {
                 notEmpty: {
                     message: '员工编号不能为空'
@@ -25,7 +25,7 @@ var WelfareInfoDlg = {
                 }
             }
         },
-        wf_date: {
+        wfDate: {
             validators: {
                 notEmpty: {
                     message: '请填写日期，格式为：yyyy.MM'
@@ -81,12 +81,13 @@ WelfareInfoDlg.close = function() {
  * 收集数据
  */
 WelfareInfoDlg.collectData = function() {
-    this.set('id');
+    this.set('id').set('personalId').set('OrgName').set('DeptID').set('DeptName').set('postAllowance').set('housingAllowance').set('trafficAllowance').set('mealAllowance').set('communicationFee').set('onlyChildFee').set('sunstrokeFee').set('proWomenFee').set('dutyAllowance').set('specialPostAllowance').set('hydropowerAllowance').set('stationeryExpenses').set('outskirtsAllowannce').set('secrecyFee').set('expatriateAllowance').set('housingFund').set('endowmentInsurance').set('medicalInsurance').set('employmentInjuryInsurance').set('maternityInsurance').set('unemploymentInsurance').set('wfDate').set('PostName');
+
 }
 /**
  * 验证数据是否为空
  */
-DeptInfoDlg.validate = function () {
+WelfareInfoDlg.validate = function () {
     $('#welfareInfoForm').data("bootstrapValidator").resetForm();
     $('#welfareInfoForm').bootstrapValidator('validate');
     return $("#welfareInfoForm").data('bootstrapValidator').isValid();

@@ -9,33 +9,25 @@ public class Salary {
     private Integer id;
 
     private String OrgName;
-    private String personal_id;
+    private String personalId;
     private Integer DeptID;
     private String DeptName;
     private String PostName;
     private String ParentTradid;
     private String TradID;
     private String EmpName;
-    private Double base_salary;
-    private Double post_salary;
-    private Double grade_salary;
-    private Double years_salary;
-    private Double skill_salary;
-    private Double archives_salary;
-    private Double overtime_salary;
-    private String sal_date;
+    private Double baseSalary;
+    private Double postSalary;
+    private Double gradeSalary;
+    private Double yearsSalary;
+    private Double skillSalary;
+    private Double archivesSalary;
+    private Double overtimeSalary;
+    private String salDate;
     private String region;
     private Integer StatFlag;
     private String reserve2;
     private String reserve3;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public String getOrgName() {
         return OrgName;
@@ -45,12 +37,12 @@ public class Salary {
         OrgName = orgName;
     }
 
-    public String getPersonal_id() {
-        return personal_id;
+    public String getPersonalId() {
+        return personalId;
     }
 
-    public void setPersonal_id(String personal_id) {
-        this.personal_id = personal_id;
+    public void setPersonalId(String personalId) {
+        this.personalId = personalId;
     }
 
     public Integer getDeptID() {
@@ -101,68 +93,68 @@ public class Salary {
         EmpName = empName;
     }
 
-    public Double getBase_salary() {
-        return base_salary;
+    public Double getBaseSalary() {
+        return baseSalary;
     }
 
-    public void setBase_salary(Double base_salary) {
-        this.base_salary = base_salary;
+    public void setBaseSalary(Double baseSalary) {
+        this.baseSalary = baseSalary;
     }
 
-    public Double getPost_salary() {
-        return post_salary;
+    public Double getPostSalary() {
+        return postSalary;
     }
 
-    public void setPost_salary(Double post_salary) {
-        this.post_salary = post_salary;
+    public void setPostSalary(Double postSalary) {
+        this.postSalary = postSalary;
     }
 
-    public Double getGrade_salary() {
-        return grade_salary;
+    public Double getGradeSalary() {
+        return gradeSalary;
     }
 
-    public void setGrade_salary(Double grade_salary) {
-        this.grade_salary = grade_salary;
+    public void setGradeSalary(Double gradeSalary) {
+        this.gradeSalary = gradeSalary;
     }
 
-    public Double getYears_salary() {
-        return years_salary;
+    public Double getYearsSalary() {
+        return yearsSalary;
     }
 
-    public void setYears_salary(Double years_salary) {
-        this.years_salary = years_salary;
+    public void setYearsSalary(Double yearsSalary) {
+        this.yearsSalary = yearsSalary;
     }
 
-    public Double getSkill_salary() {
-        return skill_salary;
+    public Double getSkillSalary() {
+        return skillSalary;
     }
 
-    public void setSkill_salary(Double skill_salary) {
-        this.skill_salary = skill_salary;
+    public void setSkillSalary(Double skillSalary) {
+        this.skillSalary = skillSalary;
     }
 
-    public Double getArchives_salary() {
-        return archives_salary;
+    public Double getArchivesSalary() {
+        return archivesSalary;
     }
 
-    public void setArchives_salary(Double archives_salary) {
-        this.archives_salary = archives_salary;
+    public void setArchivesSalary(Double archivesSalary) {
+        this.archivesSalary = archivesSalary;
     }
 
-    public Double getOvertime_salary() {
-        return overtime_salary;
+    public Double getOvertimeSalary() {
+        return overtimeSalary;
     }
 
-    public void setOvertime_salary(Double overtime_salary) {
-        this.overtime_salary = overtime_salary;
+    public void setOvertimeSalary(Double overtimeSalary) {
+        this.overtimeSalary = overtimeSalary;
     }
 
-    public String getSal_date() {
-        return sal_date;
+    public String getSalDate() {
+        return salDate;
     }
 
-    public void setSal_date(String sal_date) {
-        this.sal_date = sal_date;
+    public void setSalDate(String salDate) {
+        this.salDate = salDate;
     }
 
     public String getRegion() {
@@ -197,4 +189,11 @@ public class Salary {
         this.reserve3 = reserve3;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 }

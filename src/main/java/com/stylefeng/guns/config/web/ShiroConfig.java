@@ -115,8 +115,7 @@ public class ShiroConfig {
         /**
          * 默认的登陆访问url
          */
-        //shiroFilter.setLoginUrl("/login");
-         shiroFilter.setLoginUrl("/salaryIndex");
+        shiroFilter.setLoginUrl("/login");
         /**
          * 登陆成功后跳转的url
          */
@@ -137,11 +136,7 @@ public class ShiroConfig {
         hashMap.put("/static/**", "anon");
 
         hashMap.put("/login", "anon");
-
-        hashMap.put("/salaryIndex", "anon");
-        hashMap.put("/salaryIndexAbout", "anon");
         hashMap.put("/salaryWeb/**", "anon");
-
         hashMap.put("/global/sessionError", "anon");
         hashMap.put("/kaptcha", "anon");
         hashMap.put("/**", "user");

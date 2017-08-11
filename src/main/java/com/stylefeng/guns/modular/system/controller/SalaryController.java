@@ -7,6 +7,7 @@ import com.stylefeng.guns.common.constant.tips.Tip;
 import com.stylefeng.guns.common.controller.BaseController;
 import com.stylefeng.guns.common.exception.BizExceptionEnum;
 import com.stylefeng.guns.common.exception.BussinessException;
+import com.stylefeng.guns.common.persistence.dao.SalaryMapper;
 import com.stylefeng.guns.common.persistence.model.Salary;
 import com.stylefeng.guns.core.cache.CacheKit;
 import com.stylefeng.guns.core.log.LogObjectHolder;
@@ -40,6 +41,8 @@ public class SalaryController extends BaseController {
     @Resource
     private SalaryDao salaryDao;
 
+    @Resource
+    private SalaryMapper salaryMapper;
 
     /**
      * 跳转到工资首页
@@ -89,6 +92,7 @@ public class SalaryController extends BaseController {
     @RequestMapping(value = "/add")
     @ResponseBody
     public Tip add(Salary salary) {
+
         salaryDao.add(salary);
         return SUCCESS_TIP;
     }

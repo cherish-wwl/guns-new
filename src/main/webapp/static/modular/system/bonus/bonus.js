@@ -25,7 +25,10 @@ Bonus.initColumn = function () {
         {title: '全勤奖金', field: 'attendance_bounus', align: 'center', valign: 'middle', sortable: true},
         {title: '特别年薪奖', field: 'special_bounus', align: 'center', valign: 'middle', sortable: true},
         {title: '日期', field: 'bo_date', align: 'center', valign: 'middle', sortable: true},
-        {title: '岗位名称', field: 'PostName', align: 'center', valign: 'middle', sortable: true}
+        {title: '岗位名称', field: 'PostName', align: 'center', valign: 'middle', sortable: true},
+        {field:"operate",title:"操作",align:"center",valign:"middle",width:'80px',formatter:function(value,row,index){
+            return "<a href='javascript:;' onclick='Bonus.openBonusDetail()'>修改</a>&nbsp;&nbsp;<a href='javascript:;' onclick='Bonus.delete()'>删除</a>";
+        }}
     ];
 };
 
@@ -80,14 +83,18 @@ Bonus.openBonusDetail = function () {
  */
 Bonus.delete = function () {
     if (this.check()) {
-        var ajax = new $ax(Feng.ctxPath + "/bonus/delete", function (data) {
-            Feng.success("删除成功!");
-            Bonus.table.refresh();
-        }, function (data) {
-            Feng.error("删除失败!" + data.responseJSON.message + "!");
-        });
-        ajax.set("id",this.seItem.id);
-        ajax.start();
+        var operation = function () {
+            var id = Bonus.seItem.id;
+            var ajax = new $ax(Feng.ctxPath + "/bonus/delete", function (data) {
+                Feng.success("删除成功!");
+                Bonus.table.refresh();
+            }, function (data) {
+                Feng.error("删除失败!" + data.responseJSON.message + "!");
+            });
+            ajax.set("id", id);
+            ajax.start();
+        };
+        Feng.confirm("是否删除此条奖金数据" + Bonus.seItem.id + "?",operation);
     }
 };
 
@@ -96,16 +103,16 @@ Bonus.delete = function () {
  */
 Bonus.search = function () {
     var queryData = {};
-    queryData['personal_id'] = $("#personal_id").val();
+    queryData['personal_id'] = $("#personalId").val();
     queryData['OrgName'] = $("#OrgName").val();
     queryData['DeptName'] = $("#DeptName").val();
-    queryData['achievements_bounus'] = $("#achievements_bounus").val();
-    queryData['year_bounus'] = $("#year_bounus").val();
-    queryData['quarter_bounus'] = $("#quarter_bounus").val();
-    queryData['explore_bounus'] = $("#explore_bounus").val();
-    queryData['attendance_bounus'] = $("#attendance_bounus").val();
-    queryData['special_bounus'] = $("#special_bounus").val();
-    queryData['bo_date'] = $("#bo_date").val();
+    queryData['achievements_bounus'] = $("#achievementsBounus").val();
+    queryData['year_bounus'] = $("#yearBounus").val();
+    queryData['quarter_bounus'] = $("#quarterBounus").val();
+    queryData['explore_bounus'] = $("#exploreBounus").val();
+    queryData['attendance_bounus'] = $("#attendanceBounus").val();
+    queryData['special_bounus'] = $("#specialBounus").val();
+    queryData['bo_date'] = $("#boDate").val();
     queryData['PostName'] = $("#PostName").val();
     console.log(queryData);
     Bonus.table.refresh({query: queryData});
