@@ -487,6 +487,7 @@ nav.primary ul li a:active, nav.primary ul li a.selected {	background:#ff9900;	c
 	color: #fff;
 	font-size: 72px;
 	margin-bottom: 40px;
+	line-height: 72px;
 }
 .new-page-subtitle02{
 	color: #fff;
@@ -511,5 +512,21 @@ nav.primary ul li a:active, nav.primary ul li a.selected {	background:#ff9900;	c
 	}
 	.new-page-subtitle03{
 		font-size: 15px;
+	}
+}
+@media only screen and (max-width: 480px) and (min-width: 100px){
+	.new-page-subtitle {
+		bottom: 135px !important;
+	}
+	.new-page-subtitle01{
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+	.new-page-subtitle02{
+		font-size: 12px;
+		margin-bottom: 18px;
+	}
+	.new-page-subtitle03{
+		font-size: 10px;
 	}
 }

@@ -3,6 +3,7 @@ package com.stylefeng.guns.modular.system.dao;
 import java.util.List;
 import java.util.Map;
 
+import com.stylefeng.guns.common.persistence.model.OutUser;
 import org.apache.ibatis.annotations.Param;
 
 import com.stylefeng.guns.common.persistence.model.User;
@@ -56,4 +57,12 @@ public interface UserMgrDao {
      * @date 2017年2月17日 下午11:07:46
      */
     User getByAccount(@Param("account") String account);
+
+    /**
+     * 注册外部用户
+     * @param outUser
+     */
+    void add(OutUser outUser);
+
+    OutUser getByUsername(@Param("account") String account);
 }

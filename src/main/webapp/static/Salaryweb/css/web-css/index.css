@@ -46,14 +46,14 @@
 }
 .ul-9da{
     position: absolute;
-    top: 40px;
-    left: 400px;
+    top: 30px;
+    left: 350px;
 
   }
 .li-9da{
     font-size: 29px;
     color: #818181;
-    width: 600px;
+    width: 550px;
     border-bottom: rgba(254, 254, 254, 0) !important;
     line-height: 65px;
     height:65px;
@@ -65,10 +65,10 @@
 }
 .li-9da-odd{
     margin-left: 100px !important;
-    margin-top: 50px !important;
+    margin-top: 40px !important;
 }
 .li-9da-even{
-    margin-top: 50px !important;
+    margin-top: 40px !important;
 }
 /*×îÐÂ×ÉÑ¯*/
 .last_news {

@@ -290,7 +290,7 @@ public class ImgQrTool {
                     .setQrContent("http://www.baidu.com?a=" + "123")
                     .setQrHeight(300)
                     .setQrWidth(300)
-                    .setQrIconFilePath("D:\\二维码\\中间图标\\1.png")
+                    /*.setQrIconFilePath("D:\\二维码\\中间图标\\1.png")*/
                     .setTopWrodHeight(100)
                     .setWordContent("test" + 1)
                     .setWordSize(18).build();

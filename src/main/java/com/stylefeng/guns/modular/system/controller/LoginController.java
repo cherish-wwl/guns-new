@@ -11,6 +11,7 @@ import com.stylefeng.guns.common.exception.BussinessException;
 import com.stylefeng.guns.common.exception.InvalidKaptchaException;
 import com.stylefeng.guns.common.node.MenuNode;
 import com.stylefeng.guns.common.persistence.dao.UserMapper;
+import com.stylefeng.guns.common.persistence.model.OutUser;
 import com.stylefeng.guns.common.persistence.model.User;
 import com.stylefeng.guns.core.log.LogManager;
 import com.stylefeng.guns.core.log.factory.LogTaskFactory;
@@ -153,28 +154,39 @@ public class LoginController extends BaseController {
     }
 
     /**
-     * 注册新用户
+     * 注册新用户(应用用户)
      */
     @RequestMapping(value="/salaryWeb/registerUser")
-    public String registerUser(@Valid UserDto user,BindingResult result) {
-        if (result.hasErrors()) {
+    public String registerUser(HttpServletRequest request,@Valid UserDto userDto,BindingResult result){
+        if(result.hasErrors()){
             throw new BussinessException(BizExceptionEnum.REQUEST_NULL);
         }
-        // 判断账号是否重复
-        User theUser = managerDao.getByAccount(user.getUsername());
-        if (theUser != null) {
+        //判断用户是否重复
+        OutUser theUser = managerDao.getByUsername(userDto.getUsername());
+        if(theUser!= null){
             throw new BussinessException(BizExceptionEnum.USER_ALREADY_REG);
         }
-        // 完善账号信息
-        user.setUsername(user.getUsername());
-        user.setSalt(ShiroKit.getRandomSalt(5));
-        user.setPassword(ShiroKit.md5(user.getPassword(), user.getSalt()));
-        user.setStatus(ManagerStatus.OK.getCode());
-        user.setCreatetime(new Date());
-        user.setPhone(user.getPhone());
-        System.out.println("account:"+user.getUsername()+",phone:"+user.getPhone());
-        this.userMapper.insert(UserFactory.createUser(user));
-        return REDIRECT+"/login";
+
+        //完善信息
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        String phone = request.getParameter("phone");
+        String password2 = request.getParameter("password2");
+
+        if(password.equals(password2)){
+            OutUser user = new OutUser();
+            user.setAccount(username);
+            user.setSalt(ShiroKit.getRandomSalt(5));
+            user.setPassword(ShiroKit.md5(password ,user.getSalt()));
+            user.setPhone(phone);
+            user.setCreatetime(new Date());
+            user.setStatus(ManagerStatus.OK.getCode());
+        /*user.setRoleid("2");*/
+            managerDao.add(user);
+            return "/login.html";
+        }else{
+            return "register.html";
+        }
     }
 
 

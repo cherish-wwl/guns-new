@@ -57,4 +57,12 @@
 		from user where account = #{account} and status != 3
 	</select>
 
+	<insert id="add" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO outuser (id,image,account,name,salt,password,Priv,phone,email,Company,status,lastlogin,createtime) values(#{id},#{image},#{account},#{name},#{salt},#{password},#{Priv},#{phone},#{email},#{Company},#{status},#{lastlogin},#{createtime})
+	</insert>
+
+	<select id="getByUsername" resultType="user">
+		select * from outuser where account = #{account} and status != 3
+	</select>
+
 </mapper>
